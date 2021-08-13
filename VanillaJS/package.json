@@ -1,0 +1,14 @@
+{
+  "name": "dom-manipulation",
+  "version": "1.0.0",
+  "description": "dom manipulation wwith vanilla javascript",
+  "main": "dom.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lekhraj Dinkar",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
