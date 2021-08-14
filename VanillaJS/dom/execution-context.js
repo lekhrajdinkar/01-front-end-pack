@@ -1,3 +1,4 @@
+// 'use strict' : good practice
 //IMP :::: THIS IS WINDOW OBJECT. we are writing all our inside window object.
 
 // JS executes pieces of codes, form EC for each function 
@@ -27,6 +28,7 @@ var f1_level_1 = function () // hoisted with undefined value, can not call befor
 //const f1_level_1 = function () // no hoisting
 //function f1_level_1() // hositing with defined body, hence can be called before decalation.
 {
+    console.log('f1_level_1 : this :: ', this)
     console.log('f1_level_1 : function expression', window.g_s)
     // declartion
     let f1_s = 'f1_Anna';
@@ -79,7 +81,7 @@ var f1_level_1 = function () // hoisted with undefined value, can not call befor
     }
     //f1_level_3() // outside scope call
 
-    // Note: This keyword and arg are not applicable here
+    // Note: This keyword and arg are not applicable here for hoisting
     f3_level_2 = () => {
         console.log('\tf3_level_2 : Arrow function ', g_s)
     }
@@ -104,19 +106,21 @@ this.f1_level_1()
 
 
 // a. creating object without template
-var o = { 
+const year = 2000
+const o = { 
+    year: 2021,
     name: 'object-1', // notice let const var not used for instance variable.
 
     // lexical this IMP ::: DOnt get its OWN this. 
     print_this_arrow: () => { console.log(1, 'lexical this =>fn :', this) }, // window   
 
-    print_this() {console.log(2, 'my owner is, fn :', this) }, //  o
+    // importance for this, else it would have gotton year from global scope
+    print_this() {console.log(2, year, this.year, 'my owner is, fn :', this) }, //  o
     print_this_exp: function(){
         let local = 'local' ;
         console.log(3,'my owner is fn exp :', this); // o
         o.print_this_arrow() //call-1 , o
     }
-   
 }
 o.print_this_arrow();   // call-2
 o.print_this_arrow.bind(o)(); // binding has no impact over here.
@@ -128,11 +132,15 @@ o.print_this_exp(); //fine
 ////print_this_arrow = () => { console.log('my owner is :', this) }
 function print_this() {console.log(4,'my owner is :', this) } // same fn defined inside Object - window
 this.print_this();
+o.borrowed_function = this.print_this; o.borrowed_function();
 //this.print_this_arrow();
 
 //modify this while funcatin call.
 //this.print_this.bind(o)()
 //this.print_this.apply(o)
+
+
+
 
 
 
