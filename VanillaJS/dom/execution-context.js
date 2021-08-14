@@ -104,10 +104,12 @@ this.f1_level_1()
 
 // ########### PART-2 :: THIS KEYWORD ##################
 
+// REGULAR Fn call - window/undefined as Jonas, VS,  Object Fn call - object
 
 // a. creating object without template
 const year = 2000
 const o = { 
+ // ---- Still global scope (object which is defined inside global scope)  
     year: 2021,
     name: 'object-1', // notice let const var not used for instance variable.
 
@@ -116,14 +118,34 @@ const o = {
 
     // importance for this, else it would have gotton year from global scope
     print_this() {console.log(2, year, this.year, 'my owner is, fn :', this) }, //  o
+    sayHello(){console.log("Hello")},
     print_this_exp: function(){
+        //---- function scope
+            // EC , env: local | this| scope: closure, global, local
         let local = 'local' ;
+        this.sayHello()
+        this.print_this_arrow()
         console.log(3,'my owner is fn exp :', this); // o
-        o.print_this_arrow() //call-1 , o
+        // calling other function
+        o.print_this_arrow() //call-1 , o, executed by o
+
+                // Declaring nested Function
+                const  self = this // nice trick
+                function print_this_exp_child(){
+                    console.log('==== print_this_exp_child =====', self, this)
+                }
+                print_this_exp_child() 
+                // not executed by o, ITS REGULAR FUNCTION CALL LIKE IN GLOCAL scope
+                //so owner is Window
+
+        //---- function scope
+
+        
     }
+ // ---- still global scope
 }
 o.print_this_arrow();   // call-2
-o.print_this_arrow.bind(o)(); // binding has no impact over here.
+//o.print_this_arrow.bind(o)(); // binding has no impact over here.
 
 o.print_this(); //fine
 o.print_this_exp(); //fine
