@@ -42,3 +42,36 @@ body{
 .current-score{
     
 }
+.dice{
+    height: 50px; width: 50px;
+    background-color: crimson; color: white;
+    text-align: center;
+    font-size: 40px;
+    box-shadow: white 5px 5px;
+    transform: translateX(100px) rotate(45deg) ;
+
+}
+
+.active-player-bg{
+    background-color: rgb(245, 245, 136);
+    color: teal;
+}
+
+.btn{    
+    padding: 25px 25px;
+    font-size: 40px;
+    border-radius: 50%;
+}
+.btn-roll{
+ color: tomato;
+ transform: translateX(25px);
+}
+
+.btn-hold{
+margin-top: 30px;
+color: violet;
+
+}
+
+.hide{display: none;}
+.show{display: block;}
