@@ -12,5 +12,6 @@ console.log("KEYS: ", Object.keys(obj))
 console.log("VALUES: ", Object.values(obj))
 console.log("entries: ", Object.entries(obj))
 
+//loop object
 for( const [k,v] of Object.entries(obj) ) console.log(`${k} :: ${v}`)
-
+Object.name
