@@ -17,6 +17,8 @@ console.log( '>>> Short circuit, first_Falsy_value >>>', first_Falsy_value)
 // Nullish : undefined and null
 const first_non_Nullish_value = null ?? undefined ?? 'str' ?? 0 ?? ' '?? 23 ?? null
 console.log( '>>> Short circuit, first_non_Nullish_value >>>', first_non_Nullish_value)
+// rest.monday?.open ?? 'closed' --> use ? and ?? together, ES2020 feature
+
 
 console.log("\n--------------------C. REST and SPREAD----------------------------")
 const tdf10 = { 
