@@ -28,7 +28,7 @@ console.log("1.4. REST ", cat_packed )
 
 // 2. Mutation check
 console.log("-------------------------------------------------")
-category = {...category, active: true}
+category = {...category, active: true} // SPREAD
 console.log("2. mutation check : ",category, tdf10.category) //mutation done
 
 console.log("-------------------------------------------------")
