@@ -1,10 +1,10 @@
 'use strict';
 
-
+const uf_list = ['uf1', 'uf2']
 const tdf10 = { 
     nam: 'TDF10', fnum: 110011, active: true, 
     category: { id: 1, nam: 'AF'},
-    uf_list: ['uf1', 'uf2']
+    uf_list // Enhanced object literal
 }
 console.log("1. object literal : ",tdf10)
 console.log("-------------------------------------------------")

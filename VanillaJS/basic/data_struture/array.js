@@ -20,7 +20,8 @@ console.log('Index of "lekh" in array is : ', arr.indexOf('lekh'))
 console.log('-------------------------------------------')
 // loop array
 for (const item of arr) console.log(item);  console.log(); 
-for (const item of arr.entries()) console.log(`${item[1]} present at index ${item[0]}`); // loop array
+// for (const item of arr.entries()) console.log(`${item[1]} present at index ${item[0]}`); 
+for (const [i,item] of arr.entries()) console.log(`${item} present at index ${i}`); 
 
 console.log('-------------------------------------------')
 //way-1 unpack
