@@ -1,10 +1,11 @@
 // A.1 Arithematic
-console.log("\n------------A. transform, compare, arithemaetic, logical,---------------")
+console.log("\n------------A. transform, compare, arithemaetic ---------------")
 console.log( 10+20, 30-10, 10*2, 2**4, 'str1' + 'str2', 'str1'+22) 
-const n = 10; const [a,b] = [ ++n, n++] ; console.log(a,b)
+let n = 10; let [a,b] = [ ++n, n++] ; console.log(a,b)
 
 b = new Number(12345678901.899999999999999999999); console.log(b, typeof b)
 
+console.log("\n------------------ B. logical    ----------------------------")
 //  A.2. Logical :: Short circuit :: it cheks left to right
 const first_truthly_value = undefined || '' || 0 || 'HELLO'|| 23|| null
 console.log( '>>> Short circuit, first_truthly_value >>>', first_truthly_value)
@@ -13,7 +14,11 @@ const first_Falsy_value = 23 && undefined && '' && 0 && 'HELLO'&& 23 && null
 console.log( '>>> Short circuit, first_Falsy_value >>>', first_Falsy_value)
 // can be replace for if-else, works left to right
 
-console.log("\n--------------------B. REST and SPREAD----------------------------")
+// Nullish : undefined and null
+const first_non_Nullish_value = null ?? undefined ?? 'str' ?? 0 ?? ' '?? 23 ?? null
+console.log( '>>> Short circuit, first_non_Nullish_value >>>', first_non_Nullish_value)
+
+console.log("\n--------------------C. REST and SPREAD----------------------------")
 const tdf10 = { 
     nam: 'TDF10', fnum: 110011, active: true, 
     category: { id: 1, nam: 'AF'},

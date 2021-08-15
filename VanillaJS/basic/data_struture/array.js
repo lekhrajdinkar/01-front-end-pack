@@ -9,18 +9,32 @@
     arr.unshift(30) //add on front
     arr.push('xtra1'); arr.pop() //lets add and delete from last
     arr.unshift('xtra'); arr.shift()//lets add and delete from from
-    console.log(arr.includes('lekh'), arr.indexOf('lekh'))
-    
     return arr;
 }
+console.log('-------------------------------------------\n')
+// Array operator
+const arr =  getSampleArray();
+console.log('Does array includes \'lekh\' : ',arr.includes('lekh'))
+console.log('Index of "lekh" in array is : ', arr.indexOf('lekh'))
+
+console.log('-------------------------------------------')
+// loop array
+for (const item of arr) console.log(item);  console.log(); 
+for (const item of arr.entries()) console.log(`${item[1]} present at index ${item[0]}`); // loop array
+
+console.log('-------------------------------------------')
 //way-1 unpack
-const [age, nam, , langKnown] = getSampleArray(); console.log(nam, age, langKnown)
+const [age, nam, ,langKnown] =arr;
+console.log('unpack Array: ', nam, age, langKnown);
+
+console.log('-------------------------------------------')
 langKnown.push('xtra')
 console.log('check mutation::', langKnown, getSampleArray()[3])
 // IMP : Array unpacking mutates the object
 
+console.log('-------------------------------------------')
 //way-2  nested unpack
 const [age_, nam_, , [lang1, lang2, lang3], extra_var1, extra_var2="default_value"] = getSampleArray();
-console.log(nam_, age_, lang1, lang2, lang3, extra_var1, extra_var2) // undefined for extra var
+console.log('unpack nested language Array: ',nam_, age_, lang1, lang2, lang3, extra_var1, extra_var2) // undefined for extra var
 
-console.log(typeof extra_var2)
+console.log('-------------------------------------------')
