@@ -62,5 +62,12 @@ printSeqItemSepBySpace('hello', 'Liu')
 printSeqItemSepBySpace(...['hello', 'Liu']) // unpack array item
 printSeqItemSepBySpace(['hello', 'Liu']) // passing array
 
+console.log("\n--------------------MORE : REST and SPREAD----------------------------")
+const arr1 = [1,2,3];  const arr2 = [4,5,6,7]; 
+let [new_arr_1, new_arr_2, new_arr_rest] = [...arr1, ...arr2];
+printSeq(new_arr_1, new_arr_2, new_arr_rest); // not correct, check out below sol
+
+([new_arr_1, new_arr_2, ...new_arr_rest] = [...arr1, ...arr2]);
+printSeq(new_arr_1, new_arr_2, new_arr_rest); //REST use case 2
 
 
