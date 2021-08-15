@@ -1,15 +1,47 @@
-Object.prototype.greet = function(n){ console.log(`HELLO ${n} JS object`)}
-// console.log(new Object(), Object())
+'use strict';
 
+console.log("---------- Start -----------------")
+Object.prototype.greet = function(n){ console.log(`HELLO ${n} JS object`)}
+
+// Enhanced feild name
+const members = [
+    {feild:"name", value:"TDF20"}, 
+    {feild:"fnum", value:110020}, 
+    {feild:'sayHello', value: function(){console.log("HELLO from dynamic object")} }
+]
+
+function createDynamicFund(){
+    let obj = {}
+    for( const {feild:f, value:v} of members) obj = {...obj, [f]:v}
+    return obj
+}
+const obj = createDynamicFund();
+console.log("1. createDynamicFund >> ", obj)
+obj.sayHello();
+
+console.log("-------------------------------------------")
 // 1. Object Lieteral
-let tdf10 = { name: 'TDF10', fnum: 110011, active: true, category: { id: 1, name: 'AF'}}
+const xxx = "country_code";
+let tdf10 = { 
+    // instance Variable
+    name: 'TDF10', 
+    fnum: 110011, 
+    active: true, 
+    category: { id: 1, name: 'AF'},
+    [xxx]: "IND",
+
+    //method
+    //sayHello: function(){console.log("HELLO")}, //old
+    sayHello(){console.log("HELLO")} //new ES6+
+}
 console.log("1. object literal : ",tdf10, tdf10.greet('tdf10'))
 
+console.log("-------------------------------------------")
 // 2. Object Contructor function
 let o1=  Object.create({});
 console.log('o1 ', o1, o1.prototype, o1.greet('o1'))
 
-let o2=  Object.create(window);
+let o2=  Object.create(this); //this is global window object here
 console.log('Object : create from window :: ', o2, o2.prototype, o2.greet('o2'))
 
 let o3=  Object.create({});
@@ -50,7 +82,7 @@ console.log(tdf20.category.id, tdf20.category.name, tdf20.category.desc );
 tdf20.category.addOnFn(123);
 
 // Shalow Copy
-o = Object.assign({}, tdf20)
+const o = Object.assign({}, tdf20)
 console.log(" object assign : " , o)
 o.name =""; o.category = {}; console.log(tdf20, o)
 
