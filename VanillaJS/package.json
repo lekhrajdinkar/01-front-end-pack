@@ -1,8 +1,8 @@
 {
-  "name": "dom-manipulation",
+  "name": "js-demo",
   "version": "1.0.0",
-  "description": "dom manipulation wwith vanilla javascript",
-  "main": "dom.js",
+  "description": "Java script learning",
+  "main": "start",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,5 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "live-server": "^1.2.1"
-  }
+  },
+  "devDependencies": {},
+  "keywords": [
+    "Javascript"
+  ]
 }

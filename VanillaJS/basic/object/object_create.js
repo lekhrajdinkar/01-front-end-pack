@@ -43,7 +43,7 @@ function fund_c_fn(name, fnum, active, id, cat_name, cat_const_fn){
     this.category = new cat_const_fn(id,cat_name) // b. c-fn
 }
 
-export let tdf20 = new fund_c_fn('tdf20', 110022, false, 1, "AFIS", category_c_fn);
+let tdf20 = new fund_c_fn('tdf20', 110022, false, 1, "AFIS", category_c_fn);
 
 console.log("2. Const fn : ", tdf20);
 console.log(tdf20.category.id, tdf20.category.name, tdf20.category.desc );
