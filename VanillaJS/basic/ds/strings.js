@@ -45,11 +45,15 @@ s.toLowerCase() ; s.toUpperCase() ; s.trim()
 
 p(' CONVERT number to String  '.padStart(50,'-').padEnd(100,'-'))
 p(25, String(25), (25+''), '25' )
-p(' CONVERT String  to  number '.padStart(50,'-').padEnd(100,'-'))
+//p(' CONVERT String  to  number '.padStart(50,'-').padEnd(100,'-'))
 
 // padding
 const acct_num = '1234-1234-1234';
 p('Account ends with ', acct_num.slice(-4).padStart(acct_num.length, '*'), 'is in risk')
+
+//repeat
+const password = '12345678';
+p('Your password', '*'.repeat(password.length) )
 
 
 
