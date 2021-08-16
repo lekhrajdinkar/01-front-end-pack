@@ -41,3 +41,15 @@ forEach(arr, print_lower_case);
 console.log('-----------------'); 
 forEach(arr, print_upper_case);
 
+// ======== C. return fn from functin ==============
+console.log('\n======== C. return fn from functin ==============');
+function complete_name(first_name){
+    return function(middle_name){
+        return function(last_name){
+            return `welcome ${first_name} ${middle_name} ${last_name}. Have a great day !!`
+        }
+    }
+}
+const msg = complete_name("Anna")("liu")("Dinkar");
+console.log(msg);
+
