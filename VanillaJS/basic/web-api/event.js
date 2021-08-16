@@ -1,0 +1,1 @@
+'use strict'; const p = (...x) => console.log(...x)
