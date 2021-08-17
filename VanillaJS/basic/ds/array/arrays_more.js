@@ -19,9 +19,9 @@ const arr = [
     const sortByName = (a,b) => a.name.localeCompare(b.name);
     const sortByAge = (a,b) => a.age - b.age;
 
-//utils
+//utils - find, filter, splice/delete
 const printShort = arr => { 
-    arr.forEach( n => console.log(n.name, n.age , '||', (n.edu?.hq ?? 'KID'), '||', ...n.hobbies)  ); //first_non_nullish (und/null)
+    arr.forEach( n,i,arr => console.log(i, arr, n.name, n.age , '||', (n.edu?.hq ?? 'KID'), '||', ...n.hobbies)  ); //first_non_nullish (und/null)
     console.log('-----------------------------------') 
 }
 const findByName = (arr, name) => arr.find( n  => n.name === name)
@@ -49,6 +49,16 @@ function test_delete_update(){
     deleteByName(arr,'Ben'); deleteByName(arr,'Lekhraj Dinkar'); printShort(arr) ;
 }
 function test_sort(){
+    arr.sort(sortByAge); printShort(arr) ;
+    arr.sort(sortByName); printShort(arr) ;
+}
+
+function test_reduce(){
+    arr.sort(sortByAge); printShort(arr) ;
+    arr.sort(sortByName); printShort(arr) ;
+}
+
+function test_map(){
     arr.sort(sortByAge); printShort(arr) ;
     arr.sort(sortByName); printShort(arr) ;
 }

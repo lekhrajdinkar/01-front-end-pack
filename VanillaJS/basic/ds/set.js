@@ -14,6 +14,7 @@ console.log(s.keys());
 console.log(s.values());
 
 for( const v of s.values()) console.log(`${v}`)
+s.forEach( (v,_,m) => console.log(v,k,m)) // remember the order v,k,m // same as Map // v and k are same for  set
 
 // console.log(s.entries()); // strange
 // for( const [k,v] of s.entries()) console.log(`${k} :: ${v}`)

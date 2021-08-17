@@ -22,6 +22,8 @@ console.log('-------------------------------------------')
 for (const item of arr) console.log(item);  console.log(); 
 // for (const item of arr.entries()) console.log(`${item[1]} present at index ${item[0]}`); 
 for (const [i,item] of arr.entries()) console.log(`${item} present at index ${i}`); 
+arr.forEach( (n,i,arr) => console.log(i, arr, n)); // get index and complete array while looping
+// CONTINUE and BREAK , does not work with array.
 
 console.log('-------------------------------------------')
 //way-1 unpack
