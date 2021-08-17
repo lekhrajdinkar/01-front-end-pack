@@ -1,16 +1,10 @@
 <html>
-    <head>
-        <script src="index.js"></script>
-        <script src="execution-context.js"></script>
-        <script src="data-structure.js"></script>
-        <script src="objects.js"></script>
+    <head> <link rel="stylesheet" href="style.css"></head>
 
-        <link rel="stylesheet" href="style.css">
-    </head>
     <body>
-        <div class="containor">
-            <div class="player-containor active-player-bg">
-                <div class="name"></div>
+        <div class="containor" >
+            <div class="player-containor active-player-bg " id="player__a">
+                <div class="name" id="player__a__name">!!</div>
                 <div class="total-score">total score : <span></span> </div>
                 <div class="current-score">Current score: <span></span> </div>
                 <div class="active"></div>
@@ -26,13 +20,11 @@
                     <button class="btn btn-hold" onclick="hold()">H o l d</button>
                 </div>
             </div>
-        
-            <div class="player-containor">
-                <div class="name"></div>
-                <div class="total-score">total score : <span></span> </div>
-                <div class="current-score">Current score: <span></span> </div>
-                <div class="active"></div>
-            </div>
+
+            <div class="player-containor" id="player__b"></div>
+            
         </div> 
+        <script src="index.js"></script>
     </body>
 </html>
+

@@ -1,5 +1,7 @@
-'use strict'
-
+'use strict'; const p = (...t) => console.log(...t); let tmp;
+//==========================================
+// BASIC OPERATION and Desstructiing
+//==========================================
  // ES 6
 // 1. Unpacking array // used to return multiple item from fm/method
  function getSampleArray(){

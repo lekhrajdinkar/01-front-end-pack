@@ -1,11 +1,15 @@
-'use strict';
+'use strict'; const p = (...t) => console.log(...t); let tmp;
+
+//============================================================================================
+// HIGH ORDER FUNCTION : for each, map, filter, find, findIndex, reduce, filter
+//============================================================================================
 
 //Array
 const arr = [
     {name: 'Anna Liu', age: 10, edu: {hq: 'Masters'}, hobbies: ['insta', 'hiking', 'church-service', 'care', 'help'] },
     {name: 'Lekhraj Dinkar', age: 30, edu: {hq: 'Bachelor'}, hobbies: ['coding', 'hiking', 'sketching'] },
     {name: 'Manisha Prasad', age: 25, edu: {hq: 'Fashion'}, hobbies: ['sketching', 'cooking'] },
-    {name: "Ben", age: 4, hobbies: ['eating', 'hockey', 'dancing'] },
+    {name: "Ben Zen", age: 4, hobbies: ['eating', 'hockey', 'dancing'] },
 ]; 
 
 //useful callback
@@ -31,6 +35,7 @@ const deleteByName = (arr, nam) => {
     arr.splice(i,1) 
 } 
 
+// FILTER, FIND, FINDINDEX
 function test_search(){
     console.log('1. Print: '); arr.forEach(print);
 
@@ -40,7 +45,7 @@ function test_search(){
     console.log('\n3. ============== Find ============= ', arr.find(findBen)); 
     console.log(findByName(arr,'Manisha Prasad') )
 }
-
+// slice, splice
 function test_delete_update(){
     //arr.reverse();
     console.log(arr.slice(2)) // index 2 to end
@@ -48,25 +53,33 @@ function test_delete_update(){
     deleteAt(arr,3); printShort(arr) ;
     deleteByName(arr,'Ben'); deleteByName(arr,'Lekhraj Dinkar'); printShort(arr) ;
 }
+
+//sort
 function test_sort(){
     arr.sort(sortByAge); printShort(arr) ;
     arr.sort(sortByName); printShort(arr) ;
 }
 
+//reduce
 function test_reduce(){
-    arr.sort(sortByAge); printShort(arr) ;
-    arr.sort(sortByName); printShort(arr) ;
+   p("REDUCE :: List of userNbame: ", arr.reduce( (acc, cur, i, ar )=>{ return [...acc, cur.name]}, []))
+   p("REDUCE :: List of age: ", arr.reduce( (acc, cur, i, ar )=>{ return [...acc, cur.age]}, []))
+   p("REDUCE :: Sum of ages: ", arr.reduce( (acc, cur, i, ar )=>{ return acc + cur.age}, 0))
+   p("REDUCE :: All Hobbies : ", arr.reduce( (acc, cur, i, ar )=>{ return acc + ", "+cur.hobbies.join(", ")}, " initial value"))
 }
 
+//map
 function test_map(){
-    arr.sort(sortByAge); printShort(arr) ;
-    arr.sort(sortByName); printShort(arr) ;
+    p(arr.map( e => ({...e, initial: [...e.name.split(' ').reduce((acc,cur) => acc+cur[0],'')].join()}) ))
+    p(arr.map( e => ({...e, initial: e.name.split(' ').reduce((acc,cur) => acc+cur[0],'INY')}) ))
 }
 
 // =========== MAIN ============
 // test_delete_update() // loop, filter, find, findIndex
 // test_search() // slice, splice/delete
-test_sort()
+// test_sort()
+test_reduce()
+test_map()
 
 
 

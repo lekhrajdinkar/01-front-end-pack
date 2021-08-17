@@ -1,5 +1,7 @@
 'use strict';   const p = (...t) => console.log(...t); let tmp;
-
+//==========================================
+// MORE: slice, splice, reverse, merge,
+//==========================================
 const arr = [..."ABCDE"];
 p(arr);
 

@@ -1,19 +1,40 @@
-console.log('Building dice game...')
-// class player{
-//     name;
-//     current_score;
-//     total_score;
-//     is_active;
-// }
+'user strict'; const p = (...t) => console.log(...t); p('Building dice game...'); 
 
+// useful
+// document.querySelectorAll(".class");
+// document.querySelector("#id").classList.toggle('hide') / or add('hide')
+// document.querySelector("#id").style.backgroundColor = 'white'
+// document.querySelector("#id").addAdjacentHTML('afterbegin', 'element') -> run this code in loop to add multiple elements. 
 
+// DOM manipulation excercise
+let e;
+e = document.querySelector("#player__b"); 
+// e.innerText wont work below
+e.innerHTML = `<div class="name" id="player__b__name"> !! </div>
+                <div class="total-score">total score : <span></span> </div>
+                <div class="current-score">Current score: <span></span> </div>
+                <div class="active"></div>
+                `
+console.log(e.innerText, e.innerHTML);
+
+e.insertAdjacentHTML('afterend', '<div id="game__log"></div>');
+
+//+++++++++++++++++++++++++++++++++++
+// GAME
+//+++++++++++++++++++++++++++++++++++
 let player_a = { index:0, name: 'PLAYER-A', total_score: 0, current_score: 0}
 let player_b = { index:1, name: 'PLAYER-B', total_score: 0, current_score: 0}
 let players = [player_a, player_b];
 let active_player = players[0];
 let temp_total = 0
 let start=false
-let game_log = []
+let game_log = [{player: active_player.name, dice: 'start'}];
+
+function update_log(){
+    let e = document.querySelector("#game__log");
+    game_log.forEach((log,i,arr) => e.insertAdjacentHTML('beforebegin', `<br><div> ${log.player} ${log.dice} </div>`))
+}
+update_log()
 
 function restart()
 {
@@ -27,7 +48,7 @@ function restart()
         temp_total = 0;
         players_[0].children[3].innerText = 'Your Turn';
         for(let i=0; i<players.length; i++){
-            players_[i].children[0].innerText = prompt("Player -1 Name")
+            players_[i].children[0].innerText = players_[i].name;
             console.log(players_[i].children[1].children[0].innerText = 0)
             console.log(players_[i].children[2].children[0].innerText = 0)
             players[i].total_score = 0
@@ -40,7 +61,8 @@ function roll(){
     let dice = Math.floor(Math.random() * 7);
     while(dice === 0 ) dice = Math.floor(Math.random() * 7);
     
-    game_log.push({player: active_player.name, dice: dice})
+    game_log.push({player: active_player.name, dice: dice});  // update_log();
+    
     if (dice === 1){
         active_player.current_score = 0
         active_player.total_score = 0
@@ -70,7 +92,7 @@ function roll(){
 function hold()
 {
     let players_ = document.querySelectorAll(".player-containor");
-    game_log.push({player: active_player.name, action: 'hold'})
+    game_log.push({player: active_player.name, action: 'hold'});  // update_log();
     document.querySelector(".dice").innerText = '?';
     active_player.total_score = active_player.total_score + active_player.current_score;
     active_player.current_score = 0;

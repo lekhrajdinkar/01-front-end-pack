@@ -74,5 +74,5 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
-// A. Add dynamic list of movments using insertAdjacentTML('afterbegin', h), innerHTML, foreah arr
-// A. Add dynamic list of movments using insertAdjacentTML('afterend', h)
+// A. Add dynamic list of movments using insertAdjacentHTML('afterbegin', h), innerHTML, foreah arr
+// A. Add dynamic list of movments using insertAdjacentHTML('afterend', h)
