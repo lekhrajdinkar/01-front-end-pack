@@ -18,7 +18,7 @@
   body {
     font-family: "Poppins", sans-serif;
     color: #444;
-    background-color: #f3f3f3;
+    background-image: linear-gradient(to top left, #ecb0bf, #ddb4ff);
     height: 100vh;
     padding: 2rem;
   }
@@ -36,7 +36,7 @@
   }
   
   .logo {
-    height: 5.25rem;
+    height: 3.25rem; padding-right: 2rem;
   }
   
   .login {
@@ -49,21 +49,22 @@
     font-size: 1.6rem;
     font-family: inherit;
     text-align: center;
-    width: 12rem;
+    width: 10rem;
     border-radius: 10rem;
     margin-right: 1rem;
     color: inherit;
     border: 1px solid #fff;
-    transition: all 0.3s;
+    transition: all 1s;
   }
   
   .login__input:focus {
     outline: none;
     border: 1px solid #ccc;
+    width: 30rem;
   }
   
   .login__input::placeholder {
-    color: #bbb;
+    color: rgb(233, 130, 130);
   }
   
   .login__btn {
@@ -89,9 +90,9 @@
     max-width: 100rem;
     margin: 4rem auto;
     display: grid;
-    grid-template-columns: 4fr 3fr;
+    grid-template-columns: 3fr 4fr;
     grid-template-rows: auto repeat(3, 15rem) auto;
-    gap: 2rem;
+    gap: 3rem;
   
     /* NOTE This creates the fade in/out anumation */
     opacity: 0;
@@ -125,37 +126,39 @@
   /* MOVEMENTS */
   .movements {
     grid-row: 2 / span 3;
-    background-color: #fff;
+    background-color: white;
     border-radius: 1rem;
     overflow: scroll;
   }
   
   .movements__row {
-    padding: 2.25rem 4rem;
+    padding: 2.25rem 2rem;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #eee;
+    border-bottom: 5px solid #eee;
+    background-image: linear-gradient(to top left, #ffffff, #f7d2e8);
   }
   
   .movements__type {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 500;
-    color: #fff;
-    padding: 0.1rem 1rem;
+    color: rgb(88, 72, 72);
+    padding: 0.5rem 2rem;
     border-radius: 10rem;
     margin-right: 2rem;
+    transform: rotate(-15deg);
   }
   
   .movements__date {
-    font-size: 1.1rem;
+    font-size: 2.1rem;
     text-transform: uppercase;
-    font-weight: 500;
-    color: #666;
+    font-weight: 400;
+    color: rgb(88, 72, 72);
   }
   
   .movements__type--deposit {
-    background-image: linear-gradient(to top left, #39b385, #9be15d);
+    background-image: linear-gradient(to top left, #caebde, #c9f7a0);
   }
   
   .movements__type--withdrawal {
@@ -163,7 +166,7 @@
   }
   
   .movements__value {
-    font-size: 1.7rem;
+    font-size: 3rem;
     margin-left: auto;
   }
   
@@ -190,11 +193,11 @@
   
   .summary__value--in,
   .summary__value--interest {
-    color: #66c873;
+    color: #68806b;
   }
   
   .summary__value--out {
-    color: #f5465d;
+    color: #68806b;
   }
   
   .btn--sort {
@@ -214,15 +217,15 @@
   }
   
   .operation--transfer {
-    background-image: linear-gradient(to top left, #ffb003, #ffcb03);
+    background-image: linear-gradient(to top left, #ece7db, #e2b1cf);
   }
   
   .operation--loan {
-    background-image: linear-gradient(to top left, #39b385, #9be15d);
+    background-image: linear-gradient(to top left, #ece7db, #e2b1cf);
   }
   
   .operation--close {
-    background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+    background-image: linear-gradient(to top left, #ece7db, #e2b1cf);
   }
   
   h2 {

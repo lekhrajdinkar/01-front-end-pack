@@ -29,9 +29,9 @@ const usa = {
 const taiwan = {
   name: 'Taiwan',
   infected: [
-    ['xxx',[200, 3000,650 ] ],
-    ['YYY',[200, 450, 400] ],
-    ['ZZZ',[200, 70, 1300] ]
+    ['Jiadong',[200, 3000,650 ] ],
+    ['Jinhu ',[200, 450, 400] ],
+    ['Juguang ',[200, 70, 1300] ]
   ],
   death: [20, 45, 40, 30,65, 13, 7, 13], vacinated: [20, 45, 40 ]
 };
@@ -121,6 +121,8 @@ function show(e)
   labelinfectedCount.innerText = getInfectedCount(activeCountry); //2. add country count
   addStates(activeCountry) //3.  add states count
   containerApp.style.opacity = 100;
+  inputCountrySearch.value = '';
+  inputCountrySearch.blur();
 }
 
 btnSearch.addEventListener('click', show)
