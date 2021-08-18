@@ -53,3 +53,29 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+//===================PART-2 : Smooth scrolling =============
+const section_1 = document.querySelector('#section--1')
+const learn_more_btn = document.querySelector('.btn--scroll-to');
+learn_more_btn.addEventListener('click', ()=>{
+  //old way
+  // const rect = section_1.getBoundingClientRect();
+  // window.scrollTo({
+  //   left: rect.left + window.pageXOffset, 
+  //   top:  rect.top + window.pageYOffset,
+  //   behavior: 'smooth'
+  // });
+  // new way
+  section_1.scrollIntoView({behavior: 'smooth'})
+})
+
+//===================PART-3 :Events =============
+// A. Lsiyen to event once: pattern
+// B. Propogation - bubble and capturing
+function parent_event_handler(e){console.log('Event handle at parent', e.target)}
+function child_event_handler(e) {console.log('Event handle at child', e.target)}
+document.querySelector('#section--1').addEventListener('click', parent_event_handler);
+document.querySelector('#section--1--title').addEventListener('click', child_event_handler);
+
+
+

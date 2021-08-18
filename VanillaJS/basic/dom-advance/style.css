@@ -28,9 +28,9 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  color: #444;
+  color: rgb(253, 252, 252);
   line-height: 1.9;
-  background-color: #f3f3f3;
+  background-color: #778180;
 }
 
 /* GENERAL ELEMENTS */
@@ -110,7 +110,7 @@ img {
 }
 
 .lazy-img {
-  filter: blur(20px);
+  filter: blur(10px);
 }
 
 /* NAVIGATION */
