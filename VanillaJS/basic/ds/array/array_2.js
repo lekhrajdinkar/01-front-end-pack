@@ -1,7 +1,7 @@
 'use strict'; const p = (...t) => console.log(...t); let tmp;
 
 //============================================================================================
-// HIGH ORDER FUNCTION : for each, map, filter, find, findIndex, reduce, filter
+// HIGH ORDER FUNCTION : for each, map, filter, find, findIndex, reduce, filter \ more: concat
 //============================================================================================
 
 //Array

@@ -1,4 +1,23 @@
 'use strict'; const p = (...t) => console.log(...t); let tmp;
+
+//================== CREATE =============
+function create(){
+    console.log('-----create---------[1,2,3,4,5]-----------------------------\n')
+    let arr = [1,2,3,4,5]; p(arr)
+    arr = Array.from({length: 5} , (cur, i) => i + 1); p(arr)
+
+    console.log('-----create-------[1,1,1,1,1]-------------------------------\n')
+    arr = [1,1,1,1,1]; p(arr)
+    arr = Array.from({length: 5} , (cur, i) => 1); p(arr)
+
+    console.log('-----------Blank  array--------------------------------\n')
+    arr = Array(5); p(arr);
+    arr.fill("NEW", 0,2); p(arr);
+
+    // usecase : convert nodelist into array and then use use array method on it.
+    // arr = Array.from(document.querySelectorAll(".class-1"))
+}
+create()
 //==========================================
 // BASIC OPERATION and Desstructiing
 //==========================================

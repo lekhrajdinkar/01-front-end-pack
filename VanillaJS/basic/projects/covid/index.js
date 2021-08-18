@@ -40,7 +40,6 @@ const taiwan = {
 
 const countries = [india, usa, taiwan];
 
-
 // Elements
 const labelWelcome = document.querySelector('.welcome');
 const labelDate = document.querySelector('.date');
@@ -101,7 +100,7 @@ function addStates(activeCountry){
   for( const [k,v] of new Map(activeCountry.infected).entries()){
     const sum = v.reduce( accumulate, 0)
     const  html = 
-    ` <div class="movements__row">
+    ` <div class="movements__row" onclick="alert('clicked')">
         <div class="movements__type movements__type--deposit">HIGH</div>
         <div class="movements__date">${k}</div>
         <div class="movements__value">${sum}</div>
@@ -109,7 +108,8 @@ function addStates(activeCountry){
 
     containerMovements.insertAdjacentHTML('afterbegin', html)
   }
-
+  const arr = Array.from(document.querySelectorAll(".movements__row")); console.log(arr);
+  arr.filter(d => p(d.children))
 }
 
 // ==== MAIN =========
