@@ -112,13 +112,13 @@
     margin-bottom: -0.2rem;
   }
   
-  .balance__date {
+  .country__count {
     font-size: 1.4rem;
     color: #888;
   }
   
-  .balance__value {
-    font-size: 4.5rem;
+  .global__count {
+    font-size: 3.5rem;
     font-weight: 400;
   }
   
