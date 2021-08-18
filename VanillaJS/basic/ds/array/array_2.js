@@ -28,7 +28,7 @@ const printShort = arr => {
     arr.forEach( n,i,arr => console.log(i, arr, n.name, n.age , '||', (n.edu?.hq ?? 'KID'), '||', ...n.hobbies)  ); //first_non_nullish (und/null)
     console.log('-----------------------------------') 
 }
-const findByName = (arr, name) => arr.find( n  => n.name === name)
+const findByName = (arr, name) => arr.find( (n,i,arr)  => n.name === name)
 const deleteAt = (arr, i) => arr.splice(i,1)
 const deleteByName = (arr, nam) => { 
     const i = arr.findIndex( n => n.name === nam)
@@ -40,10 +40,10 @@ function test_search(){
     console.log('1. Print: '); arr.forEach(print);
 
     console.log('\n2. ============== Filter =========='); 
-    arr.filter(filterByhobby ).forEach(print)
+    arr.filter(filterByhobby ).forEach(print);
 
     console.log('\n3. ============== Find ============= ', arr.find(findBen)); 
-    console.log(findByName(arr,'Manisha Prasad') )
+    console.log(findByName(arr,'Manisha Prasad') );
 }
 // slice, splice
 function test_delete_update(){
@@ -74,12 +74,39 @@ function test_map(){
     p(arr.map( e => ({...e, initial: e.name.split(' ').reduce((acc,cur) => acc+cur[0],'INY')}) ))
 }
 
+// some and every
+function test_more(){
+    const arr = [12, 20,30,40,50];
+    p(arr.some(a => a === 20)) 
+    p(arr.includes(20))
+
+    p(arr.some(a => a%10 === 0))
+    p(arr.every(a => a%10 === 0))
+}
+
+// flat
+function test_flat_flatMap(){
+    const ar = [12,20,30,[400,500], [[1000,2000]]]; // havinf 2 level depth
+    p(ar.flat(1)) 
+    p(ar.flat(2))
+
+    p(arr.map( a => a.hobbies).flat(1)) //map followed by flat with depth = 1 : flatmap
+    p(arr.flatMap( a => a.hobbies)) ; // flatmap is same as map chained by flat(1)
+    p(new Set(arr.flatMap( a => a.hobbies))) ; // 
+}
+
 // =========== MAIN ============
 // test_delete_update() // loop, filter, find, findIndex
-// test_search() // slice, splice/delete
+ test_search() // slice, splice/delete
 // test_sort()
-test_reduce()
-test_map()
+// test_reduce()
+// test_map()
+// test_more()
+test_flat_flatMap()
+
+// Chain multiple HOF, Good feature. 
+// In order to check intermdeiate result, arr 3rd/4th arg is imp, because its result of previous opertor.
+// (acc, cur, i, ar ) ={} or (cur, i, ar ) => {}
 
 
 
