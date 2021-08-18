@@ -1,6 +1,6 @@
 'use strict'; const p = (...t) => console.log(...t); let tmp;
 
-//useful
+// PART-1 useful
 // A. Select
 p(document.documentElement.clientHeight, document.documentElement.clientWidth); //html
 p(document.querySelectorAll('.section'));
@@ -22,6 +22,7 @@ header.append(div); // Add as last child
 document.querySelector('.btn-close-cookie').addEventListener('click', ()=>div.remove())
 div.style.backgroundColor = '#ff58602d';
 
+// PART-2 : Smooth scrolling
 
 ///////////////////////////////////////
 // Modal window

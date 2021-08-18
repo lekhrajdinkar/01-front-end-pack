@@ -132,10 +132,10 @@
   }
   
   .movements__row {
-    padding: 2.25rem 2rem;
+    padding: 0.6rem 1rem;
     display: flex;
     align-items: center;
-    border-bottom: 5px solid #eee;
+    border-bottom: 2px solid rgb(114, 108, 108);
     background-image: linear-gradient(to top left, #ffffff, #f7d2e8);
   }
   
@@ -151,18 +151,18 @@
   }
   
   .movements__date {
-    font-size: 2.1rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 400;
     color: rgb(88, 72, 72);
   }
   
   .movements__type--deposit {
-    background-image: linear-gradient(to top left, #caebde, #c9f7a0);
+    background-image: linear-gradient(to top left, #88e0bd, #c9f7a0);
   }
   
   .movements__type--withdrawal {
-    background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+    background-image: linear-gradient(to top left, #c9f5ad, #fad8da);
   }
   
   .movements__value {

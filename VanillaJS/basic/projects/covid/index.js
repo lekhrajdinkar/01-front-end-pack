@@ -108,8 +108,10 @@ function addStates(activeCountry){
 
     containerMovements.insertAdjacentHTML('afterbegin', html)
   }
+
+  // Change background color of alternative list item
   const arr = Array.from(document.querySelectorAll(".movements__row")); console.log(arr);
-  arr.filter(d => p(d.children))
+  arr.forEach((cur, i, ar) => {if(i%2 == 0) cur.classList.add('movements__type--withdrawal')}) 
 }
 
 // ==== MAIN =========
