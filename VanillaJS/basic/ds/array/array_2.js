@@ -86,9 +86,10 @@ function test_more(){
 
 // flat
 function test_flat_flatMap(){
-    const ar = [12,20,30,[400,500], [[1000,2000]]]; // havinf 2 level depth
+    const ar = [12,20,30,[400,500], [[1000,7000]]]; // havinf 2 level depth
     p(ar.flat(1)) 
     p(ar.flat(2))
+    p("SORTED NESTED NUMBER Assry: ", ar.sort()) // coverts number into String and then sorts
 
     p(arr.map( a => a.hobbies).flat(1)) //map followed by flat with depth = 1 : flatmap
     p(arr.flatMap( a => a.hobbies)) ; // flatmap is same as map chained by flat(1)
