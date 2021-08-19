@@ -42,7 +42,7 @@ function createDots(){
 
 const init = function () {
   goToSlide(curSlide);
-  createDots();
+  createDots();//dynamically create based on slides count
   activateDot(0);
   btnRight.addEventListener('click', next_slide)
   btnLeft.addEventListener('click', previous_slide)

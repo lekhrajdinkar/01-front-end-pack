@@ -156,3 +156,24 @@ sections.forEach(s=>{
   s.classList.add('section--hidden');
 });
 
+// ============== Load Images on scroll =================
+
+const image_options = {root: null, thresold: 0.15}
+
+const loadImg_cb = (entries, obsvr) => {
+  const [entry] = entries; 
+  if(!entry.isIntersecting)return;
+  setTimeout(() => { 
+    entry.target.classList.remove('lazy-img');
+  }, 1000);
+  setTimeout(() => { 
+    entry.target.src= entry.target.getAttribute('data-src');
+  }, 2000);
+  obsvr.unobserve(entry.target);
+}
+
+const loadImg_obsvr = new IntersectionObserver(loadImg_cb, image_options);
+//subscribe
+const features_img = document.querySelectorAll('.features__img');
+features_img.forEach(img => loadImg_obsvr.observe(img));
+
