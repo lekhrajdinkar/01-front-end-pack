@@ -29,23 +29,18 @@ operation_tab_container.addEventListener('click',  (e) => {
 })
 
 // B. Add mouse event
-// const mouse_cb = (e, opacity) => {
-//   const con = e.target.closest('.operations__tab-container');
-//   console.log(con, con.children)
-//   Array.from(con.children).forEach(c=> c.style.opacity = opacity)
-// }
-// Mouseover and mouseout bubble the event
-operation_tab_container.addEventListener('mouseover', (e) => {
+// IMP : CN for event handler takes one argument, how to pass more arg. 
+// use bind and this combinition, check below.
+function mouse_cb(e) {
   const btn = e.target.closest('.operations__tab');
   const con = e.target.closest('.operations__tab-container');
-  //console.log(con, con.children)
-  Array.from(con.children).forEach(c=> {if(btn !== c) {c.style.opacity = 0.5}})
-} );
+  console.log(this.other) ; //), con, con.children)
+  Array.from(con.children).forEach(c=> {if(btn !== c) {c.style.opacity = this.opacity}})
+}
 
-operation_tab_container.addEventListener('mouseout',  (e) => {
-  const con = e.target.closest('.operations__tab-container');
-  Array.from(con.children).forEach(c=> c.style.opacity = 1)
-});
+// Mouseover and mouseout bubble the event
+operation_tab_container.addEventListener('mouseover', mouse_cb.bind({opacity: 0.5, other: 'calling mouseover cb ....'}));
+operation_tab_container.addEventListener('mouseout',  mouse_cb.bind({opacity: 1, other: 'calling mouseout cb ....'}));
 
 
 
