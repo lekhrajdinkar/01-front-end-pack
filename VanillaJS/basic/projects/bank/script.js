@@ -20,7 +20,7 @@ header.append(div); // Add as last child
 // prepend : add as first child
 // before and after - Add as sibling element.
 document.querySelector('.btn-close-cookie').addEventListener('click', ()=>div.remove())
-div.style.backgroundColor = '#ff58602d';
+//div.style.backgroundColor = '#ff58602d';
 
 // PART-2 : Smooth scrolling
 // section_1.scrollIntoView({behavior: 'smooth'})
@@ -133,5 +133,26 @@ const cb = (entries, obsvr) => {
 const options = {root: null, thresold: 0.1, rootMargin: '-90px'} //interset 0. % of root element /vp
 const obsvr = new IntersectionObserver(cb, options)
 
+// subscribe
 obsvr.observe(document.querySelector('.header'));
+
+// ============ section showup effect ==========
+
+const section_options = {root: null, thresold: 0.15}
+
+const revealSection_cb = (entries, obsvr) => {
+  const [entry] = entries; 
+  if(!entry.isIntersecting)return;
+  entry.target.classList.remove('section--hidden')
+  //obsvr.unobserve(entry.target);
+}
+
+const section_obsvr = new IntersectionObserver(revealSection_cb, section_options);
+
+// subscribe
+const sections = document.querySelectorAll('.section');
+sections.forEach(s=>{
+  section_obsvr.observe(s);
+  s.classList.add('section--hidden');
+});
 
