@@ -118,6 +118,7 @@ img {
   max-width: 100rem;
   margin: 12rem auto 0 auto;
   background-color: #fff;
+  border-radius: 2rem;
 }
 
 /* button containor */
@@ -165,6 +166,7 @@ img {
   /* JUST PRESENTATIONAL */
   font-size: 1.7rem;
   padding: 2.5rem 7rem 6.5rem 7rem;
+  
 }
 
 .operations__content--active {
@@ -178,6 +180,7 @@ img {
   font-size: 2.25rem;
   font-weight: 500;
   align-self: center;
+  color: #666;
 }
 
 .operations__icon {
