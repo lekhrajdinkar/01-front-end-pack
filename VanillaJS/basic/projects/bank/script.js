@@ -98,29 +98,40 @@ nav_links.addEventListener('click', (e) => {
   if(section) section.scrollIntoView({behavior: 'smooth'});
 })
 
-// D. tabbed components
-// operations__tab-container > (B1 > s1) +  (B2 > s2) + (B3 > s3) 
-const operation_tab_container = document.querySelector('.operations__tab-container');
-operation_tab_container.addEventListener('click',  (e) => {
-    console.log("\n\nclicked", e.target) // button or span.
-    // cant use e.target.parent
 
-    // parent of btn : operations__tab-container (cantainer of all 3 btn)
-    // parent of span : operations__tab (btn)
-    console.log("its parent:", e.target.parentElement); 
-    
-    // How to always get operations__tab, irrspective what we clicked: span od btn itself
-    console.log("button / .operations__tab >> ", e.target.closest('.operations__tab')) //this is perfect
+// D. Sticky Nav
+const scroll_cb = () => {
+  const nav = document.querySelector('.nav');
+  const section_1 = document.querySelector('#section--1');
+  const rect = section_1.getBoundingClientRect();
+  nav.classList.add('sticky');
 
-  const btn_clicked = e.target.closest('.operations__tab');
-  const tab_num = btn_clicked.getAttribute('data-tab');
+  if(window.scrollY == 0)
+  {  nav.classList.toggle('sticky');  nav.style.color = 'white'}
 
-  const nodelist_btns = document.querySelectorAll('.operations__content');
-  nodelist_btns.forEach(e => e.classList.remove('operations__content--active'));
+  if(window.scrollY > rect.top/3)
+    {  nav.style.backGround = 'red' }
 
-  document.querySelector(`.operations__content--${tab_num}`).classList.add('operations__content--active');
+  if(window.scrollY > rect.top/2)
+  {  nav.style.color = 'green' }
 
-})
+  if(window.scrollY > rect.top)
+  {  nav.style.color = 'yellow' }
+}
+window.addEventListener('scroll', scroll_cb);
+window.removeEventListener('scroll', scroll_cb)
 
+//=========== better way, above solution has performance issue on older smart phone.
+// ======= IntersectionObserver ======
 
+const cb = (entries, obsvr) => {
+  console.log(entries);
+  const [entry] = entries; // [entry] = entries[0]
+  const nav = document.querySelector('.nav');
+  entry.isIntersecting ? nav.classList.remove('sticky') :  nav.classList.add('sticky')
+}
+const options = {root: null, thresold: 0.1, rootMargin: '-90px'} //interset 0. % of root element /vp
+const obsvr = new IntersectionObserver(cb, options)
+
+obsvr.observe(document.querySelector('.header'));
 
