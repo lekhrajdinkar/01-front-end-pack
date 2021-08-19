@@ -23,6 +23,11 @@ document.querySelector('.btn-close-cookie').addEventListener('click', ()=>div.re
 div.style.backgroundColor = '#ff58602d';
 
 // PART-2 : Smooth scrolling
+// section_1.scrollIntoView({behavior: 'smooth'})
+
+// PART-3 Events
+// event tracking and bubbling
+// god practice to add event at parent rather than adding on 100 child then use e.target
 
 ///////////////////////////////////////
 // Modal window
@@ -73,9 +78,22 @@ learn_more_btn.addEventListener('click', ()=>{
 // A. Lsiyen to event once: pattern
 // B. Propogation - bubble and capturing
 function parent_event_handler(e){console.log('Event handle at parent', e.target)}
-function child_event_handler(e) {console.log('Event handle at child', e.target)}
+function child_event_handler(e) {
+  console.log('Event handle at child', e.target);
+  //e.stopPropagation
+}
 document.querySelector('#section--1').addEventListener('click', parent_event_handler);
 document.querySelector('#section--1--title').addEventListener('click', child_event_handler);
 
+const nav_links = document.querySelector('.nav__links');
+//nav_links.children.forEach(l => l.addEventListener())
+// C. Add smooth scroll on nav links 
+nav_links.addEventListener('click', (e) => {
+  e.preventDefault();
+  const id = e.target.getAttribute('href')
+  const section = document.querySelector(id);
+  console.log("nav_links.addEventListener::", id, section, e.target)
+  if(section) section.scrollIntoView({behavior: 'smooth'});
+})
 
 
