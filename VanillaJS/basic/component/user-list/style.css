@@ -1,0 +1,82 @@
+/* The page is NOT responsive. You can implement responsiveness yourself if you wanna have some fun 😃 */
+*{
+  margin: 0; padding: 0;
+}
+body {
+  background-color: azure;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-justify: center;
+  overflow: hidden;
+  height: 100vh;
+  overflow:hidden;
+  
+}
+
+.containor{
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  width:324px;
+  overflow: hidden;
+}
+
+.header{
+  background-color: rgb(51, 92, 216);
+  color: white;
+  padding: 1rem 2rem;
+}
+header input{ 
+  background-color: rgb(35, 64, 153);
+  border-radius: 50px;
+  border: none; color: white; width: 100%;
+  padding: 5px; text-align: center;
+  margin-top: 20px;
+  /* transition: width 0.5s cubic-bezier(0.19, 1, 0.22, 1); */
+}
+header input:focus{
+  outline: none;
+}
+
+header h4{ 
+  margin: 5px 0 20px;
+  opacity: 0.8;
+}
+
+.user-list{
+  background-color: seashell;
+  list-style: none;
+  max-height: 400px;
+  overflow-Y: auto;
+}
+
+.user-list li.hide{
+  display: none;
+}
+.user-list li{
+ display: flex;
+ padding: 20px;
+}
+.user-list li:not(:last-of-type){
+  border-bottom: 1px solid rgb(230, 230, 185);
+}
+
+.user-list img{
+  border-radius: 50%;
+  width: 50px;
+  object-fit: cover;
+ }
+
+ .user-list .user-info{
+  margin-left: 20px;
+ }
+
+ .user-list h4{
+  font-size: 1rem;
+ }
+ .user-list p{
+  font-size: 0.8rem;
+ }
+
+
