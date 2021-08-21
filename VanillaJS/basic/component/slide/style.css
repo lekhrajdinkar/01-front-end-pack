@@ -1,0 +1,83 @@
+/* The page is NOT responsive. You can implement responsiveness yourself if you wanna have some fun 😃 */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  line-height: 1.9;
+  text-justify: center;
+  overflow: hidden;
+}
+
+
+.slide-containor-left{
+  position: absolute;
+  width: 35vw;
+  background-color: 2px solid #5d6868;
+  z-index: 100;
+}
+
+.slide-containor-right{
+  position: absolute; left: 35vw;
+  width: 65vw;
+  background-color: #ade9e9;
+  z-index: 100;
+}
+
+.slide{
+  position: relative; 
+  width: 100%; height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; align-items: center;
+  z-index: 200;
+}
+.slide--left--0{ background-color: blanchedalmond; }
+.slide--left--1{ background-color: rgb(224, 243, 189); }
+.slide--left--2{ background-color: rgb(187, 215, 241); }
+
+.slide--right--2{ background-color: blanchedalmond; }
+.slide--right--1{ background-color: rgb(224, 243, 189); }
+.slide--right--0{ background-color: rgb(187, 215, 241); }
+
+.btn{
+  position: fixed;left:35vw;
+  top: 50vh;
+  width: 50px;
+  padding: 2rem 0;
+  border: none;
+  z-index: 300;
+  cursor: pointer;
+}
+.btn-down{ transform: translateX(-50px) translateY(50px);}
+
+textarea{
+  background-color: rgb(7, 64, 170);
+  color: azure;
+  border-radius: 1rem;
+  text-align: center;
+  text-justify: center;
+  width: 50%;
+  font-size: 2rem;
+
+}
+textarea:focus{
+  outline: none;
+}
+
+.slide--right--0{
+  
+}
+
