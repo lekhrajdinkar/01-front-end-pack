@@ -135,11 +135,13 @@ function getCountryData(country){
 // pass 2nd CB in CB
 // ctach block
 
+//================================
+//      Async code execution
+//================================
 
 // CREATE :: Own promise function
-//const rcb = data => { console.log('RESOLVE CB', data);}
-//const ecb = err => { console.log('ERROR CB', err)}
-
+// IMP :: promises runs async way
+// eg 1
 function myPromise(rcb, ecb){
     const num = (Math.random() * 9);
     if ( num > 5) rcb('SUCCESS !! greater than 5');
@@ -148,6 +150,7 @@ function myPromise(rcb, ecb){
 
 const p = new Promise(myPromise);
 
+//then conssume
 p.then(
     data => console.log(data)
 )
@@ -158,7 +161,8 @@ p.then(
     console.log('finally') //no CB.
 )
 
-// more example : create own get-fecth
+
+// eg 2:
 function fetch_get(url){
     
     function myPromise(rcb, ecb){
@@ -176,9 +180,44 @@ function fetch_get(url){
     return new Promise(myPromise);
 }
 
-fetch_get('https://restcountries.eu/rest/v2/name/india')
-.then(resp => console.log('fetch_get :: ',resp))
-.catch(err => console.err(err))
+// ========= A. PRG : Consume promise : fetch_get ========= using then 
+function test_promise(){
+    console.log('STEP A')
+
+    // IMP :: promise runs async way
+    fetch_get('https://restcountries.eu/rest/v2/name/india')
+    .then(resp => console.log('fetch_get :: ',resp))
+    .catch(err => console.err(err))
+
+    console.log('STEP B')
+}
+
+
+
+// ========= B. PRG : Consume promise : fetch_get =========  using async and await
+ // AWAIT is systax sugar over then, behind the scene using promise
+
+// 2 adv : 
+// - better handling of future data async delvered from cb
+// - Rrun asyn code, like setTimeOut
+
+async function myAsynCode(){
+    //try{
+        const resp = await fetch_get('https://restcountries.eu/rest/v2/name/india'); //consume, better than then-block
+        console.log('myAsynCode :: resp', resp);
+    //}catch{}
+}
+
+function test_aysnc_await(){
+    console.log('STEP A')
+    myAsynCode();
+    console.log('STEP B')
+}
+
+// test_promise() //                            <<<<<<<<<<< HERE
+test_aysnc_await()
+
+
 
 
 
