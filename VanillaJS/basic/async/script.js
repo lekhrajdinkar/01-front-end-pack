@@ -129,7 +129,7 @@ function getCountryData(country){
     .then(anna => {console.log(anna.const) ; return anna.const})
     .catch(err => console.error(err))
 }
-getCountryData('india')
+//getCountryData('india')                        <<<<<< HERE
 
 //there are 2ways to handle error:
 // pass 2nd CB in CB
@@ -137,9 +137,16 @@ getCountryData('india')
 
 
 // CREATE :: Own promise function
-const rcb = () => { console.log('RESOLVE CB'); return 20}
-const ecb = () => { console.log('ERROR CB')}
-const p = new Promise(rcb, ecb)
+//const rcb = data => { console.log('RESOLVE CB', data);}
+//const ecb = err => { console.log('ERROR CB', err)}
+
+function myPromise(rcb, ecb){
+    const num = (Math.random() * 9);
+    if ( num > 5) rcb('SUCCESS !! greater than 5');
+    else ecb('ERROR !! less/equal than/to 5')
+}
+
+const p = new Promise(myPromise);
 
 p.then(
     data => console.log(data)
@@ -150,6 +157,28 @@ p.then(
 .finally(
     console.log('finally') //no CB.
 )
+
+// more example : create own get-fecth
+function fetch_get(url){
+    
+    function myPromise(rcb, ecb){
+        const req = new XMLHttpRequest();
+        req.open('GET', url);
+        req.send();
+        
+        setTimeout(() => {
+            if(!req.responseText) ecb("TImeout error / 2s")
+        }, 2000);
+
+        req.addEventListener('load', () => rcb(JSON.parse(req.responseText)))
+    }
+    
+    return new Promise(myPromise);
+}
+
+fetch_get('https://restcountries.eu/rest/v2/name/india')
+.then(resp => console.log('fetch_get :: ',resp))
+.catch(err => console.err(err))
 
 
 
