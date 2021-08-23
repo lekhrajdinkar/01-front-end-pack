@@ -57,6 +57,16 @@ p(10000n, typeof 10000n, BigInt(10000), 20n > 19)
 
 
 
+//=========
+// NUMBERS
+//=========
+/// =============== Internationalization =========================
+const locale_india = new Intl.NumberFormat('en-IN');
+let num = 3666.675
+p(num, locale_india.format(num))
+
+
+
 
 
 
