@@ -11,17 +11,24 @@ more eg: DOM API, gelolocation API, AJAX, Own Class API, online API(fsr-api)
 // ==============================
 // PART-A Asynv vs Sync code
 // ==============================
+const callback_function = (arg) => { console.log('-- CB result -- ', arg) }
+function synFunc( cb1, cb_arg1) {
+    console.log('-- STEP B -- runnning cb1');
+    cb1(cb_arg1);
+    console.log('-- STEP B -- runnning cb1');
+}
 function eg(){
     //SYNC
     console.log('-- STEP A --')
-    alert('--- some backend groung operation ---');
-    console.log('-- STEP B --')
+    //alert('--- some backend groung operation ---');
+    synFunc(callback_function, 'Hello I am callback_function...');
+    console.log('-- STEP C --')
 
     //A-SYNC
     const cb = () => alert('--- some backend groung operation ---');
     console.log('-- STEP A --')
     setTimeout(cb,3000)  // it will run asynchrounsly in background without effecting main thread. //NON-blocking
-    console.log('-- STEP B --')// it will not to wait to setTimeout to finish execution.
+    console.log('-- STEP C --')// it will not to wait to setTimeout to finish execution.
 
     //Another example //A-sysn
     const imgEl = document.querySelector('img');
@@ -33,6 +40,7 @@ function eg(){
     iFrameEl.addEventListener('load', ()=>alert('video loaded'))
     //lot of array method also takes callback function but those are not executed in SYN ways.
 }
+eg();
 
 // ==============================
 // PART-B . AJAX most common usecase of Asyn call
@@ -215,7 +223,7 @@ function test_aysnc_await(){
 }
 
 // test_promise() //                            <<<<<<<<<<< HERE
-test_aysnc_await()
+// test_aysnc_await()
 
 
 
