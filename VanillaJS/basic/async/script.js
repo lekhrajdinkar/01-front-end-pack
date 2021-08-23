@@ -40,7 +40,7 @@ function eg(){
     iFrameEl.addEventListener('load', ()=>alert('video loaded'))
     //lot of array method also takes callback function but those are not executed in SYN ways.
 }
-eg();
+//eg();
 
 // ==============================
 // PART-B . AJAX most common usecase of Asyn call
@@ -158,9 +158,9 @@ function myPromise(rcb, ecb){
 
 const p = new Promise(myPromise);
 
-//then conssume
+//then consume
 p.then(
-    data => console.log(data)
+    data => console.log(data) // IMPORTANT : goes to micro task Queue which has more priority than callback queue
 )
 .catch(
     err => console.log(err)
@@ -208,22 +208,25 @@ function test_promise(){
 // 2 adv : 
 // - better handling of future data async delvered from cb
 // - Rrun asyn code, like setTimeOut
+// IMPOTANT : Async function always return Promise
 
 async function myAsynCode(){
-    //try{
+    try{
         const resp = await fetch_get('https://restcountries.eu/rest/v2/name/india'); //consume, better than then-block
         console.log('myAsynCode :: resp', resp);
-    //}catch{}
+        return resp; // has no impact, async function return promise.
+    }catch(e){console.error(e)}
 }
 
 function test_aysnc_await(){
     console.log('STEP A')
-    myAsynCode();
+    //console.log(myAsynCode()); //return Promise, javaScript 
+    myAsynCode().then(d => console.log("get return value from async function : ",d))
     console.log('STEP B')
 }
 
 // test_promise() //                            <<<<<<<<<<< HERE
-// test_aysnc_await()
+ test_aysnc_await()
 
 
 
