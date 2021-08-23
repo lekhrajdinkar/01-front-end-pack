@@ -231,18 +231,83 @@ function test_aysnc_await(){
 
     console.log('STEP B')
 }
-
-// Race, any, allSettled... continue...
-function combinePromise(){
-    return Promise.all(
-        fetch('https://restcountries.eu/rest/v2/name/india'),
-        fetch('https://restcountries.eu/rest/v2/name/usa'),
-        fetch('https://restcountries.eu/rest/v2/name/canada')
-        );
-}
 // test_promise() //                            <<<<<<<<<<< HERE
- // test_aysnc_await()
- combinePromise()
+// test_aysnc_await()
+
+// ====================================================
+// Race, any, allSettled
+// ====================================================
+// Time Out promise
+// directly returned Promise
+const timeOutPromise = new Promise(function(_, reject){
+    setTimeout(() => {
+        reject(" >>> Operation took longer !!")
+    }, 500);
+ })
+
+ // Fake 
+ // they are all function
+ const fakePromise1  = () =>  new Promise(function(resolve, _){
+    setTimeout(() => {
+        resolve({ d: "Fake data 1 from fake promise !!", t: new Date()})
+    }, 1000);
+ })
+ const fakePromise2  =  () =>  new Promise(function(resolve, _){
+    setTimeout(() => {
+        resolve("Fake data 2 from fake promise !!")
+    }, 2000);
+ })
+ const fakePromise3  =   () =>  new Promise(function(resolve, _){
+    setTimeout(() => {
+        resolve("Fake data 3 from fake promise !!")
+    }, 3000);
+ })
+
+ // ---------
+ //one
+ // any first promise settled with resolved or rejected
+function test_racePromise(){
+    return Promise.race([fakePromise1(), fakePromise2(), fakePromise3(), timeOutPromise])
+    .then(d => console.log('racePromise resolved: ',d))
+    .catch(err => console.error('racePromise rejected: ',err));
+}
+
+// any first promise settled with resolved
+function test_anyPromise(){
+    return Promise.any([timeOutPromise, fakePromise1(), fakePromise2(), fakePromise3()])
+     .then(d => console.log('anyPromise resolved: ',d))
+     .catch(err => console.error('anyPromise rejected: ',err));
+}
+
+// All
+// all promise settled with resolved or rejected
+// d is array of <rsolved data>
+function test_allSettledPromise(){
+    return Promise.allSettled([fakePromise1(), fakePromise2(), fakePromise3(), timeOutPromise])
+     .then(d => console.log('allSettledPromise resolved: ',d))
+     .catch(err => console.error('allSettledPromise rejected: ',err));
+}
+
+// all promise settled with resolved
+// d is array of {status: , value: <rsolved data>}
+function test_allPromise(){
+    return Promise.all([fakePromise1(), fakePromise2(), fakePromise3()])
+     .then(d => console.log('allPromise resolved: ',d))
+     .catch(err => console.error('allPromise rejected: ',err));
+}
+
+
+
+
+test_racePromise();
+test_allPromise();
+test_allSettledPromise();
+test_anyPromise();
+
+// allSettledPromise()
+//racePromise()
+
+
 
 
 
