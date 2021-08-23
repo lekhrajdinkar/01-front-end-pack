@@ -215,18 +215,34 @@ async function myAsynCode(){
         const resp = await fetch_get('https://restcountries.eu/rest/v2/name/india'); //consume, better than then-block
         console.log('myAsynCode :: resp', resp);
         return resp; // has no impact, async function return promise.
-    }catch(e){console.error(e)}
+    }catch(e){
+        console.error(e);
+        throw e; // so that it will propogate to below then
+    }
 }
 
 function test_aysnc_await(){
     console.log('STEP A')
+
     //console.log(myAsynCode()); //return Promise, javaScript 
-    myAsynCode().then(d => console.log("get return value from async function : ",d))
+    myAsynCode()
+    .then(d => console.log("get return value from async function : ",d))
+    .catch(e => {})
+
     console.log('STEP B')
 }
 
+// Race, any, allSettled... continue...
+function combinePromise(){
+    return Promise.all(
+        fetch('https://restcountries.eu/rest/v2/name/india'),
+        fetch('https://restcountries.eu/rest/v2/name/usa'),
+        fetch('https://restcountries.eu/rest/v2/name/canada')
+        );
+}
 // test_promise() //                            <<<<<<<<<<< HERE
- test_aysnc_await()
+ // test_aysnc_await()
+ combinePromise()
 
 
 
