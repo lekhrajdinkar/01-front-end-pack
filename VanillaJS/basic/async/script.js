@@ -53,15 +53,19 @@ function ajax_call(country){
     return req;
 }
 
+// create cb for load event as well, as we dont know how long it  would take load country data.
+//Case-1 : make ajax call twice.
 function receive_data_random(){
     const data = JSON.parse(this.responseText)
     console.log('COUNTRY DATA: ', data)
 }
 
-
+// case-2 : Load usa first and then india
+// sol: chain india ajax inside usa ajax
 function receive_data_cb_hell(){
     console.log('USA: ',JSON.parse(this.responseText)) // this === req
 
+    // nested ajax for india
     const req2 = ajax_call('india'); // AJAX 2
     //const data = {req: this}
     req2.addEventListener('load', receive_data_sequence); // .bind(data) 
@@ -85,12 +89,12 @@ function receive_data_sequence(){
 // const req1 = ajax_call('usa'); //AJAX-1 //                              <<<<<< HERE
 // req1.addEventListener('load', receive_data_cb_hell );  //               <<<<<< HERE
 
-// =========== C. CAll BACK HELL : Another Example. ======
+// =========== C. CAll BACK HELL  ======
 // TASK 1 >> TASK 2 >> TASK 3 : acheive task in this order
 // CAllback inside call back
 function runtaskInorder()
 {
-    setTimeout(()=>{    //call back does not accept any arg
+    setTimeout(()=>{    //Note: this call back does not accept any arg
         console.log('TASK 1: After 1 sec');
 
         setTimeout(()=>{ 
@@ -117,9 +121,10 @@ function runtaskInorder()
 // Container for asynchronoulsy delivered future value. (usally comes from nested CB)
 // eg: response comiing from AJAX call, like abv.
 // Analogy with Lottery ticket
-// Function which accepts 2 callback functions .
-// Life cycle: A. Pending > B. settled:: B.1 fulfilled (eg: datafetched) / B.2. Rejected (data load failed)
-// 2 step : Build and Consume
+// technically, Function which accepts 2 callback functions .
+// Life cycle: A. Pending > B. settled:: B.1 Resolve/fulfilled (eg: datafetched) / B.2. Rejected (data load failed)
+// 2 Step : Build(with setTimeOut, fetch) and Consume(async fn, then)
+// 3 Combine Promises - race, any(first fulfilled), all, allSettled
 
 // CONSUME :: In-built promise : FETCH , modern way to make ajax call.
 function getCountryData(country){
@@ -144,11 +149,11 @@ function getCountryData(country){
 // ctach block
 
 //================================
-//      Async code execution
+//      D.2 Async code execution
 //================================
 
 // CREATE :: Own promise function
-// IMP :: promises runs async way
+// IMP :: promises runs in async way
 // eg 1
 function myPromise(rcb, ecb){
     const num = (Math.random() * 9);
@@ -179,7 +184,7 @@ function fetch_get(url){
         req.send();
         
         setTimeout(() => {
-            if(!req.responseText) ecb("TImeout error / 2s")
+            if(!req.responseText) ecb("TImeout error after 2s")
         }, 2000);
 
         req.addEventListener('load', () => rcb(JSON.parse(req.responseText)))
@@ -203,6 +208,7 @@ function test_promise(){
 
 
 // ========= B. PRG : Consume promise : fetch_get =========  using async and await
+// Also updated below code with error handling, thats why code looks bit complex... hahha
  // AWAIT is systax sugar over then, behind the scene using promise
 
 // 2 adv : 
@@ -235,18 +241,18 @@ function test_aysnc_await(){
 // test_aysnc_await()
 
 // ====================================================
-// Race, any, allSettled
+// D.3 Promise Combinator : Race, any, allSettled, all
 // ====================================================
-// Time Out promise
-// directly returned Promise
+// Create own Time Out promise
+// Note: directly returned Promise
 const timeOutPromise = new Promise(function(_, reject){
     setTimeout(() => {
         reject(" >>> Operation took longer !!")
     }, 500);
  })
 
- // Fake 
- // they are all function
+ // Create ownFake promieses 
+ // warpped promised inside function. So call function to get promise type.
  const fakePromise1  = () =>  new Promise(function(resolve, _){
     setTimeout(() => {
         resolve({ d: "Fake data 1 from fake promise !!", t: new Date()})
@@ -264,48 +270,45 @@ const timeOutPromise = new Promise(function(_, reject){
  })
 
  // ---------
- //one
- // any first promise settled with resolved or rejected
+ // a. any first promise settled with resolved or rejected
 function test_racePromise(){
     return Promise.race([fakePromise1(), fakePromise2(), fakePromise3(), timeOutPromise])
     .then(d => console.log('racePromise resolved: ',d))
     .catch(err => console.error('racePromise rejected: ',err));
 }
 
-// any first promise settled with resolved
+// b. any first promise settled with resolved
 function test_anyPromise(){
     return Promise.any([timeOutPromise, fakePromise1(), fakePromise2(), fakePromise3()])
      .then(d => console.log('anyPromise resolved: ',d))
      .catch(err => console.error('anyPromise rejected: ',err));
 }
 
-// All
+
 // all promise settled with resolved or rejected
-// d is array of <rsolved data>
+// d is array of {status: , value: <resolved data>}
 function test_allSettledPromise(){
     return Promise.allSettled([fakePromise1(), fakePromise2(), fakePromise3(), timeOutPromise])
      .then(d => console.log('allSettledPromise resolved: ',d))
      .catch(err => console.error('allSettledPromise rejected: ',err));
 }
 
+// c. collection of data from all the promises
 // all promise settled with resolved
-// d is array of {status: , value: <rsolved data>}
 function test_allPromise(){
     return Promise.all([fakePromise1(), fakePromise2(), fakePromise3()])
      .then(d => console.log('allPromise resolved: ',d))
      .catch(err => console.error('allPromise rejected: ',err));
 }
 
+// ============= main ===============
+(function(){
+    test_racePromise();
+    test_allPromise();
+    test_allSettledPromise();
+    test_anyPromise();
+})()
 
-
-
-test_racePromise();
-test_allPromise();
-test_allSettledPromise();
-test_anyPromise();
-
-// allSettledPromise()
-//racePromise()
 
 
 
