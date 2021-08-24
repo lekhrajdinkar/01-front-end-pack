@@ -1,0 +1,15 @@
+{
+  "name": "supersetts",
+  "version": "1.0.0",
+  "description": "TypeScript projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "keywords": [
+    "TS",
+    "JS"
+  ],
+  "author": "Lekhraj Dinkar",
+  "license": "ISC"
+}
