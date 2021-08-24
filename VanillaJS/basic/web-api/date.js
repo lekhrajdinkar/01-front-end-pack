@@ -66,7 +66,7 @@ now = locale_india_with_options.format(new Date()); p('As of', now, typeof now);
 // ===============
 // setInterval,  setTimeout, clearInterval
 
-const intervl = setInterval(()=>p('hello ' + new Date().getSeconds()),2000) // print
+const intervl = setInterval(() => p('hello ' + new Date().getSeconds()),2000) // print
 setTimeout(() => clearInterval(intervl), 9000)
 
 
