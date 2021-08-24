@@ -1,4 +1,4 @@
-import { classes, StudentCL } from "./class";
+import { classes, Dummy, StudentCL } from "./class";
 
 const cf_parent = classes.parent ;
 const cf_child = classes.child ;
@@ -62,3 +62,16 @@ console.log('own member :: ',s2.university);
 console.log('own prototype :: ',s2.country); 
 
 console.log(s1,s2)
+
+
+// ==========Dummy Class ===========
+
+let d1 = new Dummy();
+d1.a = 20;  //a(20)
+console.log(d1.a, d1._a); //a() //Notr: d1._a is protected , dont access outside
+d1.b = 40;  //b(40)
+console.log(d1.b); //b()
+
+// Access private method from outside class
+//console.log(d1.#privareF1);
+//d1.#private_method();

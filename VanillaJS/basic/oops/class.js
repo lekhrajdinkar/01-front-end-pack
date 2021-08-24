@@ -63,3 +63,18 @@ export class StudentCL extends PersonCL{
     country="USA";
     printChild(){console.log('Student.prototype.printChild')}
 }
+
+// ================== Another Class Example =================
+// Set and get
+export class Dummy{
+    _a; //protected feild
+    _b;
+    #privareF1 = 'Dummy.privareF1';
+    #private_method = () => console.log('Dummy.private_method');
+
+    set a(_){ console.log('set a(_)'); this._a = _}
+    set b(_){ console.log('set b(_)'); this._b = _}
+
+    get a(){ console.log('get a()'); return this._a; }
+    get b(){ console.log('get a()'); return this._b; }
+}

@@ -497,6 +497,15 @@ let s2 = new _class.StudentCL();
 console.log('own member :: ', s2.university);
 console.log('own prototype :: ', s2.country);
 console.log(s1, s2);
+// ==========Dummy Class ===========
+let d1 = new _class.Dummy();
+d1.a = 20; //a(20)
+console.log(d1.a, d1._a); //a() //Notr: d1._a is protected , dont access outside
+d1.b = 40; //b(40)
+console.log(d1.b); //b()
+ // Access private method from outside class
+ //console.log(d1.#privareF1);
+ //d1.#private_method();
 
 },{"./class":"kO4Po"}],"kO4Po":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -507,6 +516,10 @@ parcelHelpers.export(exports, "classes", ()=>classes
 parcelHelpers.export(exports, "PersonCL", ()=>PersonCL
 );
 parcelHelpers.export(exports, "StudentCL", ()=>StudentCL
+);
+// ================== Another Class Example =================
+// Set and get
+parcelHelpers.export(exports, "Dummy", ()=>Dummy
 );
 // Classes are syntactical sugar over CF (Constructor function)
 // 2 ways of creating Object
@@ -565,6 +578,29 @@ class StudentCL extends PersonCL {
     country = "USA";
     printChild() {
         console.log('Student.prototype.printChild');
+    }
+}
+class Dummy {
+    _a;
+    _b;
+    #privareF1 = 'Dummy.privareF1';
+    #private_method = ()=>console.log('Dummy.private_method')
+    ;
+    set a(_) {
+        console.log('set a(_)');
+        this._a = _;
+    }
+    set b(_) {
+        console.log('set b(_)');
+        this._b = _;
+    }
+    get a() {
+        console.log('get a()');
+        return this._a;
+    }
+    get b() {
+        console.log('get a()');
+        return this._b;
     }
 }
 
