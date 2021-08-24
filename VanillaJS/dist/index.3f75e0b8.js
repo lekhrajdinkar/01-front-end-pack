@@ -459,11 +459,11 @@ var _class = require("./class");
 const cf_parent = _class.classes.parent;
 const cf_child = _class.classes.child;
 //===================================
-const obj_p1 = new cf_parent(); //way1
+const obj_p1 = new cf_parent(); //way1 : New
 console.log(obj_p1);
-const obj_p2 = Object.create(obj_p1); //way2
+const obj_p2 = Object.create(obj_p1); //way2 : Object.create
 console.log(obj_p2);
-console.log('-----------INHERITANCE-------------------------');
+console.log('-----------A. INHERITANCE With CF-------------------------');
 const obj_c1 = new cf_child(); //creating child , no inheritance from parent
 console.log(obj_c1) // print child
 ;
@@ -473,11 +473,40 @@ obj_c1.printChild();
 console.log('parent member :: ', obj_c1.name, obj_c1.age);
 console.log('parent prototype access :: ', obj_c1.type);
 obj_c1.print();
+cf_child.static_fn(); //IMP : static function
+console.log(cf_child.static_prop);
+console.log('---------------------------------');
+console.log(obj_c1.__proto__);
+console.log(obj_c1.__proto__.__proto__);
+//===================================
+console.log('-----------B. INHERITANCE With CLASSES-------------------------');
+let s1 = new _class.StudentCL();
+console.log('own member :: ', s1.university);
+console.log('own prototype :: ', s1.country);
+obj_c1.printChild();
+console.log('parent member :: ', s1.name, s1.age);
+console.log('parent prototype access :: ', s1.type);
+s1.print();
+_class.StudentCL.static_fn();
+console.log(_class.StudentCL.static_prop);
+//----------
+console.log('\n\n--------------- S2----------');
+s1.university = "California University NEW";
+s1.country = "USA NEW ";
+let s2 = new _class.StudentCL();
+console.log('own member :: ', s2.university);
+console.log('own prototype :: ', s2.country);
+console.log(s1, s2);
 
 },{"./class":"kO4Po"}],"kO4Po":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "classes", ()=>classes
+);
+// =================================
+parcelHelpers.export(exports, "PersonCL", ()=>PersonCL
+);
+parcelHelpers.export(exports, "StudentCL", ()=>StudentCL
 );
 // Classes are syntactical sugar over CF (Constructor function)
 // 2 ways of creating Object
@@ -501,12 +530,43 @@ Student.prototype = Object.create(Person.prototype);
 Student.prototype.country = "USA";
 // Student.prototype.print = function(){console.log('Person.prototype.print');}
 Student.prototype.printChild = function() {
-    console.log('Student.prototype.printUniversity');
+    console.log('Student.prototype.printChild');
 };
+// static function
+Student.static_fn = ()=>console.log('Student.static_fn')
+;
+Student.static_prop = 'Student.static_prop';
 const classes = {
     parent: Person,
     child: Student
 };
+class PersonCL {
+    name;
+    age;
+    constructor(){
+        this.name = 'Person_name_feild';
+        this.age = "Person_age_feild";
+    }
+    //prototype
+    type = 'PARENT';
+    print() {
+        console.log('Person.prototype.print');
+    }
+    static static_fn = ()=>console.log('Student.static_fn')
+    ;
+    static static_prop = 'Student.static_prop';
+}
+class StudentCL extends PersonCL {
+    constructor(){
+        super();
+        this.university = "California University";
+    }
+    //prototype
+    country = "USA";
+    printChild() {
+        console.log('Student.prototype.printChild');
+    }
+}
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"hsQuI"}],"hsQuI":[function(require,module,exports) {
 exports.interopDefault = function(a) {

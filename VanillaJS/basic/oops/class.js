@@ -21,11 +21,45 @@ Student.prototype = Object.create(Person.prototype);
 
 Student.prototype.country="USA";
 // Student.prototype.print = function(){console.log('Person.prototype.print');}
-Student.prototype.printChild = function(){console.log('Student.prototype.printUniversity')}
+Student.prototype.printChild = function(){console.log('Student.prototype.printChild')}
 
+// static function
+Student.static_fn = () => console.log('Student.static_fn');
+Student.static_prop = 'Student.static_prop'
 
 
 export const classes = {
     parent: Person,
     child: Student
+}
+
+// =================================
+
+export class PersonCL
+{
+    name;
+    age;
+    constructor(){
+        this.name = 'Person_name_feild';
+        this.age = "Person_age_feild";
+    }
+
+    //prototype
+    type = 'PARENT'; //behaving same as this.type
+    print(){console.log('Person.prototype.print');}
+
+    static static_fn = () => console.log('Student.static_fn');
+    static static_prop = 'Student.static_prop'
+    // must be called with class name
+}
+
+export class StudentCL extends PersonCL{
+    constructor(){
+        super();
+        this.university = "California University" ; 
+    }
+
+    //prototype
+    country="USA";
+    printChild(){console.log('Student.prototype.printChild')}
 }
