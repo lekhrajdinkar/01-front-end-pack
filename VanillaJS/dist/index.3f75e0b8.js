@@ -545,7 +545,7 @@ Student.prototype.country = "USA";
 Student.prototype.printChild = function() {
     console.log('Student.prototype.printChild');
 };
-// static function
+// static
 Student.static_fn = ()=>console.log('Student.static_fn')
 ;
 Student.static_prop = 'Student.static_prop';
