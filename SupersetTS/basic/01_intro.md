@@ -7,3 +7,7 @@
 5. Catch lots of error at compile time, makes JS robust, can write better code.
 
 ---
+Adv of TS:
+1. Add type in function arg
+2. obj1.proNotExist = "someValue" // cannot do in TS
+3. prevents hetrogeneous array, has another type Tuple. Also Enum

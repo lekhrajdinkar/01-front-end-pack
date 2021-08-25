@@ -56,6 +56,7 @@ print_card("CApital GROUP CompanEs", "cgc.png", ['ok', 'cancel'],
 
 
 console.log("\n--------------------C. MORE : REST and SPREAD----------------------------")
+// Usecase of REST: function definition condense + array/Object de-structuring, left side of =
 // REST Along with object destructuring
 const arr1 = [1,2,3];  const arr2 = [4,5,6,7]; 
 let [new_arr_1, new_arr_2, new_arr_rest] = [...arr1, ...arr2];
@@ -66,6 +67,6 @@ printSeq(new_arr_1, new_arr_2, new_arr_rest); //REST use case 2
 
 // eg with Object destructuring
 let { nam: fund_name, fnum: fund_number, active, category, extra = [] } = tdf10 ; 
-let { category: {...cat_packed} } = tdf10 ; //here
-console.log("1.4. REST ", cat_packed )
+let { category: {...cat_packed} , category: cat} = tdf10 ; //here ??
+console.log("1.4. REST ", cat_packed , cat)
 

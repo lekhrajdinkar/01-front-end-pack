@@ -11,5 +11,8 @@
     "JS"
   ],
   "author": "Lekhraj Dinkar",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.3.5"
+  }
 }
