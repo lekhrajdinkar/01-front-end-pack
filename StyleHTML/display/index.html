@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>02_POSITION</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+body
+<header>
+<nav>
+    <ul>
+        <li><a href="#" target="_blank">link1</a></li>
+        <!--<li><a href="#">link2</a></li>
+        <li><a href="#">link3</a></li> -->
+        <li><button onclick="inlineBlock()">inlineBlock</button></li>
+        <li><button onclick="inline()">inline</button></li>
+        <li><button onclick="block()">block</button></li>
+    </ul>
+</nav>
+</header>
+
+<article>
+    <div class="containor">
+        containor
+        <div class="box box--1"> box--1</div>
+        <div class="box box--2"> box--2</div>
+        <div class="box box--3"> box--3</div>
+    </div>
+</article>
+
+<footer>
+
+</footer> 
+ 
+<script>
+    inlineBlock = () => document.querySelectorAll('li').forEach(el => el.style.display="inline-block");
+    inline = () => document.querySelectorAll('li').forEach(el => el.style.display="inline");
+    block= () => document.querySelectorAll('li').forEach(el => el.style.display="block");
+</script>
+</body>
+</html>

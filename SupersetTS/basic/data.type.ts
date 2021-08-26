@@ -96,3 +96,11 @@ f3 = function(a1: string, b1: number){return ''}
 let f4: (a: string, b: () => void) => string;
 const cb = () => { return null}
 f4 = function(a1: string, cb){return ''}
+
+// I. Unknown and never
+// unkown more like any
+
+//no usecasse, just for code quality
+function throwerror():never{ // not void
+    throw { msg: 'error occured', code: '400'}
+}
