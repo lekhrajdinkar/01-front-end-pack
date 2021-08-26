@@ -11,21 +11,33 @@
 body
 <nav>Sticky Navbar (Z-index 100)</nav>
 <p>Position Demo</p>
-<div  class="containor" style="position: relative;">
+<div class="box box--r" style="position: relative;">Normal-Flow box</div>
+<div class="box ">Normal-Flow box</div>
+
+<div  class="containor" style="position: absolute; top: 0px; left:0px;">
     containor
     <div class="box ">Normal-Flow box--1</div>
-    <div class="box ">Normal-Flow box--2</div>
+    <div class="box " style="position: relative;">Normal-Flow box--2</div>
 
     <!-- <div style="position: relative;"> -->
-        <div style="position: absolute;" class="box box--1">absolute box--1</div>
-        <div style="position: absolute; top: 25px; left:25px;" class="box box--2">absolute box--2</div>
-    <!-- </div> -->
+        <div style="position: absolute; top: 0px; left:0px;" class="box box--a">A1</div>
+        <div style="position: relative; " class="box box--r">R1</div>
+        <div style="position: absolute; top: 20px; left:20px;" class="box box--a">A3</div>
+        <div style="position: relative; " class="box box--r">R2</div>
+        <!-- </div> -->
 
     <div class="box ">Normal-Flow box--3</div>
-    <div style="position: relative;" class="box box--1">relative box--1. First gets added like normal, then top,left,etc applied</div>
-    <div style="position: relative; top: 25px; left:25px;" class="box box--1">relative box--2, top 25, left 25</div>
+    <div style="position: relative; top: 25px;" class="box box--r">R3</div>
+    <div style="position: fixed; top: 0px; left:0px;" class="box box--f"></div>
 </div>
    
     
 </body>
 </html>
+
+<!-- 
+    normal flow:
+    relative : t l r b from parent it current position. Same as normal with top left etc.
+    Absolute : t l r b from parent non-fixed.
+    sticky: t l r b from parent vp. 
+ -->

@@ -14,9 +14,11 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-nav{position: fixed; padding: 10px; z-index: 100;
+nav{position: fixed; top: 0;
+    padding: 10px; z-index: 100;
     opacity: 0.5; text-align: left;
     background-color: cadetblue; width: 100%;}
+
 .containor{
     margin: auto auto;
     width: 600px; height: 800px ; overflow: scroll;
@@ -30,14 +32,18 @@ nav{position: fixed; padding: 10px; z-index: 100;
     border-radius: 10px; 
 }
 
-.box--1{
+.box--r{
     background-color: rgb(233, 138, 138);
 }
-.box--2{
-    background-color: rgb(191, 236, 191);
-    transform: translateX(25px) translateY(25px);
+.box--a{
+    background-color: rgb(104, 241, 241);
+    /* transform: translateX(25px) translateY(25px); */
 }
-.box--3{
-    background-color: rgb(194, 194, 241);
-    transform: translateX(50px) translateY(50px);
+.box--n{
+    background-color: rgb(86, 86, 240)
+    /* transform: translateX(50px) translateY(50px); */
+}
+.box--f{
+    height: 100px; width: 100px;
+    background-color:rgb(245, 157, 245)
 }
