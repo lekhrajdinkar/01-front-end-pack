@@ -9,11 +9,21 @@
 </head>
 <body>
 body
-<div class="containor">
+<nav>Sticky Navbar (Z-index 100)</nav>
+<p>Position Demo</p>
+<div  class="containor" style="position: relative;">
     containor
-    <div class="box box--1">box box--1</div>
-    <div class="box box--2">box box--1</div>
-    <div class="box box--3">box box--1</div>
+    <div class="box ">Normal-Flow box--1</div>
+    <div class="box ">Normal-Flow box--2</div>
+
+    <!-- <div style="position: relative;"> -->
+        <div style="position: absolute;" class="box box--1">absolute box--1</div>
+        <div style="position: absolute; top: 25px; left:25px;" class="box box--2">absolute box--2</div>
+    <!-- </div> -->
+
+    <div class="box ">Normal-Flow box--3</div>
+    <div style="position: relative;" class="box box--1">relative box--1. First gets added like normal, then top,left,etc applied</div>
+    <div style="position: relative; top: 25px; left:25px;" class="box box--1">relative box--2, top 25, left 25</div>
 </div>
    
     

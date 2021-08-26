@@ -1,12 +1,13 @@
 *{
     margin: 0; padding: 0;
-    border: 1px dashed black;
-    /* box-sizing: content-box; */
+    /* border: 1px dashed black; */
+    box-sizing: border-box;
 }
 
 body{
     height: 100vh;
     margin: 0 20px;
+    border: 1px dashed black;
 
     /* INHERITABLE */
     font-size: 1rem;
@@ -14,30 +15,24 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-nav{position: fixed; padding: 10px; z-index: 100;
-    opacity: 0.5; text-align: left;
-    background-color: cadetblue; width: 100%;}
 .containor{
     margin: auto auto;
-    width: 600px; height: 800px ; overflow: scroll;
+    width: 400px;
     background-color: rgb(161, 155, 155);
 }
-
-/* BOX */
 .box{
     margin: 10px auto;
     height: 200px; width: 200px;
     border-radius: 10px; 
+   
 }
 
 .box--1{
-    background-color: rgb(233, 138, 138);
+    background-color: red;
 }
 .box--2{
     background-color: rgb(191, 236, 191);
-    transform: translateX(25px) translateY(25px);
 }
 .box--3{
     background-color: rgb(194, 194, 241);
-    transform: translateX(50px) translateY(50px);
 }
