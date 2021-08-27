@@ -50,8 +50,11 @@ input{width:90px} button{cursor: pointer;padding:5px}
 .flex-item{ background-color: rgb(92, 184, 238);}
 .flex-item span{transform: rotateY(90deg);}
 
-/* width: 100px; does not males sense here, flex basics of 400 already defined */
-.flex-item--1{ height: 100px; width: 100px ; flex: 0 0 400px;} 
+.flex-item--1{ 
+    height: 100px; width: 100px ; 
+    /* width: 100px; does not males sense here, flex basics of 400 already defined */
+    /* flex: 0 0 400px; grow shrink basis/width */
+} 
 
 .flex-item--2{}
 .flex-item--3{ align-self: flex-start; background-color: rgb(196, 231, 252);}
@@ -62,7 +65,7 @@ input{width:90px} button{cursor: pointer;padding:5px}
 /***************    CSS GRID    ******************/
 
 .containor-grid{
-    width: 1000px; height: 1000px;
+    width: 1000px; height: 600px;
     margin: 10px auto;
     padding: 5px;
     border: 2px solid rgb(248, 8, 8);
@@ -71,30 +74,30 @@ input{width:90px} button{cursor: pointer;padding:5px}
 
     /* grid */
     display: grid; 
-    grid-gap: 16px;
+    grid-gap: 5px;
     /* grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr); */
-    grid-template-columns: 300px 300px 300px ;
-    grid-template-rows: 300px 300px ;
+    grid-template-columns: 200px 200px 200px ;
+    grid-template-rows: 200px 200px ;
     justify-content: center;
     align-content: center;
 
-    /* align item with in grid cell */
-    /* align-items: stretch; */
+    /* justify/align item with in grid cell */
+    align-items: center;
+    justify-items: center;
 }
 
 .grid-item{ 
     background-color: rgb(248, 192, 241); 
     /* transform: rotateZ(5deg); */
     border: 2px solid rgb(245, 8, 28);
-    height: 100px; 
-    /* width:100px */
+    /*height: 100px; width:100px */
 }
 
 
-.grid-item--1{ } 
-.grid-item--2{ height: 150px;}
-.grid-item--3{ }
-.grid-item--4{ }
-.grid-item--5{ }
+.grid-item--1{ width: 100px; } 
+.grid-item--2{ height: 100px;}
+.grid-item--3{ justify-self: center; align-self: center;}
+.grid-item--4{ justify-self: center; }
+.grid-item--5{ align-self: center;}
 .grid-item--6{ }

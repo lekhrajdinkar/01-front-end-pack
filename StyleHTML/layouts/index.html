@@ -9,6 +9,7 @@
 </head>
 <body>
 body
+<nav><a href="#css-grid">css-grid</a></nav>
 <section class="containor-float">
     containor-float
     <div style="float:left" class="box box--1"> box--1</div>
@@ -24,7 +25,7 @@ body
     <button onclick="flex_direction('row')">row</button>
     <button onclick="flex_direction('column')" style="margin-right: 20px;">column</button>
     
-    <br>justify-content ::
+    <br>justify-content <strong>(space)</strong> ::
     <button onclick="flex_row_jc('center')">center</button>
     <button onclick="flex_row_jc('flex-start')">flex-start</button>
     <button onclick="flex_row_jc('flex-end')">flex-end</button>
@@ -45,7 +46,7 @@ body
     <button onclick="flex_item_clear_dim()">clear of el2</button>
 </nav>
 
-<section id="containor-flex-row" >
+<section id="containor-flex-row">
     <div class="flex-item flex-item--2"  id="fr_i1"> 
         <button onclick="flex_row_item_as('stretch')">stretch</button><br>
         <button onclick="flex_row_item_as('center')">center</button><br>
@@ -63,11 +64,50 @@ body
     <div class="flex-item flex-item--6"> <span>el-5</span></div>
 </section>
 
-<em> <h3>CSS grid</h3></em>
-<section class="containor-grid">
-    <div class="grid-item grid-item--1"> <span>el-1</span> </div>
-    <div class="grid-item grid-item--2"> <span>el-2</span> </div>
-    <div class="grid-item grid-item--3"> <span>el-3</span> </div>
+<!-- ***************************************************************** -->
+<em> <h3 id="css-grid">CSS grid | each cell : 200 X 200</h3></em>
+<nav>
+    <br><em style="font-size: large; color: blueviolet;">grid cantainor</em>
+    <br>justify-content<strong>(cell)</strong> (x-axis) ::  
+    <button onclick="grid_jc('center')">center</button>
+    <button onclick="grid_jc('flex-start')">flex-start</button>
+    <button onclick="grid_jc('flex-end')">flex-end</button>
+    <button onclick="grid_jc('space-around')">space-around</button>
+    <button onclick="grid_jc('space-between')">space-between</button>
+
+    <br>align-content<strong>(cell)</strong>  (y-axis) ::  
+    <button onclick="grid_ac('center')">center</button>
+    <button onclick="grid_ac('flex-start')">flex-start</button>
+    <button onclick="grid_ac('flex-end')">flex-end</button>
+    <button onclick="grid_ac('space-around')">space-around</button>
+    <button onclick="grid_ac('space-between')">space-between</button>
+
+    <br> <-- -->    Justify Items within cell ::  
+    <button onclick="grid_ji('center')">center</button>
+    <button onclick="grid_ji('flex-start')">flex-start</button>
+    <button onclick="grid_ji('flex-end')">flex-end</button>
+    <button onclick="grid_ji('stretch')">stretch</button>
+
+    <br> ^ V    Align Items within cell ::  
+    <button onclick="grid_ai('center')">center</button>
+    <button onclick="grid_ai('flex-start')">flex-start</button>
+    <button onclick="grid_ai('flex-end')">flex-end</button>
+    <button onclick="grid_ai('stretch')">stretch</button>
+    
+</nav>
+<nav>
+    <br><em style="font-size: large; color: blueviolet;">grid Cell</em>  
+    <input type="text" id="grid_gap_input" value="16"><button onclick="grid_gap()">gap</button>
+</nav>
+<nav>
+    <br><em style="font-size: large; color: blueviolet;">grid cell item</em>  
+</nav>
+
+
+<section class="containor-grid" id="css-grid">
+    <div class="grid-item grid-item--1"> <span>el-1 w100 </span> </div>
+    <div class="grid-item grid-item--2"> <span>el-2 h100 </span> </div>
+    <div class="grid-item grid-item--3"> <span>el-3 h/w unset</span> </div>
 
     <div class="grid-item grid-item--4"> <span>el-4</span> </div>
     <div class="grid-item grid-item--5"> <span>el-5</span> </div>
@@ -103,9 +143,30 @@ body
             el.style.width='200px';
         }
     }
-    
-    //CSS grid
     flex_row_item_as =(v)=> document.querySelector('#fr_i1').style.alignSelf=v;
+
+    //CSS grid
+    function grid_jc(v){document.querySelector('.containor-grid').style.justifyContent=v;}
+    function grid_ac(v){document.querySelector('.containor-grid').style.alignContent=v;}
+    function grid_ai(v){document.querySelector('.containor-grid').style.alignItems=v;}
+    function grid_ji(v){document.querySelector('.containor-grid').style.justifyItems=v;}
+
+    function grid_gap(v){
+        var el = document.querySelector('.containor-grid')
+        el.style.gap=document.getElementById('grid_gap_input').value+'px';
+    }
+    
  </script>   
 </body>
 </html>
+
+<!-- 
+    flex, content mean space inside conatiner
+    space and grow Hori or vertically, justfy content
+
+    grid, content mean grid inside
+    grid grow hori and vert both, justify cont (hori), align cont (verti)
+
+    within each grid
+    align/justify each item, justify-items, align-items
+ -->
