@@ -99,5 +99,12 @@ input{width:90px} button{cursor: pointer;padding:5px}
 .grid-item--2{ height: 100px;}
 .grid-item--3{ justify-self: center; align-self: center;}
 .grid-item--4{ justify-self: center; }
-.grid-item--5{ align-self: center;}
-.grid-item--6{ }
+.grid-item--5{ 
+    align-self: center; 
+    /* grid-row: 1/ span 3; 
+    grid-column: 3 / span 3; */
+}
+.grid-item--6{ 
+    /* grid-column: 1 /-1; 
+    grid-row: 1/ span 2; */
+ }
