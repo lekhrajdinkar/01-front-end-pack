@@ -53,3 +53,24 @@ body{
 .flex-item--4{ align-self: stretch;}
 .flex-item--5{ align-self: center; }
 .flex-item--6{  }
+
+/***************    CSS GRID    ******************/
+
+.containor-grid{
+    display: grid; 
+    gap: 16px;
+    width: 800px;
+    margin: 10px auto;
+    padding: 5px;
+    /* height: 200px; overflow: scroll; */
+}
+
+.grid-item{ background-color: rgb(248, 192, 241); border: 2px solid rgb(245, 8, 28);}
+
+
+.grid-item--1{ height: 100px; width:100px } 
+.grid-item--2{ }
+.grid-item--3{ height: 100px; ;}
+.grid-item--4{}
+.grid-item--5{  }
+.grid-item--6{  }
