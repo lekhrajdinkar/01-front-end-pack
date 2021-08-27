@@ -34,43 +34,67 @@ body{
 .containor-float::after{
     clear: both; content: ""; display: block;
 }
-
-.containor-flex{
-    display: flex; gap: 100px;
-    justify-content:space-between;
-    justify-content:right;
+input{width:90px} button{cursor: pointer;padding:5px}
+#containor-flex-row{
+    margin: auto auto;
+    display: flex; 
+    /* gap: 100px; */
+    /* justify-content:stretch;   */
     align-items: flex-end;
-    height: 200px;
-    overflow: hidden;
+    height: 200px; width: 1000px;
+    border: 2px solid rgb(248, 8, 8);
+    overflow: scroll;
+    background: linear-gradient(rgb(207, 207, 247), rgb(185, 250, 185),rgb(243, 243, 214));
 }
 
-.flex-item{ background-color: rgb(191, 236, 191);}
+.flex-item{ background-color: rgb(92, 184, 238);}
 .flex-item span{transform: rotateY(90deg);}
 
-.flex-item--1{ height: 100px; width: 100px ; flex: 1 0 400px;} 
-.flex-item--2{ align-self: flex-start;}
-.flex-item--3{ height: 100px; align-self: stretch;}
-.flex-item--4{ align-self: stretch;}
-.flex-item--5{ align-self: center; }
-.flex-item--6{  }
+/* width: 100px; does not males sense here, flex basics of 400 already defined */
+.flex-item--1{ height: 100px; width: 100px ; flex: 0 0 400px;} 
+
+.flex-item--2{}
+.flex-item--3{ align-self: flex-start; background-color: rgb(196, 231, 252);}
+.flex-item--4{ align-self: center; background-color: rgb(196, 231, 252);}
+.flex-item--5{ align-self: flex-end; background-color: rgb(196, 231, 252);}
+.flex-item--6{ width: 100px ; }
 
 /***************    CSS GRID    ******************/
 
 .containor-grid{
-    display: grid; 
-    gap: 16px;
-    width: 800px;
+    width: 1000px; height: 1000px;
     margin: 10px auto;
     padding: 5px;
-    /* height: 200px; overflow: scroll; */
+    border: 2px solid rgb(248, 8, 8);
+    overflow: scroll;
+    background: linear-gradient(rgb(207, 207, 247), rgb(185, 250, 185),rgb(243, 243, 214));
+
+    /* grid */
+    display: grid; 
+    grid-gap: 16px;
+    /* grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr); */
+    grid-template-columns: 300px 300px 300px ;
+    grid-template-rows: 300px 300px ;
+    justify-content: center;
+    align-content: center;
+
+    /* align item with in grid cell */
+    /* align-items: stretch; */
 }
 
-.grid-item{ background-color: rgb(248, 192, 241); border: 2px solid rgb(245, 8, 28);}
+.grid-item{ 
+    background-color: rgb(248, 192, 241); 
+    /* transform: rotateZ(5deg); */
+    border: 2px solid rgb(245, 8, 28);
+    height: 100px; 
+    /* width:100px */
+}
 
 
-.grid-item--1{ height: 100px; width:100px } 
-.grid-item--2{ }
-.grid-item--3{ height: 100px; ;}
-.grid-item--4{}
-.grid-item--5{  }
-.grid-item--6{  }
+.grid-item--1{ } 
+.grid-item--2{ height: 150px;}
+.grid-item--3{ }
+.grid-item--4{ }
+.grid-item--5{ }
+.grid-item--6{ }

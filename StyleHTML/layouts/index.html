@@ -18,21 +18,49 @@ body
 </section>
 
 <strong>containor-flex ROW</strong>
-<section class="containor-flex" style="flex-direction: row;">
-    <div class="flex-item flex-item--1"> <span>el-1</span> </div>
-    <div class="flex-item flex-item--2"> <span>el-2</span></div>
+<nav>
+    <br><em style="font-size: large; color: blueviolet;">cantainor</em>
+    <br>direction ::
+    <button onclick="flex_direction('row')">row</button>
+    <button onclick="flex_direction('column')" style="margin-right: 20px;">column</button>
+    
+    <br>justify-content ::
+    <button onclick="flex_row_jc('center')">center</button>
+    <button onclick="flex_row_jc('flex-start')">flex-start</button>
+    <button onclick="flex_row_jc('flex-end')">flex-end</button>
+    <button onclick="flex_row_jc('space-between')">space-between</button>
+    <button onclick="flex_row_jc('space-around')">space-around</button>
+
+    
+    <br>align-items ::
+    <button onclick="flex_row_ai('stretch')">stretch</button>
+    <button onclick="flex_row_ai('center')">center</button>
+    <button onclick="flex_row_ai('flex-start')">flex-start</button>
+    <button onclick="flex_row_ai('flex-end')">flex-end</button>
+</nav>
+
+<nav>
+    <br><em style="font-size: large; color: blueviolet;">cantainor Item</em>  
+    <button onclick="flex_item_update_dim()">update-dimension of el2</button>
+    <button onclick="flex_item_clear_dim()">clear of el2</button>
+</nav>
+
+<section id="containor-flex-row" >
+    <div class="flex-item flex-item--2"  id="fr_i1"> 
+        <button onclick="flex_row_item_as('stretch')">stretch</button><br>
+        <button onclick="flex_row_item_as('center')">center</button><br>
+        <button onclick="flex_row_item_as('flex-start')">flex-start</button><br>
+        <button onclick="flex_row_item_as('flex-end')">flex-end</button>
+     </div>
+    <div class="flex-item flex-item--1"> 
+        el-2<br>
+        height<br><input class="input--h" type="text" value="100px"> <br>
+        flex-basis<br><input class="input--w" type="text" value="400px"> <br>
+    </div>
     <div class="flex-item flex-item--3"> <span>el-3</span></div>
     <div class="flex-item flex-item--4"> <span>el-4</span> </div>
     <div class="flex-item flex-item--5"> <span>el-5</span></div>
     <div class="flex-item flex-item--6"> <span>el-5</span></div>
-</section>
-
-
-<em> containor-flex COLUMN</em>
-<section class="containor-flex" style="flex-direction: column;">
-    <!-- <div class="box box--1" > box--1</div>
-    <div class="box box--2"> box--2</div>
-    <div class="box box--3"> box--3</div> -->
 </section>
 
 <em> <h3>CSS grid</h3></em>
@@ -40,11 +68,44 @@ body
     <div class="grid-item grid-item--1"> <span>el-1</span> </div>
     <div class="grid-item grid-item--2"> <span>el-2</span> </div>
     <div class="grid-item grid-item--3"> <span>el-3</span> </div>
+
     <div class="grid-item grid-item--4"> <span>el-4</span> </div>
     <div class="grid-item grid-item--5"> <span>el-5</span> </div>
     <div class="grid-item grid-item--6"> <span>el-6</span> </div>
 </section>
    
+ <script>
+    //  FLEX ROW
+    flex_row_ai= (v) => document.querySelector('#containor-flex-row').style.alignItems=v;
+    flex_row_jc=(v)=> document.querySelector('#containor-flex-row').style.justifyContent=v;
+    flex_item_clear_dim = () =>{
+        var el = document.querySelector('.flex-item--1')
+        el.style.height = 'unset';
+        el.style.width = 'unset';
+        el.style.flexBasis = 'unset';
+        document.querySelector('.flex-item--1 .input--h').value = 'px';
+        document.querySelector('.flex-item--1 .input--w').value = 'px';
+    }
+    flex_item_update_dim = () =>{
+        var el = document.querySelector('.flex-item--1')
+        el.style.height = document.querySelector('.flex-item--1 .input--h').value;
+        el.style.width = document.querySelector('.flex-item--1 .input--w').value;
+    }
+    flex_direction= (v)=> {
+        var el = document.querySelector('#containor-flex-row')
+        el.style.flexDirection=v;
+        if(v === 'row'){
+            el.style.height='200px';
+            el.style.width='100vh';
+        }
+        else{
+            el.style.height='100vh';
+            el.style.width='200px';
+        }
+    }
     
+    //CSS grid
+    flex_row_item_as =(v)=> document.querySelector('#fr_i1').style.alignSelf=v;
+ </script>   
 </body>
 </html>
