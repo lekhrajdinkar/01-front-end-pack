@@ -13,7 +13,7 @@
 <body>
     <div class="containor">
 
-        <div class="carosal carosal--1">
+        <div class="carosal carosal--0">
             <header>
                 <!-- <i class="icon ion-md-arrow-back"></i> -->
                 <h1>01</h1>
@@ -32,7 +32,7 @@
             </section>
         </div>
 
-        <div class="carosal carosal--2">
+        <div class="carosal carosal--1">
             <header>
                 <h1>02</h1>
                 <h3>Canadian Fund</h3>
@@ -49,7 +49,7 @@
             </section>
         </div>
 
-        <div class="carosal carosal--3">
+        <div class="carosal carosal--2">
             <header>
                 <h1>03</h1>
                 <h3>AFIS (American investment fund)</h3>
@@ -66,11 +66,35 @@
             </section>
         </div>
 
-        <button class="icon icon--left ion-md-arrow-back" ></button>
-        <button class="icon icon--right ion-md-arrow-forward" ></button>
+        <button class="icon icon-carosal icon--left ion-md-arrow-back" ></button>
+        <button class="icon icon-carosal icon--right ion-md-arrow-forward" ></button>
 
         <div class="dots"></div>
     </div>
+
+    <!-- PAGINATION START -->
+
+    <div class="paginator">
+        <div style="display: flex; align-items: center;">
+            <p style="font-size:16px; ">Page</p> 
+            <input type="text" style="width: 30px; margin-left: 10px;">
+        </div>
+        <span class="icon ion-md-rewind"></span>
+        <span class="icon ion-md-arrow-back"></span>
+        <div style="display: flex; align-items: center;">
+            <span>1</span>
+            <span>2</span>
+            <span class="active--page">3</span>
+            <span>4</span>
+            <span>5</span>
+            <span>5</span>
+            <span>6</span>
+        </div>
+        <span class="icon ion-md-arrow-forward"></span>
+        <span class="icon ion-md-fastforward"></span>
+    </div>
+
+    <!-- PAGINATION END -->
 
 </body>
 </html>

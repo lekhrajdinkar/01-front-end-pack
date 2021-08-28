@@ -10,6 +10,7 @@
 
     --body-color: whitesmoke;
 }
+
 *{
     padding: 0; margin: 0;
     box-sizing: border-box;
@@ -25,16 +26,13 @@ input{
 li{list-style: square;}
 button{outline: none;border: none; background: none;}
 p {font-size: 20px; font-weight: 400;}
-.icon{ 
-    font-size: 48px; cursor: pointer;
-}
+.icon{ font-size: 48px; cursor: pointer; }
 
 table{border-collapse: collapse; text-align: right;}
 thead tr{ background-color: var(--primary-color); color: cornsilk;}
 th,td{ padding: 5px 50px; border: var(--border-thin)}
 tbody tr:nth-child(even){ background-color: rgb(197, 235, 233);}
 
-/* START */
 .containor{
     width: 900px; height: 70vh;
     margin: 20px auto;
@@ -44,7 +42,7 @@ tbody tr:nth-child(even){ background-color: rgb(197, 235, 233);}
     display: flex; justify-content: center; align-content: center;
 }
 
-.page{ }
+/************* START ***************/
 
 .paginator{
     margin: 30px auto; padding: 10px;
@@ -53,7 +51,7 @@ tbody tr:nth-child(even){ background-color: rgb(197, 235, 233);}
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    background: var(--primary-shadow-color);
+    background: var(--primary-bg-color);
     border-radius: 10px;
     box-shadow: 1px 1px 10px grey;
 }
