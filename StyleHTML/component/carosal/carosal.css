@@ -3,8 +3,11 @@
     --primary-color: rgb(40, 134, 111);
     --primary-bg-color: rgb(220, 241, 236);
     --primary-shadow-color: rgb(214, 214, 214);
-    --border-thick: 5px solid var(--primary-color);
-    --border-thin: 2px solid var(--primary-color);
+
+    --border-thicker: 6px solid var(--primary-color);
+    --border-thick: 3px solid var(--primary-color);
+    --border-thin: 1px solid var(--primary-color);
+
     --body-color: whitesmoke;
 }
 *{
@@ -50,7 +53,7 @@ p {font-size: 20px; font-weight: 400;}
 .carosal section{
     padding: 50px 50px;
     line-height: 2rem;
-    border-top: 5px solid var(--primary-color);
+    border-top: var(--border-thicker);
     /* box-shadow: 1px 1px 20px var(--primary-shadow-light); */
     background-color: var(--primary-bg-color);
 }

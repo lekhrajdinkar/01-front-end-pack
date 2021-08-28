@@ -15,6 +15,9 @@ body{
     /* background-color: bisque; */
     font-family: sans-serif;
 }
+li{list-style: square;}
+button{outline: none;border: none; background: none;}
+p {font-size: 20px; font-weight: 400;}
 
 .accordian-containor{
     width: 900px; height: 90vh;
