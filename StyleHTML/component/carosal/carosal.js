@@ -13,11 +13,13 @@ console.log(slides)
 const goToSlide = (slide_num) => {
   console.log(curSlide)
   slides.forEach((s,i) => {
+    //s.children[1].classList.remove('carosal--active')
     if( i !== slide_num) {
       s.style.transform = `translateX(${100 * (i - slide_num ) }%) scale(0.8)`
     }
     else{
-      s.style.transform = `translateX(${100 * (i - slide_num ) }%)`
+      //s.children[1].classList.add('carosal--active')
+      s.style.transform = `translateX(${100 * (i - slide_num ) }%)`;
     }
   }) 
 }

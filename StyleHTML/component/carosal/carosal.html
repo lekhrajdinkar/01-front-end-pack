@@ -11,9 +11,30 @@
 
 </head>
 <body>
-    <div class="containor">
+    <nav>
+        <i style="flex:0.2;" class="icon ion-md-menu"></i>
+        <h3 style="flex:1">Lekhraj Dinkar</h3>
+        <div class="search--bar">
+            <input type="text">
+            <i class="icon ion-md-search"></i>
+        </div>
+        <div>
+            <ul>
+                <li> <i class="icon ion-md-home"></i> </li>
+                <li> <i class="icon ion-logo-playstation"></i> </li>
+                <li> <i class="icon ion-md-person"></i> </li>
+            </ul>
+        </div>
+    </nav>
 
-        <div class="carosal carosal--0">
+    <section class="toolbar">
+        <a href="/StyleHTML/layouts/" target="_blank">layouts</a>
+        <a href="/StyleHTML/component/paginator/" target="_blank">table</a>
+        <a href="/StyleHTML/pesudo/" target="_blank">button</a>
+    </section>
+
+    <div class="containor">
+        <div class="carosal carosal--0 carosal--active">
             <header>
                 <!-- <i class="icon ion-md-arrow-back"></i> -->
                 <h1>01</h1>
@@ -77,7 +98,7 @@
     <div class="paginator">
         <div style="display: flex; align-items: center;">
             <p style="font-size:16px; ">Page</p> 
-            <input type="text" style="width: 30px; margin-left: 10px;">
+            <input type="number" style="width: 60px; margin-left: 10px; border:var(--border-thin);">
         </div>
         <span class="icon ion-md-rewind"></span>
         <span class="icon ion-md-arrow-back"></span>
