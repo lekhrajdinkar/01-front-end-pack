@@ -61,21 +61,22 @@ a:hover{ color: var(--secondary-text-color);}
 /* START */
 .containor{
     position: relative;
-    width: 900px; height: 50vh;
+    width: 900px; height: 60vh;
     margin: 20px auto;
     border-radius: 10px;
-    padding: 20px;
     border: var(--border-thick); 
-    /* overflow: hidden; */
+    
     transition: all 1s;
 }
 .carosal--active{
-    box-shadow: 1px 1px 20px var(--primary-shadow-light);
+    box-shadow: 3px 3px 20px var(--secondary-bg-color);
+    border-radius: 10px;
  }
 .carosal{
     position: absolute; top: 0; left: 0;
     padding: 10px 50px; 
     transition: all 0.5s ease;
+    height: 100%;
 }
 
 .carosal header{
@@ -115,8 +116,8 @@ section ul {
     font-size: 50px; cursor: pointer;
     color: var(--primary-color);
 }
-.icon--right{top:50%; right: 10px;}
-.icon--left{top:50%; left: 10px;}
+.icon--right{top:50%; right: 15px;}
+.icon--left{top:50%; left: 15px;}
 
 /* DOTS */
 .dots{ position: absolute; top: 50px; left:50%; transform: translateX(-50%); display: flex;  align-items: center; }
@@ -173,7 +174,8 @@ tbody tr:nth-child(even){ background-color: rgb(197, 235, 233);}
     overflow: hidden;
     background: var(--primary-bg-color);
     border-radius: 10px;
-    box-shadow: 1px 1px 10px grey;
+    border: var(--border-thin);
+    box-shadow: 1px 1px 10px var(--secondary-bg-color);
 }
 .paginator span{
     font-size: 24px;
