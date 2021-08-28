@@ -1,6 +1,11 @@
 :root{
-    --primary-color-light: rgb(146, 238, 146);
-    --primary-color: rgb(6, 156, 6);
+    --primary-color-light: rgb(80, 172, 149);
+    --primary-color: rgb(40, 134, 111);
+    --primary-bg-color: rgb(220, 241, 236);
+    --primary-shadow-color: rgb(214, 214, 214);
+    --border-thick: 5px solid var(--primary-color);
+    --border-thin: 2px solid var(--primary-color);
+    --body-color: whitesmoke;
 }
 *{
     padding: 0; margin: 0;
@@ -17,7 +22,7 @@ body{
     box-shadow: 3px 3px 3px rgb(141, 136, 136);
     border-radius: 10px;
     padding: 20px;
-    background-color: whitesmoke;
+    background-color: var(--body-color);
 
     display: flex; flex-direction: column;
     justify-content: center;

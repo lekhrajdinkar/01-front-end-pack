@@ -12,7 +12,14 @@ console.log(slides)
 
 const goToSlide = (slide_num) => {
   console.log(curSlide)
-  slides.forEach((s,i) => s.style.transform = `translateX(${100 * (i - slide_num ) }%)`) //view slide-0
+  slides.forEach((s,i) => {
+    if( i !== slide_num) {
+      s.style.transform = `translateX(${100 * (i - slide_num ) }%) scale(0.8)`
+    }
+    else{
+      s.style.transform = `translateX(${100 * (i - slide_num ) }%)`
+    }
+  }) 
 }
 const next_slide = () => {
   curSlide++ ; curSlide= curSlide%maxSlide;

@@ -5,6 +5,7 @@
     --primary-shadow-color: rgb(214, 214, 214);
     --border-thick: 5px solid var(--primary-color);
     --border-thin: 2px solid var(--primary-color);
+    --body-color: whitesmoke;
 }
 *{
     padding: 0; margin: 0;
@@ -15,6 +16,7 @@ body{
     /* background-color: bisque; */
     overflow: hidden;
     font-family: sans-serif;
+    background-color: var(--body-color);
 }
 li{list-style: square;}
 button{outline: none;border: none; background: none;}
@@ -38,9 +40,6 @@ p {font-size: 20px; font-weight: 400;}
     
     transition: all 0.5s ease;
 }
-.carosal--1{ transform: translateX(0%);}
-.carosal--2{ transform: translateX(-100%);}
-.carosal--3{ transform: translateX(-200%);}
 
 .carosal header{
     display: flex; 
