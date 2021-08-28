@@ -77,8 +77,11 @@ input{width:90px} button{cursor: pointer;padding:5px}
     grid-gap: 5px;
     /* grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr); */
-    grid-template-columns: 200px 200px 200px ;
-    grid-template-rows: 200px 200px ;
+    grid-template-columns: [c1s] 200px [c1e c2s] 200px [c2e c3s] 200px [c4s] ;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-areas: "top top top"
+                         "bottom-1 bottom-1 bottom-3"
+                         " . . .";
     justify-content: center;
     align-content: center;
 
@@ -101,10 +104,11 @@ input{width:90px} button{cursor: pointer;padding:5px}
 .grid-item--4{ justify-self: center; }
 .grid-item--5{ 
     align-self: center; 
+    grid-area: bottom-1;
     /* grid-row: 1/ span 3; 
     grid-column: 3 / span 3; */
 }
 .grid-item--6{ 
-    /* grid-column: 1 /-1; 
+    /* grid-column: c1s / c4s; 
     grid-row: 1/ span 2; */
  }

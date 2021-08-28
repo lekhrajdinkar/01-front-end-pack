@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="accordian.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="accordian-containor">
+        <div class="accordian">
+            <header>
+                <h1>01</h1>
+                <h1>accordian</h1>
+                <i class="icon ion-ios-arrow-dropdown"></i>
+            </header>
+            <!-- <section></section> -->
+        </div>
+        <div class="accordian">
+            <header>
+                <h1>02</h1>
+                <h1>accordian</h1>
+                <button class="icon ion-ios-arrow-dropdown" onclick="expand()"></button>
+            </header>
+            <section class="section--close" id="section--2">
+                    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati exercitationem accusantium ipsum ad deserunt, veniam quis magni laborum delectus suscipit iusto aliquid culpa nisi impedit, quas consequatur, quod est blanditiis?</p>
+                    <div class="content">
+                        <img src="user-2.jpg" >
+                        <ul>
+                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+                        </ul>
+                    </div>
+            </section>
+        </div>
+        <div class="accordian">
+            <header>
+                <h1>03</h1>
+                <h1>accordian</h1>
+                <i class="icon ion-ios-arrow-dropdown"></i>
+            </header>
+            <!-- <section></section> -->
+        </div>
+    </div>
+
+    <script>
+        function expand(){
+            console.log('open called')
+            var el = document.querySelector('#section--2');
+            el.classList.toggle('section--close');
+            setTimeout(()=>el.classList.toggle('section--opacity'), 100);
+        }
+    </script>
+
+</body>
+</html>
+
