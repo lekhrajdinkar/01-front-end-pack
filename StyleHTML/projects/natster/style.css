@@ -1,0 +1,66 @@
+:root{ 
+    --pclr: #777; 
+    --pbgclr: rgb(238, 248, 248);
+
+    --plg: linear-gradient(45deg, 
+    rgb(105, 64, 201) , 
+    rgb(233, 54, 188) ,
+    rgb(143, 113, 32) ,
+    rgb(127, 194, 3) ,
+    rgb(250, 133, 149) ,
+    rgb(37, 223, 136) , 
+    rgb(130, 60, 243) ,
+    rgb(133, 132, 67) ,
+    rgb(48, 51, 223) ,
+    rgb(98, 203, 245)
+    );
+    --slg: linear-gradient(to right, rgb(218, 209, 241),rgb(245, 227, 240));
+    --flg: linear-gradient(to bottom, rgb(57, 56, 59), rgb(36, 4, 29), #777);
+    --app-width: 425px ;
+}
+
+*{margin: 0; padding:0 ; box-sizing: border-box; 
+    /* border: 1px dotted black; */
+}
+
+body{ padding: 10px; 
+    font-size: 16px; font-family: sans-serif; line-height: 1.7rem; color: rgb(114, 98, 98);
+    background-color: whitesmoke;
+}
+
+.containor{  width: var(--app-width); box-shadow: 2px 2px 10px #777; 
+    /* position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); */
+    margin: 0 auto;
+    padding: 10px;
+    background-color: var(--pbgclr);
+}
+
+
+nav{  height: 70px; width: 100%;  border-radius: 10px;
+
+    background-color: black;
+    background-image: var(--plg); 
+    background-clip: text; -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex; justify-content: center; align-items: center; }
+
+nav h2{font-size: 2.5em;}
+
+header,footer,section{
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    margin-top: 4px; border-radius: 10px; height: 90vh; width: 100%; border-top: 2px solid rgb(34, 151, 112);}
+
+    section{background-image: var(--slg);}
+
+    footer{background-image: var(--flg); color:white;}
+
+/* HEADER */
+.app--header{
+    background-image: linear-gradient(to bottom, rgba(119, 119, 119, 0.664), rgba(14, 13, 13, 0.726))
+    , url("./img-3.jpg");
+    background-size: cover; color: white;
+
+    text-align: justify;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
+.app--header h2{font-size: 1em;}
