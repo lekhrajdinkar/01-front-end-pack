@@ -53,8 +53,10 @@
   animation: slide-right 1s; }
 
 .menu {
-  right: 1em;
-  animation: slide-left 1s; }
+  top: 0.5em;
+  right: 0.6em;
+  animation: slide-left 1s;
+  background-color: #f74e0b; }
 
 @keyframes slide-right {
   from {
@@ -112,10 +114,6 @@ body {
   min-width: 425px; }
 
 header, footer, section {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   height: 90vh;
   width: 100%; }
 
@@ -186,6 +184,33 @@ button {
     transform: scale(1.5);
     opacity: 0; }
 
+.btn-text {
+  text-decoration: none;
+  font-size: 1em;
+  border-bottom: 1px solid black;
+  text-transform: capitalize;
+  padding: 1em;
+  border-radius: .4em; }
+  .btn-text:hover {
+    background-color: #f74e0b;
+    color: white;
+    transform: scale(1.1);
+    transition: all 0.5s; }
+
+.photo {
+  box-shadow: 1px 1px 5px #777;
+  border-radius: 10px;
+  position: absolute; }
+  .photo--1 {
+    top: 1em;
+    left: 30%; }
+  .photo--2 {
+    top: 3em;
+    left: 50%; }
+  .photo--3 {
+    top: 4em;
+    left: 20%; }
+
 nav {
   font-size: 1.5em;
   text-align: center;
@@ -203,6 +228,10 @@ nav {
   align-items: center; }
 
 .app--header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   position: relative;
   background-image: linear-gradient(to bottom, rgba(119, 119, 119, 0.664), rgba(14, 13, 13, 0.726)), url("img-3.jpg");
   background-size: cover;
@@ -212,7 +241,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 100%); }
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%); }
   .app--header h2 {
     text-align: center;
     font-size: 2em;
@@ -224,6 +253,51 @@ nav {
     font-size: 1.2em;
     max-width: 425px;
     animation: slide-right 2s; }
+
+.app--section--1 {
+  background-color: whitesmoke;
+  overflow: hidden; }
+  .app--section--1 .section--heading h2 {
+    font-size: 1rem;
+    text-align: center;
+    height: 70px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: black;
+    background-image: linear-gradient(45deg, #6940c9, #e936bc, #8f7120, #7fc203, #fa8595, #25df88, #823cf3, #858443, #3033df, #62cbf5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    margin: 2rem auto;
+    transition: all 0.5s; }
+    .app--section--1 .section--heading h2:hover {
+      transform: skewY(1deg) skewX(1deg) scale(1.1);
+      text-shadow: .2em .4em 1em #777; }
+  .app--section--1 .section--body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around; }
+    .app--section--1 .section--body .text-part h2 {
+      font-size: large;
+      text-transform: uppercase; }
+    .app--section--1 .section--body .text-part p {
+      font-size: small;
+      padding: 0.5em 1em;
+      text-transform: capitalize; }
+    .app--section--1 .section--body .text-part a {
+      color: #f74e0b;
+      border-bottom: 1px solid #f74e0b;
+      margin-top: 3em; }
+      .app--section--1 .section--body .text-part a:hover {
+        color: white; }
+    .app--section--1 .section--body .image-part {
+      position: relative;
+      flex-grow: 1; }
 
 footer {
   background-image: linear-gradient(to bottom, #39383b, #24041d, #777);

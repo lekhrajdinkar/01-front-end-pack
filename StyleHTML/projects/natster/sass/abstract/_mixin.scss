@@ -35,3 +35,22 @@
     transform: scale(1.2);
     box-shadow: 1px 1px 10px rgb(233, 228, 228);
 }
+
+@mixin grd-text($fsize) {
+    font-size: $fsize;
+    text-align: center;
+
+    height: $nav-h; 
+    width: 100%;  
+    border-radius: 10px;
+    background-color: black;
+    background-image: $plg; 
+    background-clip: text; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin skew-effect {
+    transform: skewY(1deg) skewX(1deg)  scale(1.1);
+    text-shadow: .2em .4em 1em #777;
+}

@@ -2,18 +2,6 @@
 @import "../abstract/mixin";
 
 nav{  
-    font-size: 1.5em;
-    text-align: center;
-
-    height: $nav-h; 
-    width: 100%;  
-    border-radius: 10px;
-    background-color: black;
-    background-image: $plg; 
-    background-clip: text; 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
+    @include grd-text(1.5em);
     @include flex-row-center-center;
-   
 }

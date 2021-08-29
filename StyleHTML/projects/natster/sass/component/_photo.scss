@@ -1,0 +1,20 @@
+.photo{
+
+    //width:55%;
+    box-shadow: 1px 1px 5px #777;
+    border-radius: 10px;
+    position: absolute;
+
+    &--1{
+        top: 1em; left: 30%;
+    }
+
+    &--2{
+        top: 3em; left: 50%;
+    }
+
+    &--3{
+        top: 4em; left: 20%;
+    }
+
+}

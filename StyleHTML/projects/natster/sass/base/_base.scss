@@ -1,7 +1,9 @@
 @import "../abstract/variables";
 @import "../abstract/mixin";
 
-*{ margin: 0; padding:0 ; box-sizing: border-box; }
+*{ margin: 0; padding:0 ; box-sizing: border-box; 
+    // border: 1px solid black;
+}
 
 body{ 
     padding: 10px; 
@@ -17,6 +19,6 @@ body{
 }
 
 header, footer, section{
-    @include flex-row-center-center;
+    
     height: 90vh; width: 100%; 
 }

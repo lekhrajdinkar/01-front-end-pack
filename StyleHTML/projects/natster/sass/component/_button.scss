@@ -34,3 +34,20 @@ button{
         opacity:0
     }
 }
+
+.btn-text{
+        text-decoration: none;
+        font-size: 1em;
+        border-bottom: 1px solid black;
+        text-transform: capitalize;
+        padding:1em;
+        border-radius: .4em;
+        
+
+      &:hover{
+          background-color: $col-1;
+          color: white;
+          transform: scale(1.1);
+          transition: all 0.5s;
+      }  
+}

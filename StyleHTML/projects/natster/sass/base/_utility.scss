@@ -8,7 +8,7 @@
     cursor: pointer; color: $col-1-light; 
     transition: all 1;
     @include circle-dim-center-center(2em);
-    
+
     &:hover{
         @include app-hover-1; //scale up + shadow
     }
@@ -19,7 +19,11 @@
     animation: slide-right 1s;
 }
 
-.menu{ 
-    right: 1em; 
+.menu{
+    // z-index: 100;
+    // @include app-hover-1;
+    //position: fixed; 
+    top: 0.5em; right: 0.6em; 
     animation: slide-left 1s;
+    background-color: $col-1;
 }
