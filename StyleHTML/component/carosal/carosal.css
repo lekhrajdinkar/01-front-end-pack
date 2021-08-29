@@ -40,7 +40,7 @@ nav, .toolbar{
     border-bottom: var(--border-thin);
     display: flex; justify-content: space-between; 
     align-items: center; padding:10px;
-    background: var(--secondary-bg-color);
+    background: var(--primary-color-light);
 }
 .toolbar{
     justify-content: flex-start; 
@@ -50,8 +50,14 @@ nav, .toolbar{
 a{text-decoration: none; font-size: 16px; 
         border:var(--border-thick); border-radius: 5px; 
         padding: 6px 12px; margin: 0 10px;
+        transition: all .5s;
 }
-a:hover{ color: var(--secondary-text-color);}
+a:hover{ 
+    color: var(--secondary-text-color); 
+    border: 3px solid var(--secondary-text-color); 
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 10px var(--secondary-text-color);;
+}
 .search--bar{ flex:2; position: relative;}
 .search--bar input{ width: 100%; border-radius: 17px; border: var(--border-thin);}
 .search--bar input:focus{ border: var(--border-thick);}
@@ -155,7 +161,7 @@ input{outline: none; border: none; padding: 10px;}
 li{list-style: square;}
 button{outline: none;border: none; background: none;}
 p {font-size: 20px; font-weight: 400;}
-.icon{ font-size: 48px; cursor: pointer;}
+.icon{ font-size: 24px; cursor: pointer;}
 
 table{border-collapse: collapse; text-align: right;}
 thead tr{ background-color: var(--primary-color); color: cornsilk;}
@@ -215,5 +221,52 @@ tbody tr:nth-child(even){ background-color: rgb(197, 235, 233);}
     font-weight: 600;
     animation: move 1s ease 0.1;
 }
+
+
+
+/* SIDE NAV */
+.side-nav-containor{
+    position: absolute; top:150px; left:0;
+    height: 100vh; width: 300px;
+    background-image: linear-gradient(to bottom, var(--primary-color), var(--primary-bg-color), var(--primary-color-light));
+    display: flex; flex-direction: column; justify-content:  center; align-items: stretch;
+    transform: translateX(-100%);
+    transition: all 0.5s;
+    border-radius: 10px;
+    /* overflow: hidden; */
+}
+
+.side-nav-item{
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 600;
+    font-family: monospace;
+    border-bottom:2px solid var(--primary-color);
+    padding: 20px 0;
+    cursor: pointer;
+    text-align: center;
+    transition: all .5s;
+}
+
+.side-nav-item:last-child{
+    border-bottom: none;
+}
+
+.ion-md-close{
+    cursor: pointer;
+    position: absolute;
+    top: 5%; right: 5%;
+
+    /* height: 2em; width: 2em; background-color: var(--secondary-bg-color);border-radius: 50%;
+    display: flex; justify-content: center; align-items: center; */
+}
+
+.side-nav-item:hover{
+    color: var(--secondary-text-color);
+    border-bottom: 2px solid var(--secondary-text-color);
+    transform: translateX(-30px)  translateX(0px) scale(1.1);
+    text-shadow: 5px 5px 10px rgb(177, 175, 174);
+}
+
 
 

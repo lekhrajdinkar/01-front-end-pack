@@ -12,7 +12,7 @@
 </head>
 <body>
     <nav>
-        <i style="flex:0.2;" class="icon ion-md-menu"></i>
+        <i style="flex:0.2;" class="icon ion-md-menu" onclick="side_nav()"></i>
         <h3 style="flex:1">Lekhraj Dinkar</h3>
         <div class="search--bar">
             <input type="text">
@@ -28,10 +28,15 @@
     </nav>
 
     <section class="toolbar">
+        
+        <a href="/StyleHTML/display/" target="_blank">box types</a>
+        <a href="/StyleHTML/position/" target="_blank">box types</a>
         <a href="/StyleHTML/layouts/" target="_blank">layouts</a>
         <a href="/StyleHTML/component/paginator/" target="_blank">table</a>
         <a href="/StyleHTML/pesudo/" target="_blank">button</a>
+        <a href="/StyleHTML/component/accodian/accodian.html" target="_blank">Accordian</a>
         <a href="/StyleHTML/projects/natster/" target="_blank">Natster App</a>
+        
         
     </section>
 
@@ -118,6 +123,15 @@
     </div>
 
     <!-- PAGINATION END -->
+
+    <div class="side-nav-containor">
+        <div class="side-nav-item">Fund Setup</div>
+        <div class="side-nav-item">Fund Allocation</div>
+        <div class="side-nav-item">Review Allocation</div>
+        <div class="side-nav-item">Report</div>
+        <div class="side-nav-item">cash Settlement</div>
+        <i class="icon ion-md-close" onclick="close_side_nav()"></i>
+    </div>
 
 </body>
 </html>

@@ -58,5 +58,16 @@ const init = function () {
 
 init();
 
+function side_nav(){
+  const el = document.querySelector('.side-nav-containor');
+  el.style.transform = 'translateX(0px)';
+}
+
+function close_side_nav(){
+  const el = document.querySelector('.side-nav-containor');
+  el.style.transform = 'translateX(-100%)';
+}
+
+
 
 
