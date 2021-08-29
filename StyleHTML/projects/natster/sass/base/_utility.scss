@@ -1,0 +1,9 @@
+@import "../abstract/variables";
+
+// icon and logo
+.app-icon{
+    position: absolute; top: 1em; font-size: 2em; 
+    cursor: pointer; color: $col-1-light; 
+}
+.logo{ left: 1em; }
+.menu{ right: 1em; }

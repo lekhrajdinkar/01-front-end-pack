@@ -1,0 +1,17 @@
+@import "../abstract/variables";
+@import "../abstract/mixin";
+
+nav{  
+    height: $nav-h; 
+    width: 100%;  
+    border-radius: 10px;
+    background-color: black;
+    background-image: $plg; 
+    background-clip: text; -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include flex-row-center-center;
+
+    h2{
+        font-size: 2.5em;
+    }
+}

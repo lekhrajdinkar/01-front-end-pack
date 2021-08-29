@@ -1,0 +1,22 @@
+@import "../abstract/variables";
+@import "../abstract/mixin";
+
+*{ margin: 0; padding:0 ; box-sizing: border-box; }
+
+body{ 
+    padding: 10px; 
+    color: rgb(114, 98, 98);
+    background-color: whitesmoke;
+}
+
+.containor{   
+    margin: 0 auto;
+    padding: 10px;
+    background-color: $pbgclr;
+    min-width: $min-app-w;
+}
+
+header, footer, section{
+    @include flex-row-center-center;
+    height: 90vh; width: 100%; 
+}

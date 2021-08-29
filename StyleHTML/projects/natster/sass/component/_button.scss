@@ -1,0 +1,36 @@
+@import "../abstract/variables";
+@import "../base/animation";
+
+button{
+    position: relative; 
+    cursor: pointer;
+    font-size: 1em; text-transform: uppercase; 
+    padding: 0.5em 3em; border-radius: 2em; 
+    border: none; 
+    color: $col-1;
+    font-weight: 600;
+    margin: 1em 1em;
+
+    transition: all 1s;
+    animation: slide-down 1s;
+
+    &:hover{ 
+        /* transform: translateY(10px);
+        box-shadow: 1px 1px 30px white; */
+        /* transform: scaleX(1.2) scaleY(1.5); */
+    }
+    &::after{ 
+        content: ""; 
+        display: inline-block;
+        height: 100%; width: 100%;
+        position: absolute; top: 0; left:0;
+        z-index:-1; border-radius: 2em; 
+        /* border: 2px solid $col-1) ; */
+        background-color: white; color: $col-1;
+        transition: all 0.4s;
+    }
+    &:hover::after{ 
+        transform: scale(1.5);
+        opacity:0
+    }
+}
