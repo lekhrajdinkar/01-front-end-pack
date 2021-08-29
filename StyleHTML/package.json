@@ -1,0 +1,14 @@
+{
+  "name": "sass-project",
+  "version": "1.0.0",
+  "description": "CSS\r SASS\r Html5\r ---\r # CSS\r 1. CSS selector\r 2. inheritance and inheritable styles(text related)\r 3. universal selector\r 4. specificity: important!, inline, #,. :, <tag>, *\r 5. decendent <p> <d>\r 6. child <p> > <c>\r 7. psuedo class :\r 8. psuedo Element ::\r 9. sibling <el> ~ <s>\r 10. Direct Sibling <el> + <s>",
+  "main": "index.js",
+  "scripts": {
+    "c:nat": "node-sass projects/natster/sass.scss projects/natster/style-compiled.css"
+  },
+  "author": "Lekhraj Dinkar",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
