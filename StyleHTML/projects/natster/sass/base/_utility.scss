@@ -1,9 +1,25 @@
 @import "../abstract/variables";
+@import "../abstract/mixin";
+@import "../base/animation";
 
 // icon and logo
 .app-icon{
     position: absolute; top: 1em; font-size: 2em; 
     cursor: pointer; color: $col-1-light; 
+    transition: all 1;
+    @include circle-dim-center-center(2em);
+    
+    &:hover{
+        @include app-hover-1; //scale up + shadow
+    }
 }
-.logo{ left: 1em; }
-.menu{ right: 1em; }
+
+.logo{ 
+    left: 1em;  
+    animation: slide-right 1s;
+}
+
+.menu{ 
+    right: 1em; 
+    animation: slide-left 1s;
+}

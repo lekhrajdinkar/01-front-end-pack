@@ -11,3 +11,27 @@
     justify-content: center; 
     align-items: center;
 }
+
+@mixin app-shadow-1 {
+    padding: 1.5rem;
+    box-shadow: 3px 5px 10px rgb(233, 228, 228);
+    background-color: aliceblue;
+}
+
+@mixin sqr-dim($d){
+    height: $d; width: $d; 
+}
+
+@mixin circle-dim($d){
+    height: $d; width: $d; 
+    border-radius: 50%;
+} 
+@mixin circle-dim-center-center($d){
+    @include flex-col-center-center; 
+    @include circle-dim($d);
+}
+
+@mixin app-hover-1{
+    transform: scale(1.2);
+    box-shadow: 1px 1px 10px rgb(233, 228, 228);
+}
