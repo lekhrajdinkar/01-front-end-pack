@@ -1,32 +1,57 @@
 <div class="containor">
-    <p>user works!</p>
 
-    <button class="left">
+    <div *ngFor="let user of users">
+        <div style="margin: 20px;">
+            <ng-container *ngTemplateOutlet="userTemplate; context:{user}" ></ng-container>
+        </div>
+    </div>
+
+    <!-- <button class="left">
         <i class="icon ion-md-back"></i>
     </button>
     <button class="right">
         <i class="icon ion-md-forward"></i>
-    </button>
+    </button> -->
 </div>
 
 
-<ng-template>
-    <div class="user-card">
-        <img class="user-img"/>
-        <h2>name</h2>
-        <p>description</p>
-        <li>
-            <i>i</i>
-            <i>i</i>
-            <i>i</i>
-        </li>
-        <button> contact</button>
-        <div class="user-address">
-            <span>line1</span>
-            <span>line2</span>
-            <span>sate</span>
-            <span>country</span>
+<ng-template #userTemplate let-u="user">
+    <div class="profile-card">
+        <div class="card-header">
+            <div class="pic">
+                <img [src]="u.picture.large" alt=""/>
+            </div>
+            <div class="name">{{u.name.first}}</div>
+            <div class="name">{{u.name.last}}</div>
+            <div class="desc">Web Developer</div>
+            <span class="desc">email@email.com</span>
+            <div class="sm">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-github"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+            </div>
+           
+            <a href="#" class="contact-btn">Contact me</a>
         </div>
-        <span>email@email.com</span>
+
+        <div class="card-footer">
+            <div class="numbers">
+               <div class="item">
+                   <span>120</span>
+                   Posts
+               </div>
+               <div class="item">
+                    <span>127K</span>
+                    Following
+                </div>
+                <div class="item">
+                    <span>130</span>
+                    Followers
+                </div>
+            </div>
+        </div>
+        
+        
     </div>
 </ng-template>

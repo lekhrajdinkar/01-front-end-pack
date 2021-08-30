@@ -1,16 +1,100 @@
 @import "../../app-sass/variable";
 @import "../../app-sass/mixin";
+@import "../../app-sass/animation";
+
+a{text-decoration: none}
 
 .containor{
-    width:400px; height: 500px;
-    box-shadow: 0px 0px 5px $shadow-dark;
+    @include flex-row-c-c;
     margin:auto;
+    border-radius: 20px;
+    text-decoration: none;
 }
 
-// =========== 
-
-button{
-    background: none; outline: none;
+profile-card{
+    @include flex-row-c-c; 
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
 }
+
+.card-header{
+    text-align: center;
+    padding: 20px 10px;
+    background-color: #0a1b31;
+}
+.pic{
+    width:100px;
+    border-radius: 50%;
+    padding: 6px; margin: auto;
+    // background-size: 200% 200%;
+    // background-image: linear-gradient(rgb(179, 236, 236), rgb(233, 233, 171), rgb(233, 161, 161));
+
+    img{
+        // height: 100px; width: 100px;
+        border-radius: 50%;
+        width:100px;
+    }
+
+    animation: circle 2s linear infinite;
+}
+.name{
+    color: white;
+    font-size: 2em;
+    padding:10px;
+}
+
+.desc{
+    color: orangered;
+    font-size: 1em;
+    padding:10px;
+}
+.sm a{
+    width: 56px; color: white;
+    display: inline-block;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+.sm a:hover{
+    background-color: orangered;
+}
+
+.contact-btn{
+    display: inline-block;
+    padding: 8px 16px;
+    border: 2px solid orangered;
+    color: orangered;
+    margin: 20px 0; border-radius: 8px;
+}
+
+.contact-btn:hover{
+    border: 2px solid white;
+    color: white;
+}
+
+.card-footer{
+    text-align: center;
+    background-color: white;
+    padding: 20px 40px;
+}
+
+.numbers{
+    display: flex;
+}
+
+.item{
+    flex:1;
+    display: block;
+    font-size: 1rem; color: black;
+    padding:20px;
+    span{
+        display: block;
+        font-size: 2rem; color: orangered; 
+    }
+}
+
+
+
 
 
