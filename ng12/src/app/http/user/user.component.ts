@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { UserApiService } from './user-api.service';
 
 @Component({
@@ -8,6 +8,9 @@ import { UserApiService } from './user-api.service';
 })
 export class UserComponent implements OnInit 
 {
+  // @Input() theme_text_color: string = 'black';
+  // @Input() theme_bg_color: string = 'whitesmoke';
+
   user :any[] = []
   constructor(private userSrv: UserApiService) { }
   

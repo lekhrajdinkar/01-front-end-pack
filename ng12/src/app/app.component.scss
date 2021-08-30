@@ -1,12 +1,14 @@
 @import "../app/app-sass/variable";
 @import "app-sass/mixin";
 
+// :host{border: 3px solid red}
+
 nav{
-    height: 60px; width: 100vw;
+    height: 40px; width: 100vw;
     background-color: $primary-bg-color; color: white;
 }
 .toolbar{
-    height: 40px; width: 100vw;
+    height: 30px; width: 100vw;
     background-color: $primary-bg-color-l1; color: rgb(90, 86, 86);
     padding: 4px;
 
@@ -19,15 +21,26 @@ nav{
         border-radius: 10px;
         text-decoration: none;
         color: blanchedalmond;
+        font-size: small;
 
         &:hover{  background-color: blanchedalmond; color: $primary-bg-color;}
     }
 }
 
 main{
-    height: calc(100vh - 100px);
+    height: calc(100vh - 90px);
     width: 100vw;
     background-color: $secondary-bg-color;
-    //@include flex-row-c-c;
+
+    // router-outlet{
+    //     height: 100%;
+    // }
+    overflow: scroll;
+}
+
+footer{
+    height: 20px; width: 100vw;
+    background-color: $primary-bg-color; 
+    color:white;
 }
 

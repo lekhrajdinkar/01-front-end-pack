@@ -1,6 +1,12 @@
 @import "../app-sass/variable";
 @import "../app-sass/mixin";
 
+
+// :host{border: 3px solid red}
+// :host{ height: 100%; }
+*{
+    border: 1px dotted grey;
+}
 .links{ 
     color: black ; 
     border: 2px solid black;
@@ -8,7 +14,7 @@
     border-radius: 4px;
     margin: 10px;
     cursor: pointer;
-    display: inline-block;
+    display: inline-block; 
 }   
 .toolbar{
     background-color: rgb(209, 230, 230);
@@ -17,4 +23,13 @@
 .links:hover{
     color: orangered ; 
     border: 2px solid orangered;
+}
+
+
+main{
+    padding: 0px 50px;
+    margin:auto;
+}
+footer{
+    background-color: $primary-bg-color-l1; 
 }

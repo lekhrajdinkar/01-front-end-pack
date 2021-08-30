@@ -1,3 +1,4 @@
+import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HttpComponent implements OnInit
 {
+  // @Input() theme_text_color: string = 'black';
+  // @Input() theme_bg_color: string = 'whitesmoke';
+  
   links=[
-    {url: 'user', text:'user-profile'},
-    {url: '', text:'next'},
-    {url: '', text:'next'}
+    {url: 'user', text:'user-profile', color: 'red'},
+    {url: '', text:'next', color: 'black'},
+    {url: '', text:'next', color: 'green'}
   ];
 
   constructor() { }

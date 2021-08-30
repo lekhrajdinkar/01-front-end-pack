@@ -1,9 +1,12 @@
 <nav>
-
+app navbar works!
 </nav>
 
 <div class="toolbar">
-    <span [routerLink]="link.url" *ngFor="let link of links">{{link.text}}</span>
+    <span 
+        [routerLink]="link.url" *ngFor="let link of links">
+        {{link.text}}
+    </span>
 </div>
 
 <main>
@@ -11,5 +14,5 @@
 </main>
 
 <footer>
-
+    app-footer works
 </footer>

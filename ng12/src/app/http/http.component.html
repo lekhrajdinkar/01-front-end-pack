@@ -1,13 +1,19 @@
-<div class="toolbar">
-    <span class="links" *ngFor="let item of links" [routerLink]="item.url">{{item.text}}</span>
+<div class="containor">
+    <nav class="toolbar">
+        <span 
+            class="links" 
+            [ngStyle]="{'color':item.color, 'border-color': item.color}"
+            *ngFor="let item of links" 
+            [routerLink]="item.url">
+            {{item.text}}
+        </span>
+    </nav>
+    
+    <main>
+       <router-outlet></router-outlet>
+    </main>
+ 
 </div>
 
-<main>
-   <router-outlet></router-outlet>
-</main>
-
-<footer>
-
-</footer>
 
 
