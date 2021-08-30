@@ -1,0 +1,33 @@
+@import "../app/app-sass/variable";
+@import "app-sass/mixin";
+
+nav{
+    height: 60px; width: 100vw;
+    background-color: $primary-bg-color; color: white;
+}
+.toolbar{
+    height: 40px; width: 100vw;
+    background-color: $primary-bg-color-l1; color: rgb(90, 86, 86);
+    padding: 4px;
+
+    span{
+        display: inline-block;
+        cursor: pointer;
+        padding:2px 16px;  
+        margin: 3px 6px;
+        border: 2px solid blanchedalmond; 
+        border-radius: 10px;
+        text-decoration: none;
+        color: blanchedalmond;
+
+        &:hover{  background-color: blanchedalmond; color: $primary-bg-color;}
+    }
+}
+
+main{
+    height: calc(100vh - 100px);
+    width: 100vw;
+    background-color: $secondary-bg-color;
+    //@include flex-row-c-c;
+}
+

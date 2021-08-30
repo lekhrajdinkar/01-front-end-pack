@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng12';
+  title = 'Angular 12';
+
+  constructor(){}
+links=[
+  {url: 'http', text:'http'},
+  {url: 'directive', text:'directive'}
+]
 }

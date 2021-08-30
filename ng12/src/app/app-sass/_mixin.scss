@@ -1,0 +1,7 @@
+@mixin flex-row-c-c{
+    display: flex; justify-content: center; align-items: center;
+}
+
+@mixin flex-col-c-c{
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+}

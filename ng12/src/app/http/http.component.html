@@ -1,0 +1,13 @@
+<div class="toolbar">
+    <span class="links" *ngFor="let item of links" [routerLink]="item.url">{{item.text}}</span>
+</div>
+
+<main>
+   <router-outlet></router-outlet>
+</main>
+
+<footer>
+
+</footer>
+
+
