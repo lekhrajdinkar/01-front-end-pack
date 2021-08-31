@@ -1,11 +1,15 @@
 <div class="containor">
 
         <div class="api-card" *ngFor="let item of restCall">
-            <div class="btn-containor">
-                <button (click)="backend_call(item)">{{item.btn_name}}</button>
+            <div>
+                <div class="name">{{item.name}}</div>
+                <div class="desc">{{item.desc}}</div>
             </div>
-            <div class="desc">{{item.desc}}</div>
+            
             <div class="type">{{item.type}}</div>
+
+            <button (click)="backend_call(item)">send</button>
+
             <div *ngFor="let feild of item | json">
                 <!-- {{feild.key}} :  {{feild.value }} -->
             </div>
