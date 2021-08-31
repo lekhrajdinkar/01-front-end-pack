@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { UserApiService } from './user-api.service';
-import {pipe} from 'rxjs' ;
+import { tap, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-user',
@@ -15,14 +15,9 @@ export class UserComponent implements OnInit
   users :any[] = [];
   constructor(private userSrv: UserApiService) { }
   
-  ngOnInit(): void {
+  ngOnInit(): void{
     this.userSrv.getUser$()
-    //.pipe(map)
-    .subscribe(
-      res=> {
-        this.users = res.results;
-        console.log(this.users)
-      });
-  }
+    .subscribe(data=>this.users=data);
+  } 
 
 }

@@ -1,0 +1,12 @@
+<div class="containor">
+    <header>blogs</header>
+    <main>
+        <div class="blog" *ngFor="let blog of blogs">
+            <div class="title">{{blog.title}}</div>
+            <div class="desc">{{blog.desc}}</div>
+        </div>
+    </main>
+    <footer class="action">
+        <a (click)="publish_post()" class="btn btn-main">publish</a>
+    </footer>
+</div>

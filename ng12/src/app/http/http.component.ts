@@ -13,7 +13,7 @@ export class HttpComponent implements OnInit
   
   links=[
     {url: 'user', text:'user-profile', color: 'red'},
-    {url: '', text:'next', color: 'black'},
+    {url: 'blogs', text:'Blogs', color: 'black'},
     {url: '', text:'next', color: 'green'}
   ];
 
