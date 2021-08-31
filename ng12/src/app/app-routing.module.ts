@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { BlogsApiService } from './http/blogs/blogs-api.service';
+import { BlogsApiService } from './http/blogs/blogs.service';
 import { BlogsComponent } from './http/blogs/blogs.component';
 import { HttpComponent } from './http/http.component';
 import { UserComponent } from './http/user/user.component';

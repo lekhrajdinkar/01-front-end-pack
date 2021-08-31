@@ -1,21 +1,19 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { Observable} from 'rxjs';
 import { tap, map, filter } from 'rxjs/operators';
+import { AppStoreSelector, BlogLoadAction } from '../../reducers/redux';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class BlogsApiService 
+export class BlogsApiService extends AppStoreSelector
 {
   base_url_api_firebase = 'https://ui-all-default-rtdb.firebaseio.com/';
-  // httpOptions = {
-  //   headers: new HttpHeaders({'Access-Control-Allow-Origin':'*'}),
-  //   mode: 'no-cors'
-  // };
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private store: Store) { super(store)}
     
   // GET
   loadBlog$ = () : Observable<any> => this.http.get(this.base_url_api_firebase+'blogs.json')
@@ -29,7 +27,8 @@ export class BlogsApiService
       }
       return newBlog;
     }),
-    tap(res => console.log('BLOGS Formatted Resp', res))
+    tap(res => console.log('BLOGS Formatted Resp', res)),
+    tap(data => this.store.dispatch(new BlogLoadAction(data))) //store
   );
   
   // POST

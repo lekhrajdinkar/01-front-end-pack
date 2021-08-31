@@ -3,34 +3,57 @@
     box-shadow: 0px 0px 10px #999;
     border-top: 2px solid darkgreen;
     width: 400px;
-    margin: 20px auto;
+    margin: 20px auto; padding: 20px;
+    border: 20px;
+    overflow: hidden;
 
+    header{
+        color: white;
+        background-image: linear-gradient(to right, rgb(147, 226, 147), rgb(243, 165, 165), rgb(178, 178, 240), rgb(236, 236, 159));
+        font-size: 1.5em;
+        padding: 2rem;
+    }
+    
     .blog{
-        background-color: darkgray;
+        background-color: rgb(235, 221, 221);
         cursor: pointer;
-        transition: all 1;
+        transition: all 1s;
 
         .title{
-            font-size: 1.5em; padding:4px 12px;
-            border-top: 1px solid darkgreen;
+            font-size: 1.5em; padding:12px 12px;
+            border-top: 1px solid rgb(195, 211, 195);
         }
 
         .desc{
             font-size: 1em; padding:4px 12px;
+            opacity:0.7
         }
 
         &:hover{
-            transform: scale(1.01);
+            transform: translateX(-10px) scale(1.01);
+            background-color: rgb(218, 196, 196);
         }
+    }
+
+    .action{
         
+        .btn{
+            display: block;
+             padding: 20px;    
+             color: black;  
+             border: 2px solid black; 
+             border-radius: 10px;
+             cursor: pointer;
+             margin: 20px;
+             background-color: coral;
+
+             &:hover{
+                transform: scale(1.01);
+                color: white;  
+                border: 2px solid coral; 
+            }
+        }
     }
 }
 
-.btn{
-    display: block;
-     padding: 10px 20px;    
-     margin: 4px;
-     color: coral;  
-     border: 2px solid coral; 
-     border-radius: 10px;
-}
+
