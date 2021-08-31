@@ -4,3 +4,12 @@
     75%{ background-position: right top;}
     100%{ background-position: left top;}
 }
+
+@keyframes rotating {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

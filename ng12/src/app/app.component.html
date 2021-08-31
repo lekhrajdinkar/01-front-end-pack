@@ -1,5 +1,5 @@
 <nav>
-app navbar works!
+    app navbar works!
 </nav>
 
 <div class="toolbar">
@@ -13,6 +13,13 @@ app navbar works!
    <router-outlet></router-outlet>
 </main>
 
-<footer>
+<footer>    
     app-footer works
 </footer>
+
+<div class="global-loader" [ngStyle]="{display:showHide}">
+    <div class="spinner">
+        <div class="dot"></div>
+        <!-- <div class="timer">{{timer}}</div> -->
+    </div>
+</div>
