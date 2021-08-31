@@ -9,19 +9,24 @@ import { Subject } from 'rxjs';
 export class AppComponent {
   title = 'Angular 12';
   showHide = 'block';
-  message_style: any = { transform: 'translateX(-100%)' }
-  message = '';
+  message_style: any = {}
+  message_class: string[] = [];
+  message = 'txt';
 
   constructor( private gSrv: GlobalService){
     this.gSrv.showHideSubject$.subscribe( v => this.showHide = v);
     this.gSrv.messageSubject$.subscribe( v => {
       this.message = v.text;
       if(v.type === 'ERROR'){
-        this.message_style = {transform: 'translateX(0%)', backgroundColor: 'rgb(223, 142, 152)' }
+         this.message_style = {transform: 'translateX(0%)', backgroundColor: 'rgb(223, 142, 152)' , color: 'red'}
+          //this.message_class = ['global_message_error'];
       }
       if(v.type === 'ALERT'){
-        this.message_style = {transform: 'translateX(0%)', backgroundColor: 'rgb(199, 233, 241)' }
+         this.message_style = {transform: 'translateX(0%)', backgroundColor: 'rgb(199, 233, 241)', color: 'blue'}
+          //this.message_class = ['global_message_alert'];
       }
+
+      setTimeout( () => {this.message_class = [], this.message_style = {}}, 3000)
     });
   }
 
@@ -40,7 +45,7 @@ export class GlobalService
   constructor(){
     setTimeout(() => {
       this.hide();
-      this.showMessage({text:'Welcome to Angular 12 webApp', type:'ALERT'})
+      this.showMessage({text:'Welcome to Angular 12 webApp', type:'ERROR'})
     }, 2000) 
   }
 

@@ -81,12 +81,25 @@ footer{
 }
 
 .global-message{
-    position: absolute; top: 20%; right: 20%;
-    width:400px;
-    transform: translateX(-100%);
+    position: absolute; top: 10%; right: 0%;
+    width:324px;  font-size: 1rem;
+    transform: translateX(100%);
     transition: all 2s;
+    
+
     .message--text{
         font-size: 1.5em; padding: 10px 20px; margin: 10px 20px; 
     }
 }
+
+.global_message_error{
+    transform: translateX(0%); background-color: rgb(223, 142, 152) ; color: rgb(240, 71, 71);
+    border: 3px solid red; 
+}
+
+.global_message_alert{
+    transform: translateX(0%); background-color: rgb(194, 205, 240) ; color: rgb(70, 70, 243);
+    border: 2px solid blue; 
+}
+
 
