@@ -12,9 +12,9 @@ export class HttpComponent implements OnInit
   // @Input() theme_bg_color: string = 'whitesmoke';
   
   links=[
-    {url: 'user', text:'user-profile', color: 'red'},
-    {url: 'blogs', text:'Blogs', color: 'black'},
-    {url: '', text:'next', color: 'green'}
+    {url: '', text:'BACK', color: 'black'},
+    {url: 'user', text:'user-profile', color: 'black'},
+    {url: 'blogs', text:'Blogs', color: 'black'}
   ];
 
   constructor() { }

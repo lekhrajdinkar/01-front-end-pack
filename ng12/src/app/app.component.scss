@@ -8,11 +8,11 @@ nav{
     background-color: $primary-bg-color; color: white;
 }
 .toolbar{
-    height: 30px; width: 100vw;
+    height: 40px; width: 100vw;
     background-color: $primary-bg-color-l1; color: rgb(90, 86, 86);
     padding: 4px;
 
-    span{
+    .link{
         display: inline-block;
         cursor: pointer;
         padding:2px 16px;  
@@ -28,7 +28,7 @@ nav{
 }
 
 main{
-    height: calc(100vh - 90px);
+    height: calc(100vh - 100px);
     width: 100vw;
     background-color: $secondary-bg-color;
 

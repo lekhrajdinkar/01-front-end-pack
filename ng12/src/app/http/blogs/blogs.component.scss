@@ -1,21 +1,22 @@
+@import '../../app-sass/variable';
+// *{ border: 1px dotted rgb(65, 70, 65);}
 .containor{
-    text-align: center;
+    // text-align: center;
     box-shadow: 0px 0px 10px #999;
     border-top: 2px solid darkgreen;
     width: 400px;
     margin: 20px auto; padding: 20px;
-    border: 20px;
     overflow: hidden;
 
     header{
-        color: white;
-        background-image: linear-gradient(to right, rgb(147, 226, 147), rgb(243, 165, 165), rgb(178, 178, 240), rgb(236, 236, 159));
+        color: white; background-color: rgb(78, 112, 133);
+        // background-image: $grd-mix-color;
         font-size: 1.5em;
         padding: 2rem;
     }
     
     .blog{
-        background-color: rgb(235, 221, 221);
+        background-color: whitesmoke;
         cursor: pointer;
         transition: all 1s;
 
@@ -38,6 +39,7 @@
     .action{
         
         .btn{
+            text-align: center;
             display: block;
              padding: 20px;    
              color: black;  
@@ -45,11 +47,12 @@
              border-radius: 10px;
              cursor: pointer;
              margin: 20px;
-             background-color: coral;
+             font-size: 1.5em;
+            //  
 
              &:hover{
                 transform: scale(1.01);
-                color: white;  
+                color: coral;  
                 border: 2px solid coral; 
             }
         }
