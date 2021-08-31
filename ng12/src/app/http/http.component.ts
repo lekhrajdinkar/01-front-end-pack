@@ -14,7 +14,8 @@ export class HttpComponent implements OnInit
   links=[
     {url: '', text:'BACK', color: 'black'},
     {url: 'user', text:'user-profile', color: 'black'},
-    {url: 'blogs', text:'Blogs', color: 'black'}
+    {url: 'blogs', text:'Blogs', color: 'black'},
+    {url: 'playground', text:'playground', color: 'blue'}
   ];
 
   constructor() { }

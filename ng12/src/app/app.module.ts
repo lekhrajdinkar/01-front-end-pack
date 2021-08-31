@@ -11,13 +11,15 @@ import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
+import { PlaygroundComponent } from './http/playground/playground.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HttpComponent,
     UserComponent,
-    BlogsComponent
+    BlogsComponent,
+    PlaygroundComponent
   ],
   imports: [
     BrowserModule,

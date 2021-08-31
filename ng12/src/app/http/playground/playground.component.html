@@ -1,0 +1,8 @@
+<div class="containor">
+
+        <div class="api-card" *ngFor="let item of restCall">
+            <button (click)="backend_call(item)">{{item.btn_name}}</button>
+            <div class="desc">{{item.desc}}</div>
+        </div>
+  
+</div>
