@@ -1,17 +1,22 @@
+import { Injectable } from "@angular/core";
 import { Action, createSelector, Store } from "@ngrx/store";
+import { Observable } from "rxjs";
 import { blog1, blog2 } from "../http/data";
+import { Blog, User } from "../model";
 
 // 1. State
 export interface AppState{
-    http?: {
-        users?: any;
-        blogs?: any;
-    }
+    http: AppHttp
+}
+export interface AppHttp{ 
+    users: User[];
+    blogs: Blog[]; 
 }
 
-let initial_state = {
+let initial_state: AppState = {
     http:{
-        blogs: [blog1, blog2]
+        blogs: [blog1, blog2],
+        users: [{name: 'unknown user'}]
     }
 }
 
@@ -37,12 +42,24 @@ export function appReducer( state: AppState = initial_state, actions: any): AppS
 
 // 4. selector
  const appState = (state: AppState) => state;
- const select_fn_http = createSelector( appState, s=> s.http);
- const select_fn_users = createSelector( select_fn_http, s => s?.users);
- const select_fn_blogs = createSelector( select_fn_http, s => s?.blogs);
+ 
+ const select_fn_app_state = createSelector( appState, (s: AppState) => s);
+    const select_fn_http = createSelector( select_fn_app_state, (s: AppState) => s.http);
+        const select_fn_users = createSelector( select_fn_http, (s: AppHttp) => s.users);
+        const select_fn_blogs = createSelector( select_fn_http, (s: AppHttp) => s.blogs);
+        
+//  @Injectable({providedIn: 'root'})
+//  export class AppStoreSelector
+//  {
+//     store_all$: Observable<AppState>;
+//     store_http$: Observable<any>;
+//     store_http_users$: Observable<any>;
+//     store_http_blogs$: Observable<any>;
 
- export class AppStoreSelector{
-     constructor(private appStr : Store){}
-     store_http_users$ = this.appStr.select(select_fn_users);
-     store_http_blogs$ = this.appStr.select(select_fn_blogs);
- }
+//      constructor(private store : Store){
+//         this.store_all$ = this.store.select(select_fn_app_state);
+//         this.store_http$ = this.store.select(select_fn_http);
+//         this.store_http_users$ = this.store.select(select_fn_users);
+//         this.store_http_blogs$ = this.store.select(select_fn_blogs);
+//      }
+// }

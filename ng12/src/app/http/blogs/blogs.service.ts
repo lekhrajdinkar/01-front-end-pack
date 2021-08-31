@@ -3,32 +3,34 @@ import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable} from 'rxjs';
 import { tap, map, filter } from 'rxjs/operators';
-import { AppStoreSelector, BlogLoadAction } from '../../reducers/redux';
+import { Blog } from 'src/app/model';
+import { BlogLoadAction } from '../../reducers/redux';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class BlogsApiService extends AppStoreSelector
+export class BlogsApiService 
 {
   base_url_api_firebase = 'https://ui-all-default-rtdb.firebaseio.com/';
 
-  constructor(private http: HttpClient, private store: Store) { super(store)}
+  constructor(private http: HttpClient, private store: Store ) { 
+    //super(store)
+  }
     
   // GET
-  loadBlog$ = () : Observable<any> => this.http.get(this.base_url_api_firebase+'blogs.json')
+  loadBlog$ = () : Observable<Blog[]> => this.http.get(this.base_url_api_firebase+'blogs.json')
   .pipe(
-    tap(res => console.log('BLOGS GET Resp', res))
+    tap((res: any)=> console.log('BLOGS GET Resp', res))
     ,map((res: any) => {
-      const newBlog: any[] = [];
-      //d.entries().forEach((id: string,v: any) => {console.log(id,v);  newBlog.push({...v, id}) });
+      const newBlog: Blog[] = [];
       for(const key in res){
         newBlog.push({...res[key], key})
       }
       return newBlog;
     }),
-    tap(res => console.log('BLOGS Formatted Resp', res)),
-    tap(data => this.store.dispatch(new BlogLoadAction(data))) //store
+    tap((data: Blog[]) => console.log('BLOGS Formatted Resp', data)),
+    tap((data: Blog[]) => this.store.dispatch(new BlogLoadAction(data))) //store
   );
   
   // POST
