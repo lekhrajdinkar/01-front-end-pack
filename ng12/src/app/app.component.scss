@@ -80,3 +80,13 @@ footer{
     }
 }
 
+.global-message{
+    position: absolute; top: 20%; right: 20%;
+    width:400px;
+    transform: translateX(-100%);
+    transition: all 2s;
+    .message--text{
+        font-size: 1.5em; padding: 10px 20px; margin: 10px 20px; 
+    }
+}
+

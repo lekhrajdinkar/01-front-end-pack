@@ -9,12 +9,20 @@ import { Subject } from 'rxjs';
 export class AppComponent {
   title = 'Angular 12';
   showHide = 'block';
-  timer = 0;
-  showHideSubject = new Subject<string>();
+  message_style: any = { transform: 'translateX(-100%)' }
+  message = '';
 
   constructor( private gSrv: GlobalService){
     this.gSrv.showHideSubject$.subscribe( v => this.showHide = v);
-    //const timeFn = setInterval( () => {++this.timer; console.log(this.timer)}, 100)
+    this.gSrv.messageSubject$.subscribe( v => {
+      this.message = v.text;
+      if(v.type === 'ERROR'){
+        this.message_style = {transform: 'translateX(0%)', backgroundColor: 'rgb(223, 142, 152)' }
+      }
+      if(v.type === 'ALERT'){
+        this.message_style = {transform: 'translateX(0%)', backgroundColor: 'rgb(199, 233, 241)' }
+      }
+    });
   }
 
   links=[
@@ -23,21 +31,25 @@ export class AppComponent {
   ]
 }
 
+
+
+
 @Injectable({providedIn:'root'})
 export class GlobalService 
 {
-  showHideSubject$ = new Subject<string>();
-  
   constructor(){
     setTimeout(() => {
       this.hide();
-    }, 2000) }
-
-  show(){
-    this.showHideSubject$.next('block');
+      this.showMessage({text:'Welcome to Angular 12 webApp', type:'ALERT'})
+    }, 2000) 
   }
 
-  hide(){
-    this.showHideSubject$.next('none');
-  }
+  // Spinner Service
+  showHideSubject$ = new Subject<string>();
+  show(){ this.showHideSubject$.next('block'); }
+  hide(){ this.showHideSubject$.next('none'); }
+
+  // Message Service
+  messageSubject$ = new Subject<{text: string, type: string}>();
+  showMessage(msg: {text: string, type: string}){ this.messageSubject$.next(msg); }
 }
