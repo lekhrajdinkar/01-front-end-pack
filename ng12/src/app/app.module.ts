@@ -12,7 +12,7 @@ import { reducers, metaReducers } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
 import { PlaygroundComponent } from './http/playground/playground.component';
-import { HttpInterceptorPrint, HttpInterceptorToken } from './http/http-interceptor-token';
+import { HttpInterceptorModifyResponse, HttpInterceptorPrint, HttpInterceptorToken } from './http/http-interceptor-token';
 
 @NgModule({
   declarations: [
@@ -29,16 +29,9 @@ import { HttpInterceptorPrint, HttpInterceptorToken } from './http/http-intercep
     StoreModule.forRoot(reducers, {metaReducers }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
   ],
-  providers: [{
-    provide: HTTP_INTERCEPTORS,
-    useClass: HttpInterceptorPrint,
-    multi: true
-  },
-  {
-    provide: HTTP_INTERCEPTORS,
-    useClass: HttpInterceptorToken,
-    multi: true
-  }
+  providers: [{provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorPrint,multi: true },
+              {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorToken,multi: true },
+              {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorModifyResponse,multi: true }
   ],
   bootstrap: [AppComponent]
 })

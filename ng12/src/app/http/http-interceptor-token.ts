@@ -1,5 +1,6 @@
 import { HttpEvent, HttpHandler, HttpHeaders, HttpInterceptor, HttpParams, HttpRequest } from "@angular/common/http";
 import { Observable } from "rxjs";
+import { tap } from "rxjs/operators";
 
 export class HttpInterceptorPrint implements HttpInterceptor{
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> 
@@ -30,5 +31,16 @@ export class HttpInterceptorToken implements HttpInterceptor{
         console.log("***********************************************************\n\n");
 
         return next.handle(new_req);
+    }
+}
+
+export class HttpInterceptorModifyResponse implements HttpInterceptor{
+    intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> 
+    {
+        console.log("****INTERCEPTOR-3 *********response*************");
+        return next.handle(req)
+        .pipe(
+            tap( res => console.log('INTERCEPTOR-3',res))
+        );
     }
 }
