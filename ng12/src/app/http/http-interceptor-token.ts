@@ -20,8 +20,9 @@ export class HttpInterceptorToken implements HttpInterceptor{
         // h.set('Content-Type',  'application/json');
         // h.set('Authorization',  'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbml0aWFsI…DcyfQ.5e9Bhrl-2LSGWWfrmp79K0gSrQLRIG0ZbUbB-WIJiN4');
         
-        let new_req = req.clone({headers: req.headers.append('Authorization','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbml0aWFsI…DcyfQ.5e9Bhrl-2LSGWWfrmp79K0gSrQLRIG0ZbUbB-WIJiN4') });
-        
+        //let new_req = req.clone({headers: req.headers.append('Authorization','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbml0aWFsI…DcyfQ.5e9Bhrl-2LSGWWfrmp79K0gSrQLRIG0ZbUbB-WIJiN4') });
+        let new_req = req.clone({headers: req.headers.append('Authorization','JWT-1') });
+ 
         //let p = new HttpParams();
         
         new_req = new_req.clone({params: new_req.params.append('param-1', 'param-1')})
