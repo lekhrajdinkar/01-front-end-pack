@@ -1,3 +1,5 @@
+import { HttpHeaders, HttpParams } from "@angular/common/http"
+
 export interface ApiCall{
     name: string,
     type: string;
@@ -18,6 +20,32 @@ export const rest_Call_list: ApiCall[] = [
       type: 'GET',
       url: 'https://ui-all-default-rtdb.firebaseio.com/blogs.json',
       desc: "Firebase realtime database running in test mode to store blogs"
+    },
+  ]
+
+  export const rest_Call_mean_list: ApiCall[] = [
+    { 
+      name: "Mean: Login",
+      type: 'POST',
+      url: 'https://mean-backend-05-18-1991.herokuapp.com/tact2/login',
+      desc: "login with liudinkar",
+      httpOptions: {
+        observe: 'body', //responnse, event, body
+        headers: new HttpHeaders({'Content-Type':  'application/json'}),
+        params: new HttpParams({})
+      },
+      body:{initial:'liudinkar',password:'liudinkar'}
+    },
+    { 
+      name: "Mean: Auth Status",
+      type: 'GET',
+      url: 'https://mean-backend-05-18-1991.herokuapp.com/tact2/auth-status',
+      desc: "mean stack app api to check auth status",
+      httpOptions: {
+        observe: 'response', 
+      //   headers: new HttpHeaders({
+      //         'Authorization' : 'Bearer '+'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbml0aWFsIjoibGl1ZGlua2FyIiwiX2lkIjoiNjEyZmUzZmUyZGUyNjkwMDA0ZDg3MTQ2IiwiZHQiOjE2MzA1Mjg2Mzk0MjYsImlhdCI6MTYzMDUyODYzOSwiZXhwIjoxNjMwNTMyMjM5fQ.SqSLDSgDpTvcGAsp5p2r6o11qC7thv6njTBqIeBg248' })
+        }
     },
     { 
         name: "Mean api-1",
