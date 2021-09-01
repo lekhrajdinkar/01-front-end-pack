@@ -301,12 +301,45 @@ function test_allPromise(){
      .catch(err => console.error('allPromise rejected: ',err));
 }
 
+// chain promises
+function test_Chain_Promise(){
+    let result ;
+    fakePromise1()
+    .then(d => {
+         console.log('fakePromise 1 data: ',d)
+        // fakePromise2().then(_ => result = d + _);
+        // //return result;
+        return fakePromise2()
+    })
+    .then(
+        d => {
+            console.log('fakePromise 1+2 data: ',d)
+            // fakePromise3().then(_ => result = d + _);
+            // return result;
+            return fakePromise3()
+        }
+    )
+    .then(
+        d => {
+            console.log('fakePromise 1+2+3 data: ',d)
+            //fakePromise4().then( _ => result = d + _);
+            return fakePromise4()
+        }
+    )
+    .then(
+        d => {
+            console.log('fakePromise 1+2+3+4 data: ',d)
+        }
+    )
+    .catch(err => console.error('racePromise rejected: ',err));
+}
 // ============= main ===============
 (function(){
     test_racePromise();
     test_allPromise();
     test_allSettledPromise();
-    test_anyPromise();
+   // test_anyPromise();
+    test_Chain_Promise();
 })()
 
 
