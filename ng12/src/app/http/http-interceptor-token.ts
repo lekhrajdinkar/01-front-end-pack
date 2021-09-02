@@ -1,6 +1,7 @@
-import { HttpEvent, HttpHandler, HttpHeaders, HttpInterceptor, HttpParams, HttpRequest } from "@angular/common/http";
-import { Observable } from "rxjs";
-import { tap } from "rxjs/operators";
+import { HttpErrorResponse, HttpEvent, HttpHandler, HttpHeaders, HttpInterceptor, HttpParams, HttpRequest } from "@angular/common/http";
+import { Observable, throwError } from "rxjs";
+import { catchError, tap } from "rxjs/operators";
+import { GlobalService } from "../app.component";
 
 export class HttpInterceptorPrint implements HttpInterceptor{
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> 
@@ -35,12 +36,26 @@ export class HttpInterceptorToken implements HttpInterceptor{
 }
 
 export class HttpInterceptorModifyResponse implements HttpInterceptor{
+    constructor( private globalErrorHandler : GlobalErrorHandler ){ }
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> 
     {
+        
         console.log("****INTERCEPTOR-3 *********response*************");
         return next.handle(req)
         .pipe(
-            tap( res => console.log('INTERCEPTOR-3',res))
+            tap( res => console.log('INTERCEPTOR-3',res)),
+            catchError( this.globalErrorHandler.cb)
         );
+    }
+}
+
+export class GlobalErrorHandler{
+    constructor( private globaSrv : GlobalService ){
+
+    }
+    cb = (err: HttpErrorResponse) => {
+        console.log(err);
+        this.globaSrv.showMessage({text:err.message, type:'ERROR'});
+        return throwError('Something bad happened; please try again later.'+err.message);
     }
 }

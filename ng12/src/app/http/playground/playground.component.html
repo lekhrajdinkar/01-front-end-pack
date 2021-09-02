@@ -24,6 +24,9 @@
             </div>
             
             <div class="type">{{item.type}}</div>
+            <textarea *ngIf="item.type === 'POST'" cols="30" rows="5">
+                {{item.body | json}}
+            </textarea>
 
             <button (click)="backend_call(item)">send</button>
 
