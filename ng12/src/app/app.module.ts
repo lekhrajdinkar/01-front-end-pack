@@ -12,7 +12,9 @@ import { reducers, metaReducers } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
 import { PlaygroundComponent } from './http/playground/playground.component';
-import { GlobalErrorHandler, HttpInterceptorModifyResponse, HttpInterceptorPrint, HttpInterceptorToken } from './http/http-interceptor-token';
+import { GlobalErrorHandler, HttpInterceptorModifyResponse, HttpInterceptorPrint, HttpInterceptorToken }
+ from './http/http-interceptor-token';
+ import{ GlobalService} from './app.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { GlobalErrorHandler, HttpInterceptorModifyResponse, HttpInterceptorPrint
   ],
   providers: [{provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorPrint,multi: true },
               {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorToken,multi: true },
-              {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorModifyResponse, deps: [GlobalErrorHandler],multi: true }
+              {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorModifyResponse, 
+                deps: [GlobalErrorHandler, GlobalService],multi: true }
   ],
   bootstrap: [AppComponent]
 })

@@ -17,16 +17,17 @@ export class AppComponent {
     this.gSrv.showHideSubject$.subscribe( v => this.showHide = v);
     this.gSrv.messageSubject$.subscribe( v => {
       this.message = v.text;
+      this.message_class = ['display_msg'];
       if(v.type === 'ERROR'){
-         this.message_style = {transform: 'translateX(0%)', backgroundColor: 'rgb(223, 142, 152)' , color: 'red'}
-          //this.message_class = ['global_message_error'];
+         //this.message_style = {transform: 'translateX(10%)', backgroundColor: 'rgb(223, 142, 152)' , color: 'red'}
+          setTimeout( () => this.message_class = [...this.message_class,'global_message_error'] , 100);
       }
       if(v.type === 'ALERT'){
-         this.message_style = {transform: 'translateX(0%)', backgroundColor: 'rgb(199, 233, 241)', color: 'blue'}
-          //this.message_class = ['global_message_alert'];
+         //this.message_style = {transform: 'translateX(10%)', backgroundColor: 'rgb(199, 233, 241)', color: 'blue'}
+         setTimeout( () => this.message_class = [...this.message_class,'global_message_alert'] , 100);
       }
 
-      setTimeout( () => {this.message_class = [], this.message_style = {}}, 3000)
+      setTimeout( () => {this.message_class = [], this.message_style = {}}, 4000)
     });
   }
 
@@ -45,8 +46,8 @@ export class GlobalService
   constructor(){
     setTimeout(() => {
       this.hide();
-      this.showMessage({text:'Welcome to Angular 12 webApp', type:'ERROR'})
-    }, 2000) 
+      this.showMessage({text:'Welcome to Angular 12 webApp', type:'ALERT'})
+    }, 500) 
   }
 
   // Spinner Service

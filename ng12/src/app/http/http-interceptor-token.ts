@@ -37,7 +37,10 @@ export class HttpInterceptorToken implements HttpInterceptor{
 }
 
 export class HttpInterceptorModifyResponse implements HttpInterceptor{
-    constructor( private globalErrorHandler : GlobalErrorHandler ){ }
+    constructor( 
+        private globalErrorHandler : GlobalErrorHandler,
+        private gblSrv: GlobalService){ }
+        
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> 
     {
         
@@ -45,19 +48,20 @@ export class HttpInterceptorModifyResponse implements HttpInterceptor{
         return next.handle(req)
         .pipe(
             tap( res => console.log('INTERCEPTOR-3',res)),
+            tap( _ => this.gblSrv.showMessage({text:"SUCCESS", type:"ALERT"})),
             catchError( this.globalErrorHandler.cb)
         );
     }
 }
 
 @Injectable({providedIn:"root"})
-export class GlobalErrorHandler{
-    constructor( private globaSrv : GlobalService ){
-
-    }
+export class GlobalErrorHandler
+{
+    constructor( private globaSrv : GlobalService ){}
     cb = (err: HttpErrorResponse) => {
         console.log(err);
-        this.globaSrv.showMessage({text:err.message, type:'ERROR'});
-        return throwError('Something bad happened; please try again later.'+err.message);
+        const text = 'Something bad happened; please try again later.'+err.message;
+        this.globaSrv.showMessage({text, type:'ERROR'});
+        return throwError(text);
     }
 }

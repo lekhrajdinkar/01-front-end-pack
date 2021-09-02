@@ -49,7 +49,7 @@ footer{
     position: absolute;top:0; left: 0;
     height: 100vh;
     width: 100vw;
-    opacity: 0.3;
+    opacity: 0.7;
     background-color: black;
 
     .spinner{
@@ -81,24 +81,32 @@ footer{
 }
 
 .global-message{
-    position: absolute; top: 10%; right: 0%;
+    position: absolute; top: 0%; right: 0%;
     width:324px;  font-size: 1rem;
     transform: translateX(100%);
-    transition: all 2s;
-    
+    transition: all 1s;
+    display:none; opacity: 0;
 
     .message--text{
         font-size: 1.5em; padding: 10px 20px; margin: 10px 20px; 
     }
+    .fa-close{
+        font-size: 1rem;
+    }
 }
 
+.display_msg{
+    font-size: 0.8rem;
+    display: block;
+    opacity: 1;
+}
 .global_message_error{
-    transform: translateX(0%); background-color: rgb(223, 142, 152) ; color: rgb(240, 71, 71);
+    transform: translateX(-10%); background-color: rgb(241, 187, 193) ; color: rgb(240, 71, 71);
     border: 3px solid red; 
 }
 
 .global_message_alert{
-    transform: translateX(0%); background-color: rgb(194, 205, 240) ; color: rgb(70, 70, 243);
+    transform: translateX(-10%); background-color: rgb(194, 205, 240) ; color: rgb(70, 70, 243);
     border: 2px solid blue; 
 }
 

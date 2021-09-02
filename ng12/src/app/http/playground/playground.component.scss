@@ -12,7 +12,9 @@
         padding: 0.5em 1em; margin:0.5em 1em;
         max-width: 324px;
         display: flex; flex-direction: column; align-items: stretch; justify-content: space-between;
-        box-shadow: 1px 1px .5em rgb(241, 224, 218);
+        box-shadow: 1px 1px .5em rgb(117, 114, 113);
+        background-color: rgb(235, 232, 232);
+        border: 1px solid orangered;
 
         button{
             padding:  0.5em 1em ; margin: 0.5em 1em ;
