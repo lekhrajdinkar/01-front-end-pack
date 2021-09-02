@@ -6,8 +6,10 @@ import { BlogsComponent } from './http/blogs/blogs.component';
 import { HttpComponent } from './http/http.component';
 import { UserComponent } from './http/user/user.component';
 import { PlaygroundComponent } from './http/playground/playground.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 const routes: Routes = [
+  {path:'rxjs', component: RxjsComponent},
   {path:'http', component: HttpComponent, 
     children:[ 
       {path:'user', component: UserComponent},

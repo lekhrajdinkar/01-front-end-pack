@@ -15,6 +15,7 @@ import { PlaygroundComponent } from './http/playground/playground.component';
 import { GlobalErrorHandler, HttpInterceptorModifyResponse, HttpInterceptorPrint, HttpInterceptorToken }
  from './http/http-interceptor-token';
  import{ GlobalService} from './app.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { GlobalErrorHandler, HttpInterceptorModifyResponse, HttpInterceptorPrint
     HttpComponent,
     UserComponent,
     BlogsComponent,
-    PlaygroundComponent
+    PlaygroundComponent,
+    RxjsComponent
   ],
   imports: [
     BrowserModule,

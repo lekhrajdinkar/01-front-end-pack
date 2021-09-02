@@ -1,0 +1,21 @@
+<div class="containor">
+    <strong><p>Observables</p></strong>
+
+    <span #btnEventObsr class="btn"><strong>Obs 1</strong>: Button click event</span>
+    <br><input #inputEventObsr type="text" placeholder="obs 2 : Enter Text">
+    <div class="obs--3">
+        <span> <strong>Obs 3</strong>(synchronized data): </span>  <span *ngFor="let data of obs3_data"> {{data}}, </span>
+        <span (click)="subscribe_obs3_s1()" class="btn">subscribe obs3 (observer-1)</span>
+        <span (click)="subscribe_obs3_s2()" class="btn">subscribe obs3 (observer-2)</span>
+    </div>
+   
+   
+   
+    <!--  <div class="ds ds--event">Button click event</div>
+     <div class="ds ds--syn">sync Data</div>
+     <div class="ds ds--asyn">Async Data</div>
+     <div class="ds ds--asyn">promise Data</div>
+     <div class="ds ds--asyn">Http/Ajax data</div> -->
+
+</div>
+

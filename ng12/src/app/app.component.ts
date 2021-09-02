@@ -33,6 +33,7 @@ export class AppComponent {
 
   links=[
     {url: 'http', text:'http'},
+    {url: 'rxjs', text:'Reactive Programming'},
     {url: 'directive', text:'directive'}
   ]
 }
