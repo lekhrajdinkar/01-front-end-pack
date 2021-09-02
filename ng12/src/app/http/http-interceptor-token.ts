@@ -1,4 +1,5 @@
 import { HttpErrorResponse, HttpEvent, HttpHandler, HttpHeaders, HttpInterceptor, HttpParams, HttpRequest } from "@angular/common/http";
+import { Injectable } from "@angular/core";
 import { Observable, throwError } from "rxjs";
 import { catchError, tap } from "rxjs/operators";
 import { GlobalService } from "../app.component";
@@ -49,6 +50,7 @@ export class HttpInterceptorModifyResponse implements HttpInterceptor{
     }
 }
 
+@Injectable({providedIn:"root"})
 export class GlobalErrorHandler{
     constructor( private globaSrv : GlobalService ){
 
