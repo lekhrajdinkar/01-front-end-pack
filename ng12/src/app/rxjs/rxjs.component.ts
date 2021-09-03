@@ -91,11 +91,14 @@ export class RxjsComponent implements OnInit, AfterViewInit, OnDestroy
     .pipe( 
       tap( od => console.log(od)),
       tap( ood => this.switch_map_outer_o_data.push(ood)),
-      switchMap( v =>  this.Obs_32_input_evt
+      switchMap( v =>  { 
+        console.log("mu code");
+        return this.Obs_32_input_evt
         .pipe(
           debounceTime(1000),
           tap( ood => this.switch_map_inner_o_data.add(ood)),
-          map( i => v + " "+i)))
+          map( i => v + " "+i))}
+          )
     )
     .subscribe( result => this.switch_map_data.push(result));
   }
@@ -169,7 +172,7 @@ export class RxjsComponent implements OnInit, AfterViewInit, OnDestroy
       complete: () => {}
     } 
     const sub3 = this.Obs_3_syn_data_array
-    .pipe(debounceTime(500))
+    //.pipe(debounceTime(500))
     .subscribe(obsrvr1);
     this.subs.push(sub3);
   }

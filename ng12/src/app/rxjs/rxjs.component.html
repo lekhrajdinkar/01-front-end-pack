@@ -8,8 +8,8 @@
     <span class="obs--data" *ngFor="let data of obs2_data"> {{data}} </span>
 
     <hr>
-    <input #inputEventObsr21 type="text" placeholder="obs 2.1 (outer) : mergeMap">.SwitchMap(
-    <input #inputEventObsr22 type="text" placeholder="obs 2.2 (inner) : mergeMap">)
+    <input #inputEventObsr21 type="text" placeholder="obs 2.1 (outer) : mergeMap"> {{'.mergeMap( (outer_data) => { outer_data + '}}
+    <input #inputEventObsr22 type="text" placeholder="obs 2.2 (inner) : mergeMap"> {{'})'}}
     <div>
         outer obs data emitted: 
         <span [ngClass]="{active_border:true}" class="obs--data" *ngFor="let data of merge_map_outer_o_data; last as isLast "> {{data}} </span>
@@ -18,8 +18,8 @@
     Result: <span class="obs--data" *ngFor="let data of merge_map_data"> {{data}} </span>
 
     <hr>
-    <input #inputEventObsr31 type="text" placeholder="obs 3.1 (outer) : switchmap">.mergeMap(
-    <input #inputEventObsr32 type="text" placeholder="obs 3.2 (inner) : switchmap">)
+    <input #inputEventObsr31 type="text" placeholder="obs 3.1 (outer) : switchmap">{{'.switchMap( (outer_data) => { outer_data + '}}
+    <input #inputEventObsr32 type="text" placeholder="obs 3.2 (inner) : switchmap"> {{'})'}}
     <div>
         outer obs data emitted: 
         <span [ngClass]="{active_border:isLast}"class="obs--data" *ngFor="let data of switch_map_outer_o_data; last as isLast"> {{data}} </span>
