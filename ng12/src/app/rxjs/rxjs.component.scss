@@ -12,10 +12,12 @@
     cursor: pointer;
     transition: all 0.5s;
 }
+.obs--data{display: inline-block; margin-left: 10px; padding: 5px 20px; 
+    background-color: rgb(185, 230, 230); border: 1px dotted black;}
 
 .containor{
     font-size: 1.5em;
-    margin: auto;
+    margin: auto; padding: 10px 50px;
     input{
         outline: none; font-size: 1em;
         background: none;
@@ -24,12 +26,13 @@
     }
     .btn{
         @include common;
-        &:hover{@include focus_item};
-        box-shadow: 3px 3px 10px rgb(49, 48, 48);
-        
-        &:active{
-            color: green;
-            border-color: greenyellow;
-        }
+        &:hover{@include focus_item; color:white};
+        box-shadow: 5px 5px 10px rgb(49, 48, 48);
+        background-color: cadetblue; color: white;
+        &:active{color: green; border-color: greenyellow;}
     }
+}
+
+.active_border{
+    border: 3px solid orangered;
 }
