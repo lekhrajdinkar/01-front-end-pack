@@ -16,6 +16,7 @@ export class CustomInputComponent implements OnInit , ControlValueAccessor{
   // Pattern : xxx + xxxChange.
   // Needed for 2 way Binding.
 
+  @Input() name!: string;
   @Input() label!: string;
 
   @Input() value!: string;

@@ -1,5 +1,6 @@
 <div class="containor">
     <label for="input-feild">{{label}}</label>
     <input id="input-feild" type="text" [value]="value" (input)="onNewInput($event)">
+    <ng-content selector=".err_message"></ng-content>
     <ng-content></ng-content>
 </div>

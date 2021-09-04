@@ -1,29 +1,40 @@
 .containor{
+    display: flex ; justify-content: space-between; align-items: center;
     border:2px solid rgb(70, 145, 10);
-    padding: 10px 16px;
+    padding: 2px 16px;
     margin: 4px;
     font-size: 1em;
-    background-color: rgb(133, 214, 133);
+    background-color: rgb(227, 245, 227);
     color: white;
     border-radius: 8px;
 
     label{
-        font-size: smaller;
-        color: white;
+        font-size: large;
+        color: black;
     }
 
     input{
+        text-align: center;
+        width:324px;
+        font-size: 1.4em;
         background: none; border: none;
-        background-color: rgb(217, 233, 184);
+        background-color:whitesmoke;
         outline: none;
-        padding:4px 8px;
+        padding:8px 16px;
         margin: 5px;
+        transition: all 0.5s;
         &:focus{
-            background-color: rgb(186, 226, 231);
+            background-color: rgb(194, 209, 211); color: rgb(23, 143, 107);
+            width:350px;
+            box-shadow: 0px 0px 20px white;
         }
     }
 
     &:focus{
         background-color: rgb(68, 126, 68);
     }
+}
+
+ng-content{
+    color: black;
 }

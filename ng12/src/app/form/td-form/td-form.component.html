@@ -13,10 +13,14 @@
                 </app-custom-input>  -->
 
                 <app-custom-input 
+                        name="nickname" ngModel
                         [label]="'Nickname'"
                         [value]="nickname_value" (valueChange)="nickname_value=$event"
                 >
                 {{nickname_value}}
+                <!-- <ng-container *ngIf="form.form.controls.nickname.touched && !form.form.controls.nickname.valid">
+                        <span class="err_message">Please enter valid email</span>
+                </ng-container> -->
                 </app-custom-input> 
 
 
@@ -66,8 +70,9 @@
         </form>
 
         <div class="side-grid">
-            <!-- <div *ngFor="let item of form.value | keyvalue">{{item.key}} : {{item.value}}</div> -->
-        
+            <div *ngFor="let item of form.value | keyvalue">{{item.key}} : {{item.value}}</div>
+        <hr><br>
+
         Binding (Component Feilds):
         <hr>
                 <br> country - <strong>ngModel</strong>  <em>(register only)</em> : {{country_value}}
@@ -76,6 +81,15 @@
                 <br> lname - <strong>[(ngModel)] </strong> (2 way bind): {{lname_value}}
                 <br> email - <strong>[value] and (input)</strong> : (2 way bind manaully) {{email_value}}
         <hr>
+
+        <p>
+        1. 2-way binfing works on custom input comp, only it they they follow @Input() XXX:T | @Output XXXchange subject T
+        <br> 2.1 [(value)] ='feild_name'  (shorthand)
+        <br> 2.2. (valueChange)="feild_name=$event" + [value] ='feild_name'.
+        <br> 3. for native HTML, this pattern doesnot exist and use uses ngModel directive. 
+        Also there is DefaultvalueAccessor for all native tage. 
+        which is bridge between ngModel directive and html native tag.
+        </p>
         </div>
     
 
