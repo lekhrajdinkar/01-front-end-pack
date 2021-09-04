@@ -1,17 +1,5 @@
-@mixin focus_item{
-    color: orangered;
-    border-color: orangered;
-    box-shadow: 0px 0px 10px orangered;
-}
+@import "../app-sass/mixin";
 
-@mixin common{
-    padding: 0.5em 1em; margin: 0.5em 1em;
-    border-radius: 10px;
-    border: 2px solid black;
-    display: inline-block;
-    cursor: pointer;
-    transition: all 0.5s;
-}
 .obs--data{display: inline-block; margin-left: 10px; padding: 5px 20px; 
     background-color: rgb(185, 230, 230); border: 1px dotted black;}
 

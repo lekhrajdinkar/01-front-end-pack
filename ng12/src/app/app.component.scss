@@ -29,7 +29,7 @@ nav{
 }
 
 main{
-    height: calc(100vh - 100px);
+    height: $primary-comp-height;
     width: 100vw;
     background-color: $secondary-bg-color;
 

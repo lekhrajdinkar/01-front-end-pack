@@ -5,3 +5,20 @@
 @mixin flex-col-c-c{
     display: flex; flex-direction: column; justify-content: center; align-items: center;
 }
+
+@mixin focus_item{
+    color: orangered;
+    border-color: orangered;
+    box-shadow: 0px 0px 10px orangered;
+}
+
+@mixin common{
+    padding: 0.5em 1em; margin: 0.5em 1em;
+    border-radius: 10px;
+    border: 2px solid black;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+

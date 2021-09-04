@@ -1,0 +1,48 @@
+@import "../../app-sass/variable";
+@import "../../app-sass/mixin";
+
+@mixin light-border {
+    border:1px solid orangered;
+    box-shadow: 1px 1px 10px #777;
+}
+
+@mixin section {
+        border-radius: 16px;
+        margin: 10px 10px; padding: 10px 10px;
+        background-color: rgb(248, 234, 247);
+        height: 100%; width: 100%;
+        border: 2px solid green;
+        overflow: scroll;
+}
+
+
+.containor{
+    margin: 16px;
+    padding:10px, 50px;
+    font-size: 0.8rem;
+    height: calc(100vh - 152px);
+    @include flex-row-c-c;
+    
+    .form-grid{
+        @include section;
+        border: 2px solid green;
+       .form-group{
+           input{
+                @include light-border;
+           }
+           button{
+                @include light-border;
+           }
+           select{
+                @include light-border;
+            option{
+               
+            }
+           }
+       }
+    }
+
+    .side-grid{
+        @include section;
+    }
+}
