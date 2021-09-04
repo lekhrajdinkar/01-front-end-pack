@@ -7,8 +7,12 @@ import { HttpComponent } from './http/http.component';
 import { UserComponent } from './http/user/user.component';
 import { PlaygroundComponent } from './http/playground/playground.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { ReactiveFormComponent } from './form/reactive-form/reactive-form.component';
+import { TdFormComponent } from './form/td-form/td-form.component';
 
 const routes: Routes = [
+  {path:'td-form', component: TdFormComponent},
+  {path:'r-form', component: ReactiveFormComponent},
   {path:'rxjs', component: RxjsComponent},
   {path:'http', component: HttpComponent, 
     children:[ 

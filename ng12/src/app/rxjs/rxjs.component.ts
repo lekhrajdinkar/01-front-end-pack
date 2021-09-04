@@ -1,7 +1,13 @@
+// SUbject... special case of Observer, can call next. Event emitter.
+// BehaviourSubject -has intial value
+// ReplaySubject - buffers old values.
+// AsynSubject : emit last value only when its is complete.
+// Subject<void>, value does not matter.
+
 import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { Observable, fromEvent, Subscription, Observer, interval, of } from 'rxjs';
-import { debounceTime, distinctUntilChanged, map, mergeMap, pluck, switchMap, tap, throttleTime } from 'rxjs/operators';
+import { Observable, fromEvent, Subscription, Observer, interval, of, from, Subject } from 'rxjs';
+import { debounceTime, distinctUntilChanged, map, mergeMap, multicast, pluck, switchMap, tap, throttleTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-rxjs',
@@ -36,9 +42,15 @@ export class RxjsComponent implements OnInit, AfterViewInit, OnDestroy
 
   subs : Subscription[] = [];
 
-  constructor(private http: HttpClient) { }
+  subject = new Subject<number>();
+ 
 
-  ngOnInit(): void { }
+  constructor(private http: HttpClient) { 
+    // const multicast_obs = from([1,2,4]).pipe(multicast(this.subject));
+  }
+
+  ngOnInit(): void { 
+  }
 
   ngOnDestroy(): void {
     this.subs.forEach(s => s.unsubscribe())
@@ -150,13 +162,15 @@ export class RxjsComponent implements OnInit, AfterViewInit, OnDestroy
     //Observer cb
     const obsvr_cb = (obsvr: Observer<string>) => { 
       this.obs3_data.forEach( d => obsvr.next(d));
-      //obsvr.next(this.obs3_data);
-      //obsvr.complete();
+      obsvr.next('Last packet');
+      obsvr.complete();
     };
 
     //create Observable
     this.Obs_3_syn_data_array =  Observable.create(obsvr_cb)
     .pipe(map(item => item+'__modified' ));
+
+    //this.Obs_3_syn_data_array =  from(this.obs3_data);
   }
 
   // ==============

@@ -16,6 +16,10 @@ import { GlobalErrorHandler, HttpInterceptorModifyResponse, HttpInterceptorPrint
  from './http/http-interceptor-token';
  import{ GlobalService} from './app.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormComponent } from './form/reactive-form/reactive-form.component';
+import { TdFormComponent } from './form/td-form/td-form.component';
+import { HighlightDirective } from './directive/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -24,12 +28,16 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     UserComponent,
     BlogsComponent,
     PlaygroundComponent,
-    RxjsComponent
+    RxjsComponent,
+    ReactiveFormComponent,
+    TdFormComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    HttpClientModule, 
+    HttpClientModule,
+    FormsModule, ReactiveFormsModule, 
     StoreModule.forRoot(reducers, {metaReducers }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
   ],
