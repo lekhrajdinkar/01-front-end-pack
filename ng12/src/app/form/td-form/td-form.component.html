@@ -1,12 +1,87 @@
-<div style="text-align:center"><strong>Template-driven Form</strong> </div> 
+<div style="text-align:center"><strong>Template Driven Form</strong> </div> 
 <div class="containor">
     
-        <div class="form-grid">
+        <form #form=ngForm class="form-grid"  novalidate autocomplete="off">
+            <div class="left">
+                     <!-- +++++++++++CUSTOM+++INPUT+++++++++++ -->
+                     <!-- SHort hand for two way binding -->
+                <!-- <app-custom-input 
+                        [label]="'Nickname'"
+                        [(value)]="nickname_value"
+                >
+                {{nickname_value}}
+                </app-custom-input>  -->
 
-        </div>
+                <app-custom-input 
+                        [label]="'Nickname'"
+                        [value]="nickname_value" (valueChange)="nickname_value=$event"
+                >
+                {{nickname_value}}
+                </app-custom-input> 
+
+
+                <!-- ++++++++++++++HTML+++++INPUT++++++ -->
+
+                <div class="input">
+                        <span>Country</span>
+                        <input name = "country" type="text" placeholder="" ngModel>
+                 </div>
+                <div class="input">
+                        <span>Age</span>
+                        <input name = "age" type="text" placeholder="" ngModel (ngModelChange)="inputAge($event)">
+                 </div>
+                <div class="input">
+                    <span>First Name</span>
+                    <input name = "fname" type="text" placeholder="" [ngModel]="fname_value">
+                </div>
+                
+                <div class="input">
+                    <span>Last Name</span>
+                    <input [name] = "'lname'" type="text" placeholder="" [(ngModel)]="lname_value">
+                    <!-- <ng-container *ngIf="form.controls.lname.touched && !form.controls.lname.valid">
+                        <span class="err_message">Please enter valid Last Name</span> 
+                    </ng-container> -->
+                </div>
+
+                <div class="input">
+                    <span>Email</span>
+                    <input name = "email" type="email" placeholder="@gmail.com" 
+                    ngModel
+                    [value]="email_value"
+                    (input)="inputEmail($event)"> {{email_value}}
+                    <!-- <ng-container *ngIf="form.controls.email.touched && !form.controls.email.valid">
+                        <span class="err_message">Please enter valid email</span>
+                    </ng-container> -->
+                </div>
+
+            </div>
+
+            
+
+            <div style="grid-column: 1/3; display: flex; justify-content: center; align-items: center;">
+                  <button (click)="printForm()" [disabled]="form.invalid">Submit</button>
+                  <button (click)="reset()">Reset</button>
+                  <button (click)="patch()" >Patch</button>
+            </div>  
+        </form>
+
         <div class="side-grid">
-    
+            <!-- <div *ngFor="let item of form.value | keyvalue">{{item.key}} : {{item.value}}</div> -->
+        
+        Binding (Component Feilds):
+        <hr>
+                <br> country - <strong>ngModel</strong>  <em>(register only)</em> : {{country_value}}
+                <br> age - <strong>ngModel (ngModelChange)</strong>: {{age_value}}
+                <br> fname - <strong>[ngModel]</strong>  (1 way bind): {{fname_value}}
+                <br> lname - <strong>[(ngModel)] </strong> (2 way bind): {{lname_value}}
+                <br> email - <strong>[value] and (input)</strong> : (2 way bind manaully) {{email_value}}
+        <hr>
         </div>
     
 
 </div>
+
+<!-- 
+        ngModel register form feild/control
+        (ngModel) , [ngModel]
+ -->

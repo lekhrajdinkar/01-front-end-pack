@@ -1,0 +1,29 @@
+.containor{
+    border:2px solid rgb(70, 145, 10);
+    padding: 10px 16px;
+    margin: 4px;
+    font-size: 1em;
+    background-color: rgb(133, 214, 133);
+    color: white;
+    border-radius: 8px;
+
+    label{
+        font-size: smaller;
+        color: white;
+    }
+
+    input{
+        background: none; border: none;
+        background-color: rgb(217, 233, 184);
+        outline: none;
+        padding:4px 8px;
+        margin: 5px;
+        &:focus{
+            background-color: rgb(186, 226, 231);
+        }
+    }
+
+    &:focus{
+        background-color: rgb(68, 126, 68);
+    }
+}

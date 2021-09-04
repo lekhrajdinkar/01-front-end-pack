@@ -39,7 +39,7 @@
         </form>
 
         <div class="side-grid">
-            <div *ngFor="let item of items"> {{item}}</div>
+            <div *ngFor="let item of items"> {{item}}</div> <hr>
             <div *ngFor="let item of form.value | keyvalue">{{item.key}} : {{item.value}}</div>
         </div>
     

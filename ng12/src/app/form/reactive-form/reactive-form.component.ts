@@ -22,7 +22,6 @@ export class ReactiveFormComponent implements OnInit {
   // Form Action
   printForm(){ 
     console.log(this.form);
-    
   }
   patch(){
     this.form.patchValue({fname:'Lekhraj'})

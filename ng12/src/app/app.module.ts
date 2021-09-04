@@ -20,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormComponent } from './form/reactive-form/reactive-form.component';
 import { TdFormComponent } from './form/td-form/td-form.component';
 import { HighlightDirective } from './directive/highlight.directive';
+import { CustomInputComponent } from './form/custom-input/custom-input.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { HighlightDirective } from './directive/highlight.directive';
     RxjsComponent,
     ReactiveFormComponent,
     TdFormComponent,
-    HighlightDirective
+    HighlightDirective,
+    CustomInputComponent
   ],
   imports: [
     BrowserModule,
