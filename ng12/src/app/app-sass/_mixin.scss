@@ -21,4 +21,18 @@
     transition: all 0.5s;
 }
 
+@mixin input-mixin{
+    outline: none; font-size: 1em;
+    background: none;
+    @include common;
+    &:focus{  @include focus_item}
+}
+@mixin btn-mixin{
+    @include common;
+    &:hover{@include focus_item; color:white};
+    box-shadow: 5px 5px 10px rgb(49, 48, 48);
+    background-color: cadetblue; color: white;
+    &:active{color: green; border-color: greenyellow;}
+}
+
 

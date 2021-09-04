@@ -9,15 +9,10 @@
     input{
         outline: none; font-size: 1em;
         background: none;
-        @include common;
-        &:focus{  @include focus_item}
+        @include input-mixin;
     }
     .btn{
-        @include common;
-        &:hover{@include focus_item; color:white};
-        box-shadow: 5px 5px 10px rgb(49, 48, 48);
-        background-color: cadetblue; color: white;
-        &:active{color: green; border-color: greenyellow;}
+        @include btn-mixin;
     }
 }
 
