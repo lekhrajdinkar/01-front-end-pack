@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { FormGroup, NgForm } from '@angular/forms';
+import { FormGroup, NgForm, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-td-form',
@@ -32,7 +32,7 @@ export class TdFormComponent implements OnInit, AfterViewInit {
   }
   patch(){
     //this.form.patchValue({fname:'Lekhraj'})
-    //console.log(this.form.get('fname'));
+    //console.log(a);
   }
   reset(){ 
     this.form.reset();

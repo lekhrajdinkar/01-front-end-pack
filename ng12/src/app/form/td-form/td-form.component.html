@@ -32,12 +32,21 @@
 
                 <div class="input">
                         <span>Country</span>
-                        <input name = "country" type="text" placeholder="" ngModel> 
+                        <input name = "country" type="text" placeholder="" ngModel #country_ref=ngModel
+                            required maxlength=3> 
+                            <span *ngIf="country_ref.invalid && country_ref.dirty" style="color:red">Please enter valid value</span>
+                       <div>required maxlength=3</div> 
+                       <br>valid:   {{country_ref.valid}}, 
+                       <br>touched: {{country_ref.valid}},
+                       <br>dirty:   {{country_ref.dirty}},
+                       <br>pristine:{{country_ref.pristine}}
                  </div><hr>
+
                 <div class="input">
                         <span>Age</span>
                         <input name = "age" type="text" placeholder="" ngModel (ngModelChange)="inputAge($event)">
                  </div><hr>
+                 
                 <div class="input">
                     <span>First Name</span>
                     <input name = "fname" type="text" placeholder="" [ngModel]="fname_value">
