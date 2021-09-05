@@ -66,8 +66,12 @@
         color: rgb(48, 46, 46); &:focus{color: white; } 
         background-color: rgb(124, 226, 209);
         border-width: 1px;
+        // .ng-invalid{
+        //     background-color: rgb(252, 192, 202); 
+        // }
     }
 }
+
 
 input::placeholder{ color: white; opacity:0.5}
 
@@ -95,3 +99,12 @@ select{
     border-bottom: 3px solid red;
     border-radius: 6px;
 }
+
+// :host-context(app-custom-input) .containor{
+//     cursor: pointer;
+//     &:hover{
+//         transform: scale(1.1);
+//         cursor: pointer;
+//     }
+// }
+

@@ -57,6 +57,17 @@ export class FormValidators
         //     }, 2000, control);
         // });
     }
+
+    validateCountry(control: FormControl): ValidationErrors | null{
+        const value: string = control.value;
+        console.log(value);
+        if(value === '' || value === null || value?.length === 0)
+         return {custom_validation_msg: 'Cant be Empty'};
+        else if(value.length < 3)
+            return {custom_validation_msg: 'Cant be less than 3 char'};
+        else
+         return null;
+    }
     
 }
 

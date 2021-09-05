@@ -3,14 +3,16 @@
     
         <form class="form-grid" [formGroup]="form" novalidate>
             <div class="left" style="grid-column: 1/3">
-                <app-custom-input label="Enter Country" formControlName="country" [(value)]="country_value">
+
+                <!-- IMPORTANT usecase of binding -->
+                <app-custom-input label="Enter Country" formControlName="country" 
+                [value]="form.get('country')?.value"
+                (valueChange)="form.get('country')?.setValue($event)"
+                >
                     <ng-container class="err_message" *ngIf="form.get('country')?.errors">
                         <span  *ngFor="let item of form.get('country')?.errors | keyvalue" class="err_message">{{item.value}}</span> 
                     </ng-container>
-                    {{country_value}} <!-- connect -->
                 </app-custom-input>
-                {{country_value}}
-
 
                 <div class="input">
                     <div>

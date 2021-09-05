@@ -15,10 +15,10 @@ export class ReactiveFormComponent implements OnInit, OnDestroy {
   subs : Subscription[] =[];
 
   country_value:any;
-  
+
   ngOnInit(): void {
     this.form = new FormGroup({
-      'country': new FormControl('USA'),
+      'country': new FormControl('US', [Validators.required, this.my_validators.validateCountry.bind(this)]),
       'age': new FormControl(18, [Validators.required, this.my_validators.validateAgeFeild.bind(this)]),
       'fname': new FormControl(null, [Validators.required, this.my_validators.validateNameFeild.bind(this)]),
       'lname': new FormControl(null, [Validators.required, this.my_validators.validateNameFeild.bind(this)]),
