@@ -2,45 +2,76 @@
 <div class="containor">
     
         <form class="form-grid" [formGroup]="form" novalidate>
-            <div class="left">
-                <div class="input">
-                    <span>Age</span><br>
-                    <input formControlName="age" type="text" placeholder="">
-                    <ng-container *ngIf="form.get('age')?.errors">
-                        <span class="err_message">Please enter valid age</span> 
+            <div class="left" style="grid-column: 1/3">
+                <app-custom-input label="Enter Country" formControlName="country" [(value)]="country_value">
+                    <ng-container class="err_message" *ngIf="form.get('country')?.errors">
+                        <span  *ngFor="let item of form.get('country')?.errors | keyvalue" class="err_message">{{item.value}}</span> 
                     </ng-container>
-                </div>
-                
-                <div class="input">
-                    <span>First Name</span><br>
-                    <input formControlName="fname" type="text" placeholder="">
-                    <ng-container *ngIf="form.get('fname')?.errors">
-                        <span class="err_message">Please enter valid Last Name</span> 
-                    </ng-container>
-                </div>
-                
-                <div class="input">
-                    <span>Last Name</span><br>
-                    <input formControlName="lname" type="text" placeholder="">
-                    <ng-container *ngIf="form.get('lname')?.errors">
-                        <span class="err_message">Please enter valid Last Name</span> 
-                    </ng-container>
-                </div>
+                    {{country_value}} <!-- connect -->
+                </app-custom-input>
+                {{country_value}}
+
 
                 <div class="input">
-                    <span>Email</span><br>
-                    <input formControlName="email" type="email" placeholder="@gmail.com">
-                    <ng-container *ngIf="form.controls.email.touched && !form.controls.email.valid">
-                        <span class="err_message">Please enter valid email</span>
-                    </ng-container>
+                    <div>
+                        <span> <strong>Age</strong>  </span><br>
+                        <input formControlName="age" type="text" placeholder="">
+                    </div>
+                    <div>
+                        <div>(without dirty, erro msg would come)</div>
+                        <ng-container *ngIf="form.get('age')?.errors">
+                            <span  *ngFor="let item of form.get('age')?.errors | keyvalue" class="err_message">{{item.value}}</span> 
+                        </ng-container>
+                    </div>
+                </div>
+<hr>
+                <div class="input">
+                    <div>
+                        <span> <strong>First Name</strong>  </span><br>
+                        <input formControlName="fname" type="text" placeholder="">
+                    </div>
+                    <div>
+                        <div>(without dirty, erro msg would come)</div>
+                        <ng-container *ngIf="form.get('fname')?.errors">
+                            <span class="err_message">Please enter some value</span> 
+                        </ng-container>
+                    </div>
+                </div>
+<hr>
+                <div class="input">
+                    <div>
+                        <span> <strong>Last Name</strong>  </span><br>
+                        <input formControlName="lname" type="text" placeholder="">  
+                    </div>
+                    <div>
+                        <ng-container *ngIf="form.controls.email.dirty && form.get('lname')?.errors">
+                            <span class="err_message">Please enter some value</span> 
+                        </ng-container>
+                        <div>(if dirty, erro msg would come)</div>
+                    </div>
+                </div>
+<hr>
+                <div class="input">
+                    <div>
+                        <span> <strong>Email</strong>  </span><br>
+                        <input formControlName="email" type="email" placeholder="@gmail.com">
+                    </div>
+                    <div>
+                        <div>(if touched, erro msg would come)</div>
+                        <ng-container *ngIf="form.controls.email.touched && !form.controls.email.valid">
+                            <span class="err_message" [innerText] = "form.get('email')?.errors?.custom_validation_msg"></span> 
+                        </ng-container>
+                    </div>
                 </div>
 
             </div>
 
-            <div class="right">
-                <!-- <input type="text" placeholder="First Name">
-                <input type="text" placeholder="First Name"> -->
-            </div>
+
+
+            <!-- <div class="right">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="First Name"> 
+            </div> -->
 
             <div style="grid-column: 1/3; display: flex; justify-content: center; align-items: center;">
                   <button (click)="printForm()" [disabled]="form.invalid">Submit</button>

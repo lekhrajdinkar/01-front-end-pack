@@ -14,20 +14,24 @@ export class ReactiveFormComponent implements OnInit, OnDestroy {
   constructor(private my_validators: FormValidators) { }
   subs : Subscription[] =[];
 
+  country_value:any;
+  
   ngOnInit(): void {
-    // this.form = new FormGroup({
-    //   'age': new FormControl(18, [Validators.required, this.my_validators.validateAgeFeild.bind(this)]),
-    //   'fname': new FormControl(null, [Validators.required, this.my_validators.validateNameFeild.bind(this)]),
-    //   'lname': new FormControl(null, [Validators.required, this.my_validators.validateNameFeild.bind(this)]),
-    //   'email': new FormControl(null, [Validators.required] , [this.my_validators.validateEmail_promise.bind(this)]) // 3rd argument is async vaidator
-    // });
-
     this.form = new FormGroup({
-      'age': new FormControl(18, [Validators.required]),
-      'fname': new FormControl(null, [Validators.required]),
-      'lname': new FormControl(null, [Validators.required]),
-      'email': new FormControl(null, [Validators.required]) // 3rd argument is async vaidator
+      'country': new FormControl('USA'),
+      'age': new FormControl(18, [Validators.required, this.my_validators.validateAgeFeild.bind(this)]),
+      'fname': new FormControl(null, [Validators.required, this.my_validators.validateNameFeild.bind(this)]),
+      'lname': new FormControl(null, [Validators.required, this.my_validators.validateNameFeild.bind(this)]),
+      'email': new FormControl(null, [Validators.required] , [this.my_validators.validateEmail_promise.bind(this)]) // 3rd argument is async vaidator
     });
+    console.log(this.form);
+
+    // this.form = new FormGroup({
+    //   'age': new FormControl(18, [Validators.required]),
+    //   'fname': new FormControl(null, [Validators.required]),
+    //   'lname': new FormControl(null, [Validators.required]),
+    //   'email': new FormControl(null, [Validators.required]) // 3rd argument is async vaidator
+    // });
 
     //Manually subscribe to async validator
     // const sub = this.my_validators.validateEmail_obs(this.form.get('email')!)

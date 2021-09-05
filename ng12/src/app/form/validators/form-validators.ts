@@ -11,8 +11,8 @@ export class FormValidators
     validateNameFeild(control: FormControl): ValidationErrors | null{
         const value: string = control.value;
         console.log(value);
-        if(value === '' || value.includes("test"))
-         return {error: 'Add valid name, cant be Name'};
+        if(value === '')
+         return {custom_validation_msg: 'Add valid name, cant be Name'};
         else
          return null;
     }
@@ -21,14 +21,14 @@ export class FormValidators
         const value: string = control.value;
         
         //if(/[1-100]/.test(value)){
-        if( +value > 100){
+        if( +value < 100){
             console.log(value, 'is valid');
             return null;
         }
          
         else{
             console.log(value, 'is Invalid, Please add age between 1 to 100');
-            return {error: 'Add age between 1 to 100'};
+            return {custom_validation_msg: 'Add age between 1 to 100'};
         }
          
     }
@@ -70,9 +70,12 @@ class emailAsyncValidator_promise implements AsyncValidator
         const value: string = control.value;
         // if(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/.test(value)){
         if(!value.includes("@")){
-            const err_msg = 'Add age between 1 to 100';
+            const err_msg = '@ is missing';
             console.log(value, err_msg)
-            return Promise.resolve({error: err_msg});
+            return Promise.resolve({custom_validation_msg: err_msg});
+        }
+        else if(value === null || value === 'null'){
+            return Promise.resolve({custom_validation_msg: "cant be blank"});
         }
         else{
             console.log(value, 'is valid')
@@ -86,9 +89,11 @@ class emailAsyncValidator_obs implements AsyncValidator{
         const value: string = control.value;
         //if(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/.test(value)){
         if(!value.includes("@")){
-            const err_msg = 'Add age between 1 to 100';
+            const err_msg = '@ is missing';
             console.log(value, err_msg)
-            return of({error: err_msg});
+            return of({custom_validation_msg: err_msg});
+        }else if(value === null || value === 'null'){
+            return of({custom_validation_msg: "cant be blank"});
         }
         else{
             console.log(value, 'is valid')
