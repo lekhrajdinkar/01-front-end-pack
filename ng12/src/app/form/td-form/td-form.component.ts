@@ -40,8 +40,14 @@ export class TdFormComponent implements OnInit, AfterViewInit {
   inputEmail(e:any){
     this.email_value= e.target.value;
   }
-  inputAge(e:any){
+  inputAge(e:any, ngModel: NgModel){
     console.log(e);
     this.age_value= e;
+
+    const formGroup = this.form.form;
+    //const formContol = formGroup?.get('lname');
+    const formContol = formGroup.controls.lname;
+    console.log(this.form, formGroup, formContol, ngModel);
+    formContol?.setValue('dinkar');
   }
 }

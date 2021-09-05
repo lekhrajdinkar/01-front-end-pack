@@ -15,13 +15,14 @@
                 <!-- [value]="nickname_value" (valueChange)="nickname_value=$event" -->
 
                 <app-custom-input 
-                        name="nickname" ngModel
+                        name="nickname" 
+                        #nickname_ref=ngModel ngModel required
                         [label]="'Nickname'"
                         
                         [value]="form.form.get('nickname')?.value"
                         (valueChange)="form.form.get('nickname')?.setValue($event)"
                 >
-                {{nickname_value}}
+                {{nickname_ref.valid}}
                 <!-- <ng-container *ngIf="form.form.controls.nickname.touched && !form.form.controls.nickname.valid">
                         <span class="err_message">Please enter valid email</span>
                 </ng-container> -->
@@ -29,7 +30,7 @@
 
 
                 <!-- ++++++++++++++HTML+++++INPUT++++++ -->
-
+                not registered : ngModel missing : <input name="country2" type="text" placeholder="" >  
                 <div class="input">
                         <span>Country</span>
                         <input name = "country" type="text" placeholder="" ngModel #country_ref=ngModel
@@ -44,9 +45,9 @@
 
                 <div class="input">
                         <span>Age</span>
-                        <input name = "age" type="text" placeholder="" ngModel (ngModelChange)="inputAge($event)">
+                        <input  #age_ref=ngModel name="age" type="text" placeholder="" ngModel (ngModelChange)="inputAge($event, age_ref)">
                  </div><hr>
-                 
+
                 <div class="input">
                     <span>First Name</span>
                     <input name = "fname" type="text" placeholder="" [ngModel]="fname_value">
@@ -83,11 +84,12 @@
         </form>
 
         <div class="side-grid">
-            <div *ngFor="let item of form.value | keyvalue">{{item.key}} : {{item.value}}</div>
+            <h2>Registered formControl</h2>
+            <p>IMP: html input native, already 2 way binded with form>contol>value. Below i tried to bind it additional varivable like XXX_value </p>
+            <div *ngFor="let item of form.value | keyvalue"> <strong>{{item.key}} </strong> :: {{item.value}}</div>
         <hr><br>
 
-        Binding (Component Feilds):
-        <hr>
+       <h4>Binding (Component Feilds :: XXX_value. eg: age_value) </h4> 
                 <br> country - <strong>ngModel</strong>  <em>(register only)</em> : {{country_value}}
                 <br> age - <strong>ngModel (ngModelChange)</strong>: {{age_value}}
                 <br> fname - <strong>[ngModel]</strong>  (1 way bind): {{fname_value}}

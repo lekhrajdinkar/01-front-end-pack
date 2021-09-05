@@ -2,6 +2,10 @@
     border:2px solid rgb(236, 40, 66);
 }
 
+:host.ng-invalid.ng-dirty .containor{
+    background-color:rgb(255, 225, 225)
+}
+
 .containor{
     display: flex ; justify-content: space-between; align-items: center;
     border:2px solid rgb(70, 145, 10);
@@ -33,6 +37,7 @@
             box-shadow: 0px 0px 20px white;
         }
     }
+    
 
     &:focus{
         background-color: rgb(68, 126, 68);
