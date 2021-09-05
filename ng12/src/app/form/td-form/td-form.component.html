@@ -12,10 +12,14 @@
                 {{nickname_value}}
                 </app-custom-input>  -->
 
+                <!-- [value]="nickname_value" (valueChange)="nickname_value=$event" -->
+
                 <app-custom-input 
                         name="nickname" ngModel
                         [label]="'Nickname'"
-                        [value]="nickname_value" (valueChange)="nickname_value=$event"
+                        
+                        [value]="form.form.get('nickname')?.value"
+                        (valueChange)="form.form.get('nickname')?.setValue($event)"
                 >
                 {{nickname_value}}
                 <!-- <ng-container *ngIf="form.form.controls.nickname.touched && !form.form.controls.nickname.valid">
@@ -28,16 +32,16 @@
 
                 <div class="input">
                         <span>Country</span>
-                        <input name = "country" type="text" placeholder="" ngModel>
-                 </div>
+                        <input name = "country" type="text" placeholder="" ngModel> 
+                 </div><hr>
                 <div class="input">
                         <span>Age</span>
                         <input name = "age" type="text" placeholder="" ngModel (ngModelChange)="inputAge($event)">
-                 </div>
+                 </div><hr>
                 <div class="input">
                     <span>First Name</span>
                     <input name = "fname" type="text" placeholder="" [ngModel]="fname_value">
-                </div>
+                </div><hr>
                 
                 <div class="input">
                     <span>Last Name</span>
@@ -45,7 +49,7 @@
                     <!-- <ng-container *ngIf="form.controls.lname.touched && !form.controls.lname.valid">
                         <span class="err_message">Please enter valid Last Name</span> 
                     </ng-container> -->
-                </div>
+                </div><hr>
 
                 <div class="input">
                     <span>Email</span>
@@ -56,7 +60,7 @@
                     <!-- <ng-container *ngIf="form.controls.email.touched && !form.controls.email.valid">
                         <span class="err_message">Please enter valid email</span>
                     </ng-container> -->
-                </div>
+                </div><hr>
 
             </div>
 
