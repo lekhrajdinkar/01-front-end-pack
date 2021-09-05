@@ -27,20 +27,25 @@ export class CustomInputComponent implements OnInit , ControlValueAccessor{
 
   ngOnInit(): void {}
 
-  onNewInput(newValue:any){ this.valueChange.emit(newValue.target.value) }
+  onNewInput(e:any){ 
+    const new_value = e.target.value;
+    this.valueChange.emit(new_value);
+    this.writeValue(new_value); // IMPORTANT
+   }
 
-   _ = (v: any) => {};
-  writeValue(obj: any): void {
-    this.value = obj;
-    this._(obj);
-    //throw new Error('Method not implemented.');
+  //=============================
+
+  registerOnTouched_cb = (v: any) => {};
+  registerOnChange_cb = (v: any) => {};
+
+  writeValue(obj: string): void {
+    this.registerOnChange_cb(obj);
   }
   registerOnChange(fn: any): void {
-    this._ = fn;
-    //throw new Error('Method not implemented.');
+    this.registerOnChange_cb = fn;
   }
   registerOnTouched(fn: any): void {
-    //throw new Error('Method not implemented.');
+    this.registerOnTouched_cb = fn;
   }
 
 }
