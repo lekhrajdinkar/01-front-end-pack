@@ -4,20 +4,31 @@
         <form class="form-grid" [formGroup]="form" novalidate>
             <div class="left">
                 <div class="input">
-                    <span>First Name</span>
-                    <input formControlName="fname" type="text" placeholder="">
+                    <span>Age</span><br>
+                    <input formControlName="age" type="text" placeholder="">
+                    <ng-container *ngIf="form.get('age')?.errors">
+                        <span class="err_message">Please enter valid age</span> 
+                    </ng-container>
                 </div>
                 
                 <div class="input">
-                    <span>Last Name</span>
+                    <span>First Name</span><br>
+                    <input formControlName="fname" type="text" placeholder="">
+                    <ng-container *ngIf="form.get('fname')?.errors">
+                        <span class="err_message">Please enter valid Last Name</span> 
+                    </ng-container>
+                </div>
+                
+                <div class="input">
+                    <span>Last Name</span><br>
                     <input formControlName="lname" type="text" placeholder="">
-                    <ng-container *ngIf="form.controls.lname.touched && !form.controls.lname.valid">
+                    <ng-container *ngIf="form.get('lname')?.errors">
                         <span class="err_message">Please enter valid Last Name</span> 
                     </ng-container>
                 </div>
 
                 <div class="input">
-                    <span>Email</span>
+                    <span>Email</span><br>
                     <input formControlName="email" type="email" placeholder="@gmail.com">
                     <ng-container *ngIf="form.controls.email.touched && !form.controls.email.valid">
                         <span class="err_message">Please enter valid email</span>
