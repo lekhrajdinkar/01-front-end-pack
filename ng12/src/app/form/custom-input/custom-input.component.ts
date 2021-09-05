@@ -31,6 +31,7 @@ export class CustomInputComponent implements OnInit , ControlValueAccessor{
 
    _ = (v: any) => {};
   writeValue(obj: any): void {
+    this.value = obj;
     this._(obj);
     //throw new Error('Method not implemented.');
   }

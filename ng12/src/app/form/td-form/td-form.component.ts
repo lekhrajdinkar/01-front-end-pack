@@ -16,6 +16,7 @@ export class TdFormComponent implements OnInit, AfterViewInit {
   age_value:string = '20';
   country_value = 'INDIA';
   nickname_value!: string;
+  nickname2_value!: string;
 
   constructor() { }
 

@@ -14,6 +14,13 @@
                     </ng-container>
                 </app-custom-input>
 
+                <app-custom-input 
+                label="Enter state" 
+                formControlName="state"
+                [(ngModel)]="state_value"> 
+                                {{state_value}}
+                </app-custom-input>
+
                 <div class="input">
                     <div>
                         <span> <strong>Age</strong>  </span><br>
@@ -85,6 +92,12 @@
         <div class="side-grid">
             <div *ngFor="let item of items"> {{item}}</div> <hr>
             <div *ngFor="let item of form.value | keyvalue">{{item.key}} : {{item.value}}</div>
+            <hr>
+            <h4>Should not use formControlName and ngModel together</h4>
+            <p>It looks like you're using ngModel on the same form field as formControlName.
+                Support for using the ngModel input property and ngModelChange event with
+                reactive form directives has been deprecated in Angular v6 and will be removed
+                in a future version of Angular.</p>
         </div>
     
 
