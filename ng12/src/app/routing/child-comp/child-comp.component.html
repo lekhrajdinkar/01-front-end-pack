@@ -1,1 +1,32 @@
-<p>child-comp works!</p>
+<div class="containor">
+    static data: {{data.source}}
+    <div class="item">
+        <div class="user">
+            ID: {{user.id}} <br>
+            NAME: {{user.name}}
+        </div>
+        
+
+        <!-- <app-user></app-user> -->
+
+        <div *ngIf="fragment"> 
+            <div  class="console">1. {{fragment}} </div><hr>
+        </div>
+
+        <br> <h5>2. data:</h5>
+        <div *ngIf="data"> 
+            <div *ngFor="let item of data | keyvalue" class="console">{{item.key}} : {{item.value}} </div> <hr> 
+        </div>
+
+        <br> <h5>3. params:</h5>
+        <div *ngIf="params"> 
+            <div *ngFor="let item of params | keyvalue" class="console">{{item.key}} : {{item.value}}</div> <hr> 
+        </div>
+
+        <br> <h5>4. queryParams:</h5>
+        <div *ngIf="queryParams">
+            <div *ngFor="let item of queryParams | keyvalue" class="console">{{item.key}} : {{item.value}}</div>  <hr> 
+        </div>
+
+    </div>
+</div>

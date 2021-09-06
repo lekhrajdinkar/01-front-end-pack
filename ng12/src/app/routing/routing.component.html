@@ -1,1 +1,25 @@
-<p>routing works!</p>
+<div class="containor">
+    <div class="list">
+        <h3>RouterLink</h3>
+        <li class="list-item" *ngFor="let u of users" 
+        [routerLink]="[u?.id]" routerLinkActive="router-link-active" > 
+            {{u.name}}
+        </li>
+    </div>
+    <div class="list  list--2">
+        <h3>programatically</h3>
+        <li class="list-item" *ngFor="let u of users" 
+        (click)="showDetails(u)">
+            {{u.name}}
+        </li>
+    </div>
+    <div class="detail">
+        <h2>Details</h2>
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+<!-- 
+    Notes:
+    routerLinkActiveOption="{exact:true}" 
+-->

@@ -9,6 +9,8 @@ import { PlaygroundComponent } from './http/playground/playground.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { ReactiveFormComponent } from './form/reactive-form/reactive-form.component';
 import { TdFormComponent } from './form/td-form/td-form.component';
+import { RoutingComponent } from './routing/routing.component';
+import { ChildCompComponent } from './routing/child-comp/child-comp.component';
 
 const routes: Routes = [
   {path:'', component: WelcomeComponent},
@@ -21,6 +23,14 @@ const routes: Routes = [
       {path:'blogs', component: BlogsComponent}, 
       {path:'playground', component: PlaygroundComponent},
     ]},
+
+    {path:'routing', component: RoutingComponent, 
+    children:[ 
+      {path:':id', component: ChildCompComponent, data:{source: 'navigate with routerLink directive'}},
+      {path:':id/:name', component: ChildCompComponent,  data:{source: 'Programitcally navigate'}},
+      {path:':name', redirectTo: ':id'}, 
+    ]},
+
     {path:'**', component: ErrorPageComponent, data:{some_static_err_msg: 'Something went Wrong !'}},
 ];
 
