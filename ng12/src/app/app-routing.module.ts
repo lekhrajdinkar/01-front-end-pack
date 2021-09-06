@@ -11,6 +11,7 @@ import { ReactiveFormComponent } from './form/reactive-form/reactive-form.compon
 import { TdFormComponent } from './form/td-form/td-form.component';
 import { RoutingComponent } from './routing/routing.component';
 import { ChildCompComponent } from './routing/child-comp/child-comp.component';
+import { CompExitGaurd, RoutingChildGaurd, RoutingGaurd } from './routing/gaurd';
 
 const routes: Routes = [
   {path:'', component: WelcomeComponent},
@@ -25,6 +26,9 @@ const routes: Routes = [
     ]},
 
     {path:'routing', component: RoutingComponent, 
+    // canActivate: [RoutingGaurd], // whole
+    // canActivateChild: [RoutingChildGaurd],  //only child
+    canDeactivate: [CompExitGaurd],
     children:[ 
       {path:':id', component: ChildCompComponent, data:{source: 'navigate with routerLink directive'}},
       {path:':id/:name', component: ChildCompComponent,  data:{source: 'Programitcally navigate'}},

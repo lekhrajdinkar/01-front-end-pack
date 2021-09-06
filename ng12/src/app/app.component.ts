@@ -84,7 +84,12 @@ export class WelcomeComponent {
 
 @Component({
   selector: 'app-error-page-root',
-  template: `<h1 style="margin:auto; color:red;" > {{err_msg}} ! </h1>`,
+  template: `
+  <div style="height:100%; margin:auto;">
+    <h1 style="margin:auto; color:red;" > 
+      {{err_msg}} ! 
+    </h1>
+  </div>`,
   styleUrls: ['./app.component.scss']
 })
 export class ErrorPageComponent {

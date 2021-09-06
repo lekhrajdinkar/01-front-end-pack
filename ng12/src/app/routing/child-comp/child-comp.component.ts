@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
+import { CanCompExit } from '../gaurd';
 
 @Component({
   selector: 'app-child-comp',
@@ -23,6 +24,8 @@ export class ChildCompComponent implements OnInit , OnDestroy
     private router: Router,
     private activedRoute: ActivatedRoute
   ) { this.getSnapShotWhileRouting();}
+
+ 
 
   ngOnDestroy(): void {
    this.subs.forEach(s=>s.unsubscribe());

@@ -40,6 +40,19 @@
 .router-link-active{
    color: rgb(33, 168, 15);
    font-weight: 700;
+   font-size: larger;
 }
 
 li{ text-decoration: none; list-style: none;}
+
+button{
+    padding: 10px 20px;  margin:10px 20px;  cursor: pointer;
+    border: 2px solid green; background-color: rgb(245, 207, 226);
+    &:hover{
+        box-shadow: 0 0 10px #777
+    }
+    &:active{
+        transform: scale(1.1);
+        color: yellowgreen;
+    }
+}
