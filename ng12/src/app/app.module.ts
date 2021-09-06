@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent, ErrorPageComponent, WelcomeComponent } from './app.component';
 import { HttpComponent } from './http/http.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UserComponent } from './http/user/user.component';
@@ -21,10 +21,12 @@ import { ReactiveFormComponent } from './form/reactive-form/reactive-form.compon
 import { TdFormComponent } from './form/td-form/td-form.component';
 import { HighlightDirective } from './directive/highlight.directive';
 import { CustomInputComponent } from './form/custom-input/custom-input.component';
+import { RoutingComponent } from './routing/routing.component';
+import { ChildCompComponent } from './routing/child-comp/child-comp.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent, ErrorPageComponent, WelcomeComponent,
     HttpComponent,
     UserComponent,
     BlogsComponent,
@@ -33,7 +35,9 @@ import { CustomInputComponent } from './form/custom-input/custom-input.component
     ReactiveFormComponent,
     TdFormComponent,
     HighlightDirective,
-    CustomInputComponent
+    CustomInputComponent,
+    RoutingComponent,
+    ChildCompComponent
   ],
   imports: [
     BrowserModule,

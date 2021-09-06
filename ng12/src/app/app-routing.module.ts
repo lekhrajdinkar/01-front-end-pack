@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { AppComponent, ErrorPageComponent, WelcomeComponent } from './app.component';
 import { BlogsApiService } from './http/blogs/blogs.service';
 import { BlogsComponent } from './http/blogs/blogs.component';
 import { HttpComponent } from './http/http.component';
@@ -11,6 +11,7 @@ import { ReactiveFormComponent } from './form/reactive-form/reactive-form.compon
 import { TdFormComponent } from './form/td-form/td-form.component';
 
 const routes: Routes = [
+  {path:'', component: WelcomeComponent},
   {path:'td-form', component: TdFormComponent},
   {path:'r-form', component: ReactiveFormComponent},
   {path:'rxjs', component: RxjsComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
       {path:'blogs', component: BlogsComponent}, 
       {path:'playground', component: PlaygroundComponent},
     ]},
+    {path:'**', component: ErrorPageComponent},
 ];
 
 @NgModule({
