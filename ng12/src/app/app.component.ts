@@ -84,9 +84,15 @@ export class WelcomeComponent {
 
 @Component({
   selector: 'app-error-page-root',
-  template: `<h1 style="margin:auto; color:red;" > Something went wrong ! </h1>`,
+  template: `<h1 style="margin:auto; color:red;" > {{err_msg}} ! </h1>`,
   styleUrls: ['./app.component.scss']
 })
 export class ErrorPageComponent {
-  
+  err_msg!: string;
+  constructor(
+    private router: Router,
+    private activedRoute: ActivatedRoute
+    ){
+      this.err_msg= this.activedRoute.snapshot.data['some_static_err_msg'];
+    }
 }

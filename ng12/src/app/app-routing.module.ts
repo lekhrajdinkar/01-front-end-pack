@@ -21,7 +21,7 @@ const routes: Routes = [
       {path:'blogs', component: BlogsComponent}, 
       {path:'playground', component: PlaygroundComponent},
     ]},
-    {path:'**', component: ErrorPageComponent},
+    {path:'**', component: ErrorPageComponent, data:{some_static_err_msg: 'Something went Wrong !'}},
 ];
 
 @NgModule({
