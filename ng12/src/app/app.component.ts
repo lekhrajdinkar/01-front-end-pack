@@ -1,4 +1,5 @@
 import { Component, Injectable } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subject } from 'rxjs';
 
 @Component({
@@ -34,9 +35,13 @@ export class AppComponent {
   links=[
     {url: 'http', text:'http'},
     {url: 'rxjs', text:'Reactive Programming'},
-    {url: 'directive', text:'directive'},
+    
     {url: 'td-form', text:'TD Form'},
-    {url: 'r-form', text:'Reactive Form'}
+    {url: 'r-form', text:'Reactive Form'},
+
+    {url: 'directive', text:'directive'},
+    {url: 'pipe', text:'Pipe'},
+    {url: 'routing', text:'routing'}
   ]
 }
 
@@ -61,4 +66,27 @@ export class GlobalService
   // Message Service
   messageSubject$ = new Subject<{text: string, type: string}>();
   showMessage(msg: {text: string, type: string}){ this.messageSubject$.next(msg); }
+}
+
+@Component({
+  selector: 'app-welcome-root',
+  template: `
+  <h1 style="text-align:center;margin:auto; color:green;"> WELCOME TO NG12 </h1>
+  `,
+  styleUrls: ['./app.component.scss']
+})
+export class WelcomeComponent {
+  constructor(
+    private router: Router,
+    private activedRoute: ActivatedRoute
+    ){}
+}
+
+@Component({
+  selector: 'app-error-page-root',
+  template: `<h1 style="margin:auto; color:red;" > Something went wrong ! </h1>`,
+  styleUrls: ['./app.component.scss']
+})
+export class ErrorPageComponent {
+  
 }
