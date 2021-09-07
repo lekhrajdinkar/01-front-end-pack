@@ -19,10 +19,11 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormComponent } from './form/reactive-form/reactive-form.component';
 import { TdFormComponent } from './form/td-form/td-form.component';
-import { HighlightDirective } from './directive/highlight.directive';
+import { HighlightDirective } from './directives/appearance.directive';
 import { CustomInputComponent } from './form/custom-input/custom-input.component';
 import { RoutingComponent } from './routing/routing.component';
 import { ChildCompComponent } from './routing/child-comp/child-comp.component';
+import { holdableDirective } from './directives/behaviour.directive';
 
 @NgModule({
   declarations: [
@@ -34,10 +35,11 @@ import { ChildCompComponent } from './routing/child-comp/child-comp.component';
     RxjsComponent,
     ReactiveFormComponent,
     TdFormComponent,
-    HighlightDirective,
     CustomInputComponent,
     RoutingComponent,
     ChildCompComponent
+
+    ,HighlightDirective, holdableDirective
   ],
   imports: [
     BrowserModule,
@@ -47,11 +49,11 @@ import { ChildCompComponent } from './routing/child-comp/child-comp.component';
     StoreModule.forRoot(reducers, {metaReducers }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
   ],
-  providers: [{provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorPrint,multi: true },
+  providers: [
+              {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorPrint,multi: true },
               {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorToken,multi: true },
-              {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorModifyResponse, 
-                deps: [GlobalErrorHandler, GlobalService],multi: true }
-  ],
+              {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorModifyResponse, deps: [GlobalErrorHandler, GlobalService],multi: true }
+             ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

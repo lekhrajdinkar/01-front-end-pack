@@ -28,8 +28,14 @@ export class RoutingComponent implements OnInit, CanCompExit {
 
   ngOnInit(): void { }
 
-  pop = () => this.users.pop();
+  holdTime = 2000;
+  pop = (e: number) => { 
+    console.log(e); 
+    if(e >= this.holdTime/100) 
+      this.users.pop()
+  };
 
+  getTime(t: number){ console.log(t)}
   showDetails(u:any){
     this.router.navigate([u.id, u.name], 
       {

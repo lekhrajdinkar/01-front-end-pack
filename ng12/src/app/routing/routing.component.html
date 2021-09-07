@@ -1,5 +1,5 @@
 <div class="containor">
-    <div class="list">
+    <div class="list" >
         <h3>RouterLink</h3>
         <li class="list-item" *ngFor="let u of users" 
         [routerLink]="[u?.id]" routerLinkActive="router-link-active" > 
@@ -15,7 +15,7 @@
     </div>
     <div class="detail">
         <h2 style="display: inline-block;">Details</h2>
-        <button (click)="pop()">POP</button>
+        <button  holdable [holdTime]="holdTime" (holdTimeEvent) ="pop($event)">POP</button>
         <router-outlet></router-outlet>
     </div>
 </div>
