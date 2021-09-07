@@ -18,6 +18,8 @@ export class holdableDirective
   cancel$ = new Subject<string>();
   sub!: Subscription;
 
+  constructor() { }
+
   holdTime$ = interval(100).pipe( takeUntil(this.cancel$) )
 
   @HostBinding('style.backgroundColor') bgCol = 'rgb(225, 247, 183)';
@@ -27,17 +29,19 @@ export class holdableDirective
     console.log('%c Mouse HOLD DOWN', console_style_1 , e);
     this.sub = this.holdTime$.subscribe( t => {
       this.holdEvent.next(t) ;
-      if (t >= (this.holdTime/100) )this.sub.unsubscribe()
-    } );
-
+      if (t >= (this.holdTime/100) ) {
+        this.sub.unsubscribe(); 
+        this.holdEvent.next(0)
+      }
+    });
   }
 
   @HostListener('mouseup', ['$event'])
   onMouseLeave(e: any){
     console.log('%c Mouse Lifted UP', console_style_2, e);
     this.cancel$.next('cancel');
+    this.holdEvent.next(0);
     this.sub.unsubscribe();
   } 
-  constructor() { }
   
 }
