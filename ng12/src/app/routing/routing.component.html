@@ -13,7 +13,30 @@
             {{u.name}}
         </li>
     </div>
+
+
     <div class="detail">
+
+        <!-- <div class="tab" showOneContainorDir>
+            <ul class="link">
+                <li  [showOneLinkDir]="'id1'"> tab1 </li>
+                <li  [showOneLinkDir]="'id2'"> tab2 </li>
+                <li  [showOneLinkDir]="'id3'"> tab3 </li>
+            </ul>
+
+            <div class="tab--1" [showOneDir]="'id1'" [active]="true">
+                tab 1 content
+            </div>
+
+            <div class="tab--2" [showOneDir]="'id2'">
+                tab 2 content
+            </div>
+
+            <div class="tab--3" [showOneDir]="'id3'">
+                tab 3 content
+            </div>
+        </div> -->
+
         <h2 style="display: inline-block;">Details</h2>
         <button  holdable [holdTime]="holdTime" (holdTimeEvent) ="pop($event)">POP</button> 
         <div class="progress"><div class="fill" [ngStyle]="progress"></div></div>

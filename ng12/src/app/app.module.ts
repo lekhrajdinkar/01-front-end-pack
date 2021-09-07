@@ -24,6 +24,7 @@ import { CustomInputComponent } from './form/custom-input/custom-input.component
 import { RoutingComponent } from './routing/routing.component';
 import { ChildCompComponent } from './routing/child-comp/child-comp.component';
 import { holdableDirective } from './directives/behaviour.directive';
+import { ShowOneContainorDir, ShowOneDir, ShowOneLinkDir } from './directives/tab.directive';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { holdableDirective } from './directives/behaviour.directive';
     RoutingComponent,
     ChildCompComponent
 
-    ,HighlightDirective, holdableDirective
+    ,HighlightDirective, holdableDirective,
+    ShowOneContainorDir, ShowOneDir, ShowOneLinkDir
   ],
   imports: [
     BrowserModule,
