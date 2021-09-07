@@ -15,7 +15,8 @@
     </div>
     <div class="detail">
         <h2 style="display: inline-block;">Details</h2>
-        <button  holdable [holdTime]="holdTime" (holdTimeEvent) ="pop($event)">POP</button>
+        <button  holdable [holdTime]="holdTime" (holdTimeEvent) ="pop($event)">POP</button> 
+        <div class="progress"><div class="fill" [ngStyle]="progress"></div></div>
         <router-outlet></router-outlet>
     </div>
 </div>

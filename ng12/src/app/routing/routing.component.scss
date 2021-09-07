@@ -56,3 +56,15 @@ button{
         color: yellowgreen;
     }
 }
+
+.progress{
+    width: 200px;
+    padding: 2px; margin: 16px;
+    border: 1px solid black;
+    display: inline-block;
+    .fill{
+        height: 4px;
+        background-color: red;
+        width: 0%;
+    }
+}

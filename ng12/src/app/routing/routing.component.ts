@@ -29,11 +29,24 @@ export class RoutingComponent implements OnInit, CanCompExit {
   ngOnInit(): void { }
 
   holdTime = 2000;
+  //progress = 0;
+  progress= {'width.%': 0};
+
   pop = (e: number) => { 
-    console.log(e); 
-    if(e >= this.holdTime/100) 
-      this.users.pop()
-  };
+    this.progress = {'width.%': (e/20)*100};
+    console.log(e);
+    // this.progress = e; 
+
+    if(e >= this.holdTime/100) {
+      this.users.pop();
+      // this.progress = 0 ; 
+      this.progress = {'width.%': 0};
+    }
+  }
+
+  updateProgress(){
+    return 
+  }
 
   getTime(t: number){ console.log(t)}
   showDetails(u:any){
