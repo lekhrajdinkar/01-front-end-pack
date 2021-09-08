@@ -6,7 +6,7 @@
             {{u.name}}
         </li>
     </div>
-    <div class="list  list--2">
+    <div class="list  list--2" appHighlight>
         <h3>programatically</h3>
         <li class="list-item" *ngFor="let u of users" 
         (click)="showDetails(u)">
@@ -41,6 +41,9 @@
         <button  holdable [holdTime]="holdTime" (holdTimeEvent) ="pop($event)">POP</button> 
         <div class="progress"><div class="fill" [ngStyle]="progress"></div></div>
         <router-outlet></router-outlet>
+
+        <!-- <div app-child-comp ></div> -->
+        <!-- <app-child-comp></app-child-comp> -->
     </div>
 </div>
 

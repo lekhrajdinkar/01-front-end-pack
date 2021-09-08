@@ -1,0 +1,47 @@
+@import "../app-sass/mixin";
+
+.containor{
+    margin: 10px 20px; padding: 10px 20px; 
+    background: whitesmoke;
+    color: green;
+    display: flex; justify-content: flex-start; align-items: stretch;
+    height: 95%;
+
+    .block{
+        margin: 5px;
+        padding:10px 20px;
+        background-image: linear-gradient( rgb(221, 240, 184), rgb(207, 207, 241));
+        border-top: 3px solid yellowgreen;
+        max-width: 400px; max-height: 400px;
+        overflow: scroll;
+        .desc{
+            font-size: small; 
+            opacity: 0.7;
+            padding:10px
+        }
+        .title{
+            font-size: large;
+           // position: relative; right: 0;
+        }
+       
+    }
+}
+
+input{
+    outline: none;
+    background: none;
+    @include input-mixin;
+    width:60px;
+}
+
+button{
+    padding: 10px 20px;  margin:10px 20px;  cursor: pointer;
+    border: 2px solid green; background-color: rgb(245, 207, 226);
+    &:hover{
+        box-shadow: 0 0 10px #777
+    }
+    &:active{
+        transform: scale(1.1);
+        color: yellowgreen;
+    }
+}

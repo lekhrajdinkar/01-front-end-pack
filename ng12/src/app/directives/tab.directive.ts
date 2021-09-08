@@ -31,7 +31,7 @@ export class ShowOneContainorDir implements AfterContentInit{
 
     // add(item: ShowOneDir){ this.children.push(item) }
     show(id:any){
-        this.children.forEach(i=> { 
+        Array.from(this.children).forEach(i=> { 
             console.log(i)
             i.active = id === i.id ? true: false;
         } );

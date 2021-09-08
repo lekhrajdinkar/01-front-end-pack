@@ -25,6 +25,8 @@ import { RoutingComponent } from './routing/routing.component';
 import { ChildCompComponent } from './routing/child-comp/child-comp.component';
 import { holdableDirective } from './directives/behaviour.directive';
 import { ShowOneContainorDir, ShowOneDir, ShowOneLinkDir } from './directives/tab.directive';
+import { PipeComponent } from './pipe/pipe.component';
+import { FilterPipe, ShortenPipe } from './pipe/custom.pipe';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { ShowOneContainorDir, ShowOneDir, ShowOneLinkDir } from './directives/ta
     ChildCompComponent
 
     ,HighlightDirective, holdableDirective,
-    ShowOneContainorDir, ShowOneDir, ShowOneLinkDir
+    ShowOneContainorDir, ShowOneDir, ShowOneLinkDir, PipeComponent
+
+    ,ShortenPipe, FilterPipe
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,47 @@
+<div class="containor">
+
+    <div class="block">
+        <div class="title">1. Inbuilt Date Pipe</div>
+        <hr><div class="desc">date_utc: {{ date_utc }}</div>
+        <hr><div class="desc">chicago_datetime_str: {{ chicago_datetime_str }}</div>
+        transformation:
+        <hr><div class="desc">input: {{ date1 }}</div>
+        <hr><div class="desc"> {{ date1 | date}}</div>
+        <hr><div class="desc"> {{ date1 | date:'short' }}</div>
+        <hr><div class="desc"> {{ date1 | date:'long' }}</div>
+        <hr><div class="desc"> {{ date1 | date:'medium' }}</div>
+        <hr><div class="desc"> {{ date1 | date:'LL YYYY' }}</div>
+    </div>
+
+
+
+    <div class="block">
+        <div class="title">1. Shorten Pipe</div>
+        <div class="desc">input: {{ 'Lekhraj Dinkar' }}</div>
+        <div class="desc">transformation: {{ 'Lekhraj Dinkar' | shorten}}</div>
+    </div>
+
+    <div class="block">
+        <div class="title">2. Shorten Pipe</div>
+        <div class="desc">'shorten'
+            :<input type="text" [(ngModel)]="text_shorten" placeholder="enter text"> 
+            :<input type="number" [(ngModel)]="len_shorten" placeholder="enter length">
+             <br>{{ text_shorten | shorten:len_shorten}}
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="title">3. Filter pipe</div>
+        <div class="desc">impure, if ant thing changes on page, this pipe will get executed, not good for performance sake.</div>
+            Array: {{servers}}
+        <button (click)="add()">Add s11</button>
+        <input type="text" [(ngModel)]="text">
+        <ng-container *ngTemplateOutlet="searcher; context:{sss: servers}" ></ng-container>
+    </div>
+        
+</div>
+
+<ng-template #searcher let-svrs="sss">
+    <!-- <div *ngFor="let s of svrs"> {{s}}</div> -->
+    <div *ngFor="let s of servers | ng12_filter:text"> {{s}}</div>
+</ng-template>

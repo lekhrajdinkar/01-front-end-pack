@@ -59,7 +59,8 @@ const options = {
 // p(navigator.language); //to get locale from browser
 const locale_india = new Intl.DateTimeFormat('en-IN');
 const locale_india_with_options = new Intl.DateTimeFormat('en-IN', options);
-
+let chicago_datetime_str = new Date().toLocaleString("en-US", { timeZone: "America/Chicago" });
+p(chicago_datetime_str);
 now = locale_india.format(new Date()); p(now, typeof now);
 now = locale_india_with_options.format(new Date()); p('As of', now, typeof now);
 

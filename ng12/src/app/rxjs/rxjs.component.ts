@@ -49,7 +49,11 @@ export class RxjsComponent implements OnInit, AfterViewInit, OnDestroy
     // const multicast_obs = from([1,2,4]).pipe(multicast(this.subject));
   }
 
-  ngOnInit(): void { 
+  ngOnInit(): void {
+    // const arr = [0,1,2,3,4] 
+    // interval(2000).pipe(
+    //   map( d => arr[d])
+    // ).subscribe( data => console.log("%c arr item in 2 sec", "color:red", data))
   }
 
   ngOnDestroy(): void {

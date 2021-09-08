@@ -12,10 +12,12 @@ import { TdFormComponent } from './form/td-form/td-form.component';
 import { RoutingComponent } from './routing/routing.component';
 import { ChildCompComponent } from './routing/child-comp/child-comp.component';
 import { CompExitGaurd, RoutingChildGaurd, RoutingGaurd } from './routing/gaurd';
+import { PipeComponent } from './pipe/pipe.component';
 
 const routes: Routes = [
   {path:'', component: WelcomeComponent},
   {path:'td-form', component: TdFormComponent},
+  {path:'pipe', component: PipeComponent},
   {path:'r-form', component: ReactiveFormComponent},
   {path:'rxjs', component: RxjsComponent},
   {path:'http', component: HttpComponent, 

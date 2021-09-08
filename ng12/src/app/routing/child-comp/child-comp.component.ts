@@ -1,16 +1,18 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, HostBinding, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { CanCompExit } from '../gaurd';
 
 @Component({
-  selector: 'app-child-comp',
+  selector: '[app-child-comp]',
   templateUrl: './child-comp.component.html',
   styleUrls: ['./child-comp.component.scss']
 })
 export class ChildCompComponent implements OnInit , OnDestroy
 {
 
+  @HostBinding('style.backgroundColor') bgCol = 'rgb(225, 247, 183)';
+  
   user = {id: 1, name: 'XXXXX'};
 
   data!: any;
