@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit, TestabilityRegistry } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { FormValidators } from '../validators/form-validators';
 
@@ -11,7 +11,7 @@ import { FormValidators } from '../validators/form-validators';
 export class ReactiveFormComponent implements OnInit, OnDestroy {
 
   form!: FormGroup;
-  constructor(private my_validators: FormValidators) { }
+  constructor(private my_validators: FormValidators, private formBuilder: FormBuilder) { }
   subs : Subscription[] =[];
 
   country_value:any;
@@ -24,9 +24,14 @@ export class ReactiveFormComponent implements OnInit, OnDestroy {
       'age': new FormControl(18, [Validators.required, this.my_validators.validateAgeFeild.bind(this)]),
       'fname': new FormControl(null, [Validators.required, this.my_validators.validateNameFeild.bind(this)]),
       'lname': new FormControl(null, [Validators.required, this.my_validators.validateNameFeild.bind(this)]),
-      'email': new FormControl(null, [Validators.required] , [this.my_validators.validateEmail_promise.bind(this)]) // 3rd argument is async vaidator
+      'email': new FormControl(null, [Validators.required] , [this.my_validators.validateEmail_promise.bind(this)]), // 3rd argument is async vaidator
+     
+      'exp': this.formBuilder.group({ 
+        'technology': this.formBuilder.control(null),
+        'skills':  this.formBuilder.array([])  //add control, group, array inside this array...
+      })
     });
-    console.log(this.form);
+    console.log(this.form, this.form.get('exp.skills'));
 
     // this.form = new FormGroup({
     //   'age': new FormControl(18, [Validators.required]),
@@ -49,7 +54,16 @@ export class ReactiveFormComponent implements OnInit, OnDestroy {
   // Form Action
   printForm(){ 
     console.log(this.form);
+    const temp = this.form.get('exp.skills')?.value;
+    Array.from(temp).forEach(e => console.log(e))
   }
+
+  // FormArray
+  get skills(): FormArray{return this.form.get('exp.skills')! as FormArray; }
+  addSkillControl(){this.skills.push(new FormGroup({'skill':this.formBuilder.control(null)})); }
+  deleteSkillControl(i: number){this.skills.removeAt(i); }
+
+
   patch(){
     this.form.patchValue({fname:'Lekhraj', email:'abc@xyz.com'})
     console.log(this.form.get('fname'));

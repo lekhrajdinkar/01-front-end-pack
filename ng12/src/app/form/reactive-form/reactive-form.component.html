@@ -72,6 +72,25 @@
                         </ng-container>
                     </div>
                 </div>
+<hr>
+                <div formGroupName="exp">
+                    <span> <strong>Experience</strong>  </span><br>
+                    <div class="input">
+                        <input formControlName="technology" type="text" placeholder="technologies">
+                        <button (click)="addSkillControl()"> ADD Skills</button>
+                    </div>
+                    <div formArrayName="skills" >
+                        <!-- dynamic contol -->
+                        <div *ngFor="let s of skills.controls; index as i" class="input" [formGroupName]="i">
+                            <div>
+                                {{i}} <input type="text"  placeholder="skill" formControlName="skill">
+                                <button (click)="deleteSkillControl(i)" style="border-color:rgb(236, 36, 36); background: white; color: red;">
+                                    Remove</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
 
             </div>
 

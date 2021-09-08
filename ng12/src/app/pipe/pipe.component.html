@@ -24,8 +24,8 @@
     <div class="block">
         <div class="title">2. Shorten Pipe</div>
         <div class="desc">'shorten'
-            :<input type="text" [(ngModel)]="text_shorten" placeholder="enter text"> 
-            :<input type="number" [(ngModel)]="len_shorten" placeholder="enter length">
+            <br>:<input type="text" [(ngModel)]="text_shorten" placeholder="enter text"> 
+            <br>:<input type="number" [(ngModel)]="len_shorten" placeholder="enter length">
              <br>{{ text_shorten | shorten:len_shorten}}
         </div>
     </div>
@@ -35,7 +35,7 @@
         <div class="desc">impure, if ant thing changes on page, this pipe will get executed, not good for performance sake.</div>
             Array: {{servers}}
         <button (click)="add()">Add s11</button>
-        <input type="text" [(ngModel)]="text">
+        <input type="text" [(ngModel)]="text"><br>
         <ng-container *ngTemplateOutlet="searcher; context:{sss: servers}" ></ng-container>
     </div>
         
@@ -43,5 +43,5 @@
 
 <ng-template #searcher let-svrs="sss">
     <!-- <div *ngFor="let s of svrs"> {{s}}</div> -->
-    <div *ngFor="let s of servers | ng12_filter:text"> {{s}}</div>
+    <span *ngFor="let s of servers | ng12_filter:text"> {{s}}</span>
 </ng-template>
