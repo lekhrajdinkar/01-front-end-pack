@@ -1,0 +1,21 @@
+@import "../../app-sass/mixin";
+
+.obs--data{display: inline-block; margin-left: 10px; padding: 5px 20px; 
+    background-color: rgb(185, 230, 230); border: 1px dotted black;}
+
+.containor{
+    font-size: 1.5em;
+    margin: auto; padding: 10px 50px;
+    input{
+        outline: none; font-size: 1em;
+        background: none;
+        @include input-mixin;
+    }
+    .btn{
+        @include btn-mixin;
+    }
+}
+
+.active_border{
+    border: 3px solid orangered;
+}

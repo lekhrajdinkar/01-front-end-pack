@@ -13,13 +13,20 @@ import { RoutingComponent } from './routing/routing.component';
 import { ChildCompComponent } from './routing/child-comp/child-comp.component';
 import { CompExitGaurd, RoutingChildGaurd, RoutingGaurd } from './routing/gaurd';
 import { PipeComponent } from './pipe/pipe.component';
+import { TransformComponent } from './rxjs/transform/transform.component';
+import { BasicComponent } from './rxjs/basic/basic.component';
 
 const routes: Routes = [
   {path:'', component: WelcomeComponent},
   {path:'td-form', component: TdFormComponent},
   {path:'pipe', component: PipeComponent},
   {path:'r-form', component: ReactiveFormComponent},
-  {path:'rxjs', component: RxjsComponent},
+  {path:'rxjs', component: RxjsComponent, 
+  children:[ 
+    {path:'combinator', component: TransformComponent},
+    {path:'transform', component: TransformComponent}, 
+    {path:'basic', component: BasicComponent},
+  ]},
   {path:'http', component: HttpComponent, 
     children:[ 
       {path:'user', component: UserComponent},

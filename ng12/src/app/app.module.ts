@@ -29,6 +29,8 @@ import { PipeComponent } from './pipe/pipe.component';
 import { FilterPipe, ShortenPipe } from './pipe/custom.pipe';
 import { TestingComponent } from './testing/testing.component';
 import { PlaceHolderDirective } from './directives/place.holder.dir';
+import { TransformComponent } from './rxjs/transform/transform.component';
+import { BasicComponent } from './rxjs/basic/basic.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,7 @@ import { PlaceHolderDirective } from './directives/place.holder.dir';
     ,HighlightDirective, holdableDirective,PlaceHolderDirective,
     ShowOneContainorDir, ShowOneDir, ShowOneLinkDir, PipeComponent
 
-    ,ShortenPipe, FilterPipe, TestingComponent
+    ,ShortenPipe, FilterPipe, TestingComponent, TransformComponent, BasicComponent
   ],
   imports: [
     BrowserModule,

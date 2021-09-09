@@ -1,61 +1,15 @@
 <div class="containor">
-    <strong><p>Observables</p></strong>
-
-    <span #btnEventObsr class="btn"><strong>Obs 1</strong>: obs 1 ::  click event</span>
-    <span class="obs--data" *ngFor="let data of obs1_data"> {{data.x}},{{data.y}} </span>
-    <br>
-    <input #inputEventObsr1 type="text" placeholder="obs 2 : input event">
-    <span class="obs--data" *ngFor="let data of obs2_data"> {{data}} </span>
-
-    <hr>
-    <input #inputEventObsr21 type="text" placeholder="obs 2.1 (outer) : mergeMap"> {{'pipe(mergeMap( (outer_data) => { outer_data + '}}
-    <input #inputEventObsr22 type="text" placeholder="obs 2.2 (inner) : mergeMap"> {{'}) )'}}
-    <div>
-        outer obs data emitted: 
-        <span [ngClass]="{active_border:true}" class="obs--data" *ngFor="let data of merge_map_outer_o_data; last as isLast "> {{data}} </span>
-        <br> inner obs data emmited: <span class="obs--data" *ngFor="let data of merge_map_inner_o_data "> {{data}} </span>
+    <div class="list" >
+        <h3>Operators</h3>
+        <li class="list-item" *ngFor="let u of links" 
+        [routerLink]="[u]" routerLinkActive="router-link-active" > 
+            {{u}}
+        </li>
     </div>
-    Result: <span class="obs--data" *ngFor="let data of merge_map_data"> {{data}} </span>
+    
 
-    <hr>
-    <input #inputEventObsr31 type="text" placeholder="obs 3.1 (outer) : switchmap">{{'pipe(switchMap( (outer_data) => { outer_data + '}}
-    <input #inputEventObsr32 type="text" placeholder="obs 3.2 (inner) : switchmap"> {{'}) )'}}
-    <div>
-        outer obs data emitted: 
-        <span [ngClass]="{active_border:isLast}"class="obs--data" *ngFor="let data of switch_map_outer_o_data; last as isLast"> {{data}} </span>
-        <br> inner obs data emmited: <span class="obs--data" *ngFor="let data of switch_map_inner_o_data "> {{data}} </span>
+
+    <div class="detail">
+        <router-outlet></router-outlet>
     </div>
-    Result: <span class="obs--data" *ngFor="let data of switch_map_data"> {{data}} </span>
-
-    <hr>
-    <div class="obs--3">
-        <span> <strong>Obs 3</strong>(synchronized data): </span> 
-
-        <br>
-        <span (click)="subscribe_obs3_s1()" class="btn">subscribe obs3 (observer-1) </span> data:
-        <span class="obs--data" *ngFor="let data of obs3_obs1_data"> {{data}} </span>
-
-        <br>
-        <span (click)="subscribe_obs3_s2()" class="btn">subscribe obs3 (observer-2)</span> data:
-        <span class="obs--data" *ngFor="let data of obs3_obs2_data"> {{data}} </span>
-    </div>
-
-    <hr>
-    <div class="obs--4">
-        <span> <strong>Obs 4</strong>(a-synchronized data / iterval(1s) : </span> 
-        <br>
-        <span (click)="register_obs4()" class="btn">subscribe interval-obs</span>
-        <span *ngFor="let data of obs4_data" class="obs--data"> {{data}} </span>
-        
-    </div>
-   
-   
-   
-    <!--  <div class="ds ds--event">Button click event</div>
-     <div class="ds ds--syn">sync Data</div>
-     <div class="ds ds--asyn">Async Data</div>
-     <div class="ds ds--asyn">promise Data</div>
-     <div class="ds ds--asyn">Http/Ajax data</div> -->
-
 </div>
-
