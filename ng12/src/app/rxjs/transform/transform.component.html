@@ -1,14 +1,20 @@
 <div class="containor" style="display:flex">
 
-    <div class=" card buffer">
-
+    
+    <div class="card buffer">
+        <h3> A. Buffer related</h3><hr><br>
+        
         <div class="opr">
             <a (click)="buffer_test()">Start interval obs</a>
-            <button #bufferBtn >Buffer numbers until click me</button>
+            <button #bufferBtn >Buffer numbers until click me and then emit</button>
             <span class="sdata" *ngFor="let item of buffer$ | async">{{item}}</span>
         </div>
 
-        
+        <div class="opr">
+            <a (click)="bufferCount_test()">Start interval obs</a>
+            <button #bufferCountBtn >Buffer numbers 5, then release until click me</button>
+            <span class="sdata" *ngFor="let item of bufferCount$ | async">{{item}}</span>
+        </div>
     </div>
 
 </div>
