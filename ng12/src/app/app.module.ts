@@ -28,6 +28,7 @@ import { ShowOneContainorDir, ShowOneDir, ShowOneLinkDir } from './directives/ta
 import { PipeComponent } from './pipe/pipe.component';
 import { FilterPipe, ShortenPipe } from './pipe/custom.pipe';
 import { TestingComponent } from './testing/testing.component';
+import { PlaceHolderDirective } from './directives/place.holder.dir';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,7 @@ import { TestingComponent } from './testing/testing.component';
     RoutingComponent,
     ChildCompComponent
 
-    ,HighlightDirective, holdableDirective,
+    ,HighlightDirective, holdableDirective,PlaceHolderDirective,
     ShowOneContainorDir, ShowOneDir, ShowOneLinkDir, PipeComponent
 
     ,ShortenPipe, FilterPipe, TestingComponent

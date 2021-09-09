@@ -1,5 +1,6 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ComponentFactoryResolver, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { FormGroup, NgForm, NgModel } from '@angular/forms';
+import { PlaceHolderDirective } from 'src/app/directives/place.holder.dir';
 
 @Component({
   selector: 'app-td-form',
@@ -7,6 +8,8 @@ import { FormGroup, NgForm, NgModel } from '@angular/forms';
   styleUrls: ['./td-form.component.scss']
 })
 export class TdFormComponent implements OnInit, AfterViewInit {
+
+  @ViewChild(PlaceHolderDirective) alertHost!: PlaceHolderDirective;
 
   //@ViewChild('form') form!: ElementRef
   @ViewChild('form') form!: NgForm;
@@ -18,7 +21,7 @@ export class TdFormComponent implements OnInit, AfterViewInit {
   nickname_value!: string;
   nickname2_value: string = "Benu";
 
-  constructor() { }
+  constructor(private compFactoryResolver: ComponentFactoryResolver) { }
 
   ngAfterViewInit(): void {
     console.log(this.form);
@@ -30,13 +33,26 @@ export class TdFormComponent implements OnInit, AfterViewInit {
   // Form Action
   printForm(){ 
     console.log(this.form);
+    new AlertComponent()
   }
+
+  // info: Called on reset
+  showAlert(){
+    const pointOnDom = this.alertHost.viewContainerRef;
+    pointOnDom.clear();
+    const cf = this.compFactoryResolver.resolveComponentFactory(AlertComponent);
+    const compRef = pointOnDom.createComponent(cf);
+    compRef.instance.closeEvent.subscribe( (_:any) => { pointOnDom.clear();});
+    compRef.instance.message = " My custom message passed via @Input to Dynamic AlertComponent"
+  }
+
   patch(){
     //this.form.patchValue({fname:'Lekhraj'})
     //console.log(a);
   }
   reset(){ 
     this.form.reset();
+    this.showAlert();
   }
   inputEmail(e:any){
     this.email_value= e.target.value;
@@ -51,4 +67,27 @@ export class TdFormComponent implements OnInit, AfterViewInit {
     console.log(this.form, formGroup, formContol, ngModel);
     formContol?.setValue('dinkar');
   }
+}
+
+
+@Component({
+  selector: 'app-alert',
+  template: `
+  <div class="backdrop">
+    <div class="backdrop--msg" >
+      <h2>Alert!</h2>
+      <p> {{message}} </p>
+      <button (click)="closeEvent.next({})"> close </button>
+    <div>
+  </div>
+  `,
+  styleUrls: ['./td-form.component.scss']
+})
+export class AlertComponent implements OnInit {
+
+  @Input() message ='';
+  @Output() closeEvent = new EventEmitter<any>();
+
+  ngOnInit(): void { }
+
 }

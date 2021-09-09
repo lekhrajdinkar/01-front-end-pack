@@ -51,7 +51,7 @@ function print_card(title, picture, action, ...detail){ // detail, action --> wo
     console.log('*****************************************\n\n');
 }
 
-print_card("CApital GROUP CompanEs", "cgc.png", ['ok', 'cancel'], 
+print_card("company", "c.png", ['ok', 'cancel'], 
 'linjcncj kvnxkcn  vnxkvn', 'jbvjs bvjkbjv jbjxvxbj bjsbvjsd', 'bjdsbvj dsjcjdsc sdskhjd sknvsd ' )
 
 

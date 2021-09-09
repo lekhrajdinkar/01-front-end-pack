@@ -91,3 +91,31 @@ select{
     border-bottom: 3px solid red;
     border-radius: 6px;
 }
+
+.backdrop{
+    position: absolute;
+    top:0; left:0;
+    background-color: rgba(0, 0, 0, 0.726);
+    height: 100vh; width: 100vw;
+
+    .backdrop--msg{
+
+        color:black;
+        position: absolute;
+        top:50%; left:50%;
+        background-color:white ;
+        width: 400px;
+        height: 200px;
+
+        text-align: center;
+        padding:10px, 20px;
+        border: 3px solid yellowgreen ;
+        border-radius: 16px;
+
+        transform: translate(-50%,-50%);
+        h2{
+            margin-bottom: 20px;
+            color: red;
+        }
+    }
+}
