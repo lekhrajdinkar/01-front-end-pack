@@ -27,6 +27,7 @@ import { holdableDirective } from './directives/behaviour.directive';
 import { ShowOneContainorDir, ShowOneDir, ShowOneLinkDir } from './directives/tab.directive';
 import { PipeComponent } from './pipe/pipe.component';
 import { FilterPipe, ShortenPipe } from './pipe/custom.pipe';
+import { TestingComponent } from './testing/testing.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,7 @@ import { FilterPipe, ShortenPipe } from './pipe/custom.pipe';
     ,HighlightDirective, holdableDirective,
     ShowOneContainorDir, ShowOneDir, ShowOneLinkDir, PipeComponent
 
-    ,ShortenPipe, FilterPipe
+    ,ShortenPipe, FilterPipe, TestingComponent
   ],
   imports: [
     BrowserModule,

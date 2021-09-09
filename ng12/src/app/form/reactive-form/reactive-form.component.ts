@@ -54,11 +54,18 @@ export class ReactiveFormComponent implements OnInit, OnDestroy {
   // Form Action
   printForm(){ 
     console.log(this.form);
-    const temp = this.form.get('exp.skills')?.value;
+    let temp = this.form.get('exp.skills')?.value;
     Array.from(temp).forEach(e => console.log(e))
+
+    //temp = this.form.get('exp.skills.0.skill')?.value; 
+    console.log('%c Skill-1','color:green; font-size: larger',this.getSkillAt(0));
+   //temp = this.form.get('exp.skills.1.skill')?.value; 
+    console.log('%c Skill-2','color:green; font-size: larger',this.getSkillAt(1));
   }
 
   // FormArray
+  getSkillAt(i:number ){ return this.form.get(`exp.skills.${i}.skill`)?.value}
+
   get skills(): FormArray{return this.form.get('exp.skills')! as FormArray; }
   addSkillControl(){this.skills.push(new FormGroup({'skill':this.formBuilder.control(null)})); }
   deleteSkillControl(i: number){this.skills.removeAt(i); }
