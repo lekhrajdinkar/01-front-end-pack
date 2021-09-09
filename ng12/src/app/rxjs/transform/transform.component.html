@@ -6,14 +6,23 @@
         
         <div class="opr">
             <a (click)="buffer_test()">Start interval obs</a>
-            <button #bufferBtn >Buffer numbers until click me and then emit</button>
+            <br> BUFFER : Buffer numbers until stop click me and then emit all.
+            <button #bufferBtn >Stop</button>
             <span class="sdata" *ngFor="let item of buffer$ | async">{{item}}</span>
         </div>
 
         <div class="opr">
             <a (click)="bufferCount_test()">Start interval obs</a>
-            <button #bufferCountBtn >Buffer numbers 5, then release until click me</button>
+            <br> BUFFER COUNT: Buffer numbers then release batch of 5
+            <button #bufferCountBtn>Stop </button>
             <span class="sdata" *ngFor="let item of bufferCount$ | async">{{item}}</span>
+        </div>
+
+        <div class="opr">
+            <a (click)="bufferTime_test()">Start interval obs</a>
+            <br> BUFFER TIME: Buffer numbers till 2 sec, then release
+            <button #bufferCountTime> Stop</button>
+            <span class="sdata" *ngFor="let item of bufferTime$ | async">{{item}}</span>
         </div>
     </div>
 

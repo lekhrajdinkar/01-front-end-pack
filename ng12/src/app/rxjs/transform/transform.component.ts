@@ -1,6 +1,6 @@
 import { AfterContentInit, AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { fromEvent, interval, Observable } from 'rxjs';
-import { buffer, bufferCount, take, takeUntil, tap } from 'rxjs/operators';
+import { buffer, bufferCount, bufferTime, take, takeUntil, tap, toArray } from 'rxjs/operators';
 
 const p =( d:any)=>console.log(d);
 
@@ -13,12 +13,14 @@ export class TransformComponent implements OnInit, AfterViewInit {
 
   buffer$!: Observable<any>;
   bufferCount$!: Observable<any>; 
+  bufferTime$!: Observable<any>; 
 
   constructor() { }
 
   ngOnInit(): void {}
   @ViewChild('bufferBtn')btn_buffer!: ElementRef<any>;
   @ViewChild('bufferCountBtn')btn_bufferCount!: ElementRef<any>;
+  @ViewChild('bufferCountTime')btn_bufferTime!: ElementRef<any>;
   
   ngAfterViewInit(): void {}
 
@@ -32,14 +34,26 @@ export class TransformComponent implements OnInit, AfterViewInit {
        
     )
   }
-//2
+  //2 BufferCount
   bufferCount_test(){
     const clicks$ = fromEvent(this.btn_bufferCount.nativeElement, 'click');
     this.bufferCount$ = interval(1000).pipe( 
       tap(p)
       ,takeUntil(clicks$ )
-      ,bufferCount( 5 ) 
+      ,bufferCount( 5 )
+      //, toArray() 
     )
   }
-  
+
+  //2 BufferTime
+  bufferTime_test(){
+    const clicks$ = fromEvent(this.btn_bufferTime.nativeElement, 'click');
+    this.bufferTime$ = interval(1000).pipe( 
+      tap(p)
+      ,takeUntil(clicks$ )
+      ,bufferTime(2000) 
+    )
+  }
 }
+
+
