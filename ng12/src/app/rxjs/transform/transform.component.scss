@@ -1,0 +1,22 @@
+button{
+    //font-size: small;
+    padding: 10px 20px;  margin:10px 20px;  cursor: pointer;
+    border: 2px solid green; background-color: rgb(245, 207, 226);
+    &:hover{
+        box-shadow: 0 0 10px #777
+    }
+    &:active{
+        transform: scale(1.1);
+        color: rgb(137, 174, 243);
+    }
+}
+
+a{
+    cursor: pointer;
+    &:active{ color:coral;}
+    &:hover{color: deepskyblue;}
+}
+
+.sdata{
+    padding: 5px; margin: 5px; border: 1px solid deepskyblue;
+}
