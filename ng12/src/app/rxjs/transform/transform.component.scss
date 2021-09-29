@@ -18,7 +18,9 @@ a{
 }
 
 .sdata{
+    cursor: pointer;
     padding: 5px; margin: 5px; border: 1px solid deepskyblue;
+    &:hover{background-color: rgb(35, 95, 116); color:white; box-shadow: 0 0 5px orangered;}
 }
 
 .card{
