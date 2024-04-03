@@ -2,6 +2,7 @@
 Object.prototype.new_function = function(){console.log("Iam new function")}
 Object.new_function();
 //Object.new_function_by_parent();
+console.log("Object.prototype : ",Object.prototype)
 
 obj_parent = Object.create(Object); 
 obj_parent.new_function()
