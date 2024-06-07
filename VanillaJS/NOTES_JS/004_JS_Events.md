@@ -29,7 +29,7 @@ btn.addEventListener('click' , eh2 )
 ```
 4. Remove listener : `removeEventListener(eventListener, eventHandler)` 
 - eg : After 2 seconds removing listener:
-![](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/rm1.jpg)
+![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/rm1.jpg)
 
 5. Events Prophogation:
 ```
@@ -38,32 +38,32 @@ btn.addEventListener('click' , eh2 )
 </div>
 ```
 Add click listener on both div. if we  click inner div then technically also clicking div2. both event handler would get called.
-![](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/ep1.jpg)
+![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/ep1.jpg)
 
 - `addEventListener(eventListener, eventHandler, true)` --> 3rd arg is true.  Use it inside parent element's event handler --> it will set the priority high. parent handler will get called first followed by child's event handler.
-![](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/ep3.jpg)
+![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/ep3.jpg)
 
 - stop propagation: `event.stopPropagation()`
-![](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/ep2.jpg)
+![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/ep2.jpg)
 
 6. get the element --> who has fired the event.
 - `event.target`
 - eg : Setting style for element.
-![](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/es1.jpg)
+![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/es1.jpg)
 - CAn also get the coordinated from where event has been clicked.
-![](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/es2.jpg) 
+![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/es2.jpg) 
 
 ***
 
 ### Events:
 
 1. Mouse Event:
-![](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/e2.jpg)
+![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/e2.jpg)
 
 2. Keyboard Event:
-![](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/e1.jpg)
+![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/e1.jpg)
 
 3. Forms Event:
-![](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/e3.jpg)
+![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/e3.jpg)
 
 note: Check more on mozilla network.

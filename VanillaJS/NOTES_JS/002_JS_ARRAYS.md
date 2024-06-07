@@ -1,7 +1,7 @@
 ### ARRAYS
 #### Feature
 1. JS arrays can be think as array of infinite lenght:
-![img](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/array1.PNG)
+![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/array1.PNG)
 ***
 
 ### Fundamental operation
@@ -15,13 +15,13 @@ var arr = [`abc`, 'xyz',1,2, true, false, {name:'lekh'}]
 #### 2.Iterate:
 - 2.1. for loop
 - 2.2. forEach:
-![img](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/array2.PNG)
+![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/array2.PNG)
 
 #### 3. Add element
 - 3.1. At end - `push(element)`
 
 Add Undefined element - way1
-![img](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/array3.PNG)
+![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/array3.PNG)
 
 - 3.2. at start - `unShift(element)`
 
@@ -60,13 +60,13 @@ console.log(a2); //[2, 3, 4]
 
 ##### a. Filter
 - take function as arg
-![img](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/array4.PNG)
+![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/array4.PNG)
 
 ##### b. map 
 - eg: triple each element.
 - it untouch original array.
 - take function as arg.
-![img](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/array5.PNG)
+![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/array5.PNG)
 
 ##### c. reverse
 - change original array.
@@ -78,7 +78,7 @@ console.log(a2); //[2, 3, 4]
 ##### e. join() 
 - it return string. 
 - returns new array.
-![img](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/array6.PNG)
+![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/array6.PNG)
 
 ##### f. reduce()
 - take function as arg.

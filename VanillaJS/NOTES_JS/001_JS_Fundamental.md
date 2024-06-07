@@ -2,10 +2,10 @@
 - 3 tech for web development - `css(style)` + `html(content)` + `JS (logic/programming` --> to add dynamic and interactive effect, DOM manipulation,etc)
 - lightweight(precompiled) scripting language for browser. it OOP language. it has classes, interface, inheritabnce, abstraction, etc.
 
-![img](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/jonas/basic/01.jpg)
+![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/basic/01.jpg)
 
 - JS engine:
-![img](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/jonas/basic/12.jpg)
+![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/basic/12.jpg)
 
 ***
 
@@ -46,13 +46,13 @@ and ES6 - Few browser does not support it and transcompile it to ES5 format brfo
 9. JS `library` - lodash, reactJS, jquery, axios, etc.
 
 10. **First Class function** :
-![img](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/jonas/basic/13.jpg)
+![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/basic/13.jpg)
 
 - simple eg: pass function as argument
-![img](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/jonas/basic/13_1.jpg)
+![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/basic/13_1.jpg)
 
 - simple eg: return Function
-![img](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/jonas/basic/13_2.jpg)
+![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/basic/13_2.jpg)
 ***
 
 ### Data Types
@@ -86,7 +86,7 @@ if(1 === '1') - false
 - `if (NaN == NaN) // false` 
 
 #### 4. assign function declaration to var.
-![img](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/js1.PNG)
+![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/js1.PNG)
 
 ```var a = function calc(var1, var2){
   return var1 + var2;
@@ -143,34 +143,34 @@ else
 
 #### 6. array
 1. iterate more:
-![](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/js2.PNG)
+![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/js2.PNG)
 
 array is object type with length as builtin property.
-![](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/js3.PNG)
+![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/js3.PNG)
 
 
 #### 7. Addition / subtraction
 1. 
-![](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/js4.PNG)
+![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/js4.PNG)
 2. 
-![](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/js5.PNG)
+![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/js5.PNG)
 3. 
-![](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/js6.PNG)
+![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/js6.PNG)
 4. Add/sub with NULL - 0
-![](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/js7.PNG)
+![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/js7.PNG)
 5. Add/Sub with undefined - NaN
-![](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/js8.PNG)
+![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/js8.PNG)
 
 6. Sub string1/number with string2 - NaN/worked
-![](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/js9.PNG)
-![](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/js11.PNG)
+![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/js9.PNG)
+![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/js11.PNG)
 
 7. Sub string1 with number - Js will convert string to number
-![](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/js10.PNG)
+![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/js10.PNG)
 
 #### 8. Multiple:
 1. 
-![](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/js12.PNG)
+![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/js12.PNG)
 
 2. withString
 ```

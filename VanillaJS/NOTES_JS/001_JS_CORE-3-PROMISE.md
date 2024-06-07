@@ -6,12 +6,12 @@
 
 2. Once event is complete (eg: asyn call complete to fetch data from backend), it determines what to do after event complete.
 3. it implements the concept of `future state`, to store the returned data.
-![img](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/jonas/promise/01.jpg)
+![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/promise/01.jpg)
 
 #### Promise State: 
 > Pending and  fulfilled/rejected
 
-![img](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/jonas/promise/01_1.jpg)
+![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/promise/01_1.jpg)
 
 ***
 
@@ -42,7 +42,7 @@ promise1
 ```
 - data1 and error1 
 
-![img](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/jonas/promise/02.jpg)
+![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/promise/02.jpg)
 ***
 
 ## PRG-1 : Nested callback : CALLBACK HELL
@@ -63,7 +63,7 @@ promise1
 
 > all callback(asyn call) will run in parallel.
 
-![img](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/jonas/promise/03.jpg)
+![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/promise/03.jpg)
 
 ### prblem of callback hell
 - messy code, difficult to understand data being passed and returned from nested callback.
@@ -89,11 +89,11 @@ promise1
 
 - prg img1 - p1 and p2
 
-![img](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/jonas/promise/05.jpg)
+![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/promise/05.jpg)
 
 - prg img2 - p3
 
-![img](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/jonas/promise/05_2.jpg)
+![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/promise/05_2.jpg)
 
 ### problem
 - lot of then statement.
@@ -114,11 +114,11 @@ async function f1(){
 }
 ```
 
-![img](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/jonas/promise/06_1.jpg)
+![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/promise/06_1.jpg)
 
 - subscribe to asyn function to get result asynchronously.
 
-![img](https://github.com/lekhrajdinkar/javaScript/blob/master/NOTES_JS/asset/jonas/promise/06_2.jpg)
+![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/promise/06_2.jpg)
 
 ***
 ___
