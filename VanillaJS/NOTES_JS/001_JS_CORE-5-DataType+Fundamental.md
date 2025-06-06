@@ -34,12 +34,14 @@
 
 #### 1. console.log(typeof a)
 
+```
 var a = Infinity, NaN, 0, -1, 1.1, - `number`
 var a = undefined - `undefined`
 var a = Null , {}, {a:'a', b:1}, [1,2,3] - `Object`
 var a = "1" , '1' - `string`
 var a = true -- `boolean`
 var a = function() {} - `function`
+```
 
 #### 2. null vs Undefined
 
