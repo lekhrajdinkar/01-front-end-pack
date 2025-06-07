@@ -1,0 +1,224 @@
+/*1. Clear browser defaults. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*2. Set background-color, color, etc for entire app */
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+/* 3. Create row class*/
+.row {
+    max-width: 100%;
+    margin: 0 auto ; 
+}
+
+/* 4. add bkg image with 100% height*/
+header {
+    background-image: linear-gradient(rgba(28, 25, 25, 0.85), rgba(28, 25, 25, 0.85)), url(img2/header-bg-2.jpg);
+    background-position: center; background-size: cover;
+    height: 100vh;
+/*    The vh unit can be used to fill the background of the viewport*/
+}
+
+/*  5. Becoz of normalized.css, h1 got margin and white space. lets fix it by this.*/
+h1,h2,h3 {
+    font-weight: 100;  /* 6.2 thickness */
+    text-transform: uppercase;
+    letter-spacing: 1px;   
+}
+
+h1 {
+    margin: 0; 
+    color: #fff ; font-size: 200% ; /* 6.1 body:20px, hence 40px */
+    word-spacing: 20px;
+}
+
+h2 {
+    margin: 0; 
+    color: #000 ; font-size: 150% ; 
+    text-align: center; 
+}
+
+h2:after{
+    display: block;
+    align: center;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+
+h3 {
+    margin: 0; 
+    color: darkgreen ; font-size: 110% ;
+    text-align: center; 
+    margin-bottom: 3%;
+}
+
+.ui-tech-test-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);  
+}
+
+/* 7. Button --- start */
+.btn:link, 
+.btn:visited {
+    display: inline-block; padding: 20px 40px;   font-weight: 300;
+    text-decoration: none;
+    border-radius: 50px;    
+}
+
+.btn-lime:link, 
+.btn-lime:visited{
+    color: #fff; 
+    border: 2px solid #fff;
+    margin-right: 40px;
+}
+
+.btn-lime:active, 
+.btn-lime:hover{
+    color: #e74c3c; 
+    border: 2px solid #e74c3c;
+    transition: background-color 2.5s, border 2.5s, color 0.5s ;
+}
+
+
+.btn-tan:link, 
+.btn-tan:visited {
+    color: #fff;
+    background-color: #e74c3c;
+    border: 2px solid #e74c3c;
+}
+
+.btn-tan:active,
+.btn-tan:hover {
+    color: #2d3317;
+    background-color: #f5877b;
+    border: 2px solid #5abaed;
+    transition: background-color 2.5s, border 2.5s, color 0.5s ;
+}
+/* Button --- end */
+
+/* 8. Nav bar and logo - start*/
+.main-nav {
+    float: right;
+    list-style: none; /**/
+    margin-top: 55px;
+    margin-right: 5%;
+}
+
+.main-nav li {
+    display: inline-block;  /**/
+    margin-left: 40px;
+}
+
+.main-nav li a:link, .main-nav li a:visited {
+    color: #fff;
+    font-size: 70%;
+    border-bottom: 3px solid transparent;
+}
+
+.main-nav li a:hover, .main-nav li a:active {
+    color: #e74c3c;
+    border: 1px solid #fff; 
+    border-bottom: 3px solid #e74c3c;
+    padding: 8px;
+    transition: border-bottom 1.0s;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+/* 8. Nav bar and logo - end */
+
+section {
+    padding: 80px 0;
+}
+
+/* ----- ICONS ----- */
+.icon-big {
+    font-size: 350%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.box {
+    padding: 1%;
+    text-align: justify;
+}
+
+.box p {
+    font-size: 90%;
+    color: darkblue;
+}
+
+/* ----- Footers ----- */
+footer {
+    background-color: rgba(39, 53, 114, 0.94);
+    padding: 50px;
+    font-size: 80%;
+    color: antiquewhite;
+}
+
+.footer-nav {    
+    list-style: none;
+    float: left;
+    margin-top: 55px;
+    margin-right: 5%;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li , .social-links li {
+    display: inline-block;  /**/
+    margin-left: 10px;
+}
+
+.footer-nav li a:link, .footer-nav li a:visited,
+.social-links li a:link, .social-links li a:visited
+{
+    color: #fff;
+    font-size: 100%;
+    border-bottom: 1px solid transparent;
+}
+
+.footer-nav li a:hover, .footer-nav li a:active ,
+.social-links li a:hover, .social-links li a:active
+{
+    color: #e74c3c;
+    border: 1px solid #fff; 
+    border-bottom: 1px solid #63ebac;
+    padding: 8px;
+    transition: border-bottom 1.0s;
+}
+
+.social-links li a:hover, .social-links li a:active
+{
+    font-size: 200%;
+}
+
+
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/01-Frontend-Angular-material" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/01-Frontend-MEAN-stack" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/01-Frontend-ReactJS-16-redux" vcs="Git" />
+  </component>
+</project>
