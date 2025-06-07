@@ -1,6 +1,3 @@
-[submodule "Angular2+ Notes"]
-	path = 01-Frontend-Angular6-fundamentals/tree/master/notes
-	url = https://github.com/lekhrajdinkar/01-Frontend-Angular6-fundamentals.git
 [submodule "01-Frontend-Angular-material"]
 	path = 01-Frontend-Angular-material
 	url = https://github.com/lekhrajdinkar/01-Frontend-Angular-material.git
@@ -10,9 +7,6 @@
 [submodule "01-Frontend-reactJs"]
 	path = 01-Frontend-reactJs
 	url = https://github.com/lekhrajdinkar/01-Frontend-reactJs.git
-[submodule "01-Frontend-Angular6-fundamentals"]
-	path = 01-Frontend-Angular6-fundamentals
-	url = https://github.com/lekhrajdinkar/01-Frontend-Angular6-fundamentals.git
 [submodule "01-Frontend-ReactJS-16-redux"]
 	path = 01-Frontend-ReactJS-16-redux
 	url = https://github.com/lekhrajdinkar/01-Frontend-ReactJS-16-redux.git
