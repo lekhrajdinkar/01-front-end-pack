@@ -12,10 +12,10 @@
 
 ### project/s
 - First project (NG-6) https://github.com/lekhrajdinkar/01-Frontend-Angular6-fundamentals/tree/master
-- MEAN stack : https://github.com/lekhrajdinkar/01-Frontend-MEAN-stack/tree/master
+- **MEAN stack** 
   - mongoDB
   - Express
-  - Angular
+  - Angular : https://github.com/lekhrajdinkar/01-Frontend-MEAN-stack/tree/master
   - Nodejs
 - OTT : https://github.com/lekhrajdinkar/99-project-01-OTT-ng
 - Angular material : https://github.com/lekhrajdinkar/01-Frontend-Angular-material
