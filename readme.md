@@ -7,7 +7,6 @@
 # B. Framework 
 ## 1. Angular
 ### Notes:
-- Evolution : https://chat.deepseek.com/a/chat/s/3ae49220-86bc-424d-9afc-c328f3cc073f
 - maximialliam udemy : https://github.com/lekhrajdinkar/01-Frontend-Angular6-fundamentals/tree/master/notes
 
 ### project/s
