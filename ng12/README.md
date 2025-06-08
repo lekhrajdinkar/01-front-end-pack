@@ -2,6 +2,16 @@ https://github.com/lekhrajdinkar/01-front-end-pack?tab=readme-ov-file
 
 https://github.com/lekhrajdinkar/01-Frontend-Angular6-fundamentals/tree/master/notes
 
+for node 17+
+- set NODE_OPTIONS=--openssl-legacy-provider
+
+```
+  opensslErrorStack: [ 'error:03000086:digital envelope routines::initialization error' ],
+  library: 'digital envelope routines',
+  reason: 'unsupported',
+  code: 'ERR_OSSL_EVP_UNSUPPORTED'
+```  
+
 ---
 # Ng12
 
