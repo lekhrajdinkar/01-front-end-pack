@@ -1,3 +1,8 @@
+https://github.com/lekhrajdinkar/01-front-end-pack?tab=readme-ov-file
+
+https://github.com/lekhrajdinkar/01-Frontend-Angular6-fundamentals/tree/master/notes
+
+---
 # Ng12
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
