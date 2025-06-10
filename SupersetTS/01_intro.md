@@ -29,7 +29,7 @@
 - fact : just syntactical sugar
 
 ### String typing (new things)
-- [007_JS_ES6.md](../../VanillaJS/NOTES_JS/007_JS_ES6.md)
+- [007_JS_ES6.md](../VanillaJS/NOTES_JS/007_JS_ES6.md)
 - **symbol** from ES6+
 - **never**
 - **tuple**
