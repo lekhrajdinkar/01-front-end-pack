@@ -2,6 +2,7 @@
   "name": "supersetts",
   "version": "1.0.0",
   "description": "TypeScript projects",
+  "type": "module", 
   "main": "index.js",
   "scripts": {
     "test": "start"
@@ -10,9 +11,11 @@
     "TS",
     "JS"
   ],
+  
   "author": "Lekhraj Dinkar",
   "license": "ISC",
   "dependencies": {
+    "rxjs": "^7.8.2",
     "typescript": "^4.3.5"
   }
 }

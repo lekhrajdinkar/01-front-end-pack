@@ -7,7 +7,7 @@
 import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Observable, fromEvent, Subscription, Observer, interval, Subject } from 'rxjs';
-import { debounceTime, distinctUntilChanged, map, mergeMap, pluck, switchMap, tap } from 'rxjs/operators';
+import { debounceTime, distinctUntilChanged, map, mergeMap, pluck, switchMap, tap,take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-basic',
@@ -68,12 +68,18 @@ export class BasicComponent implements OnInit, AfterViewInit, OnDestroy
     this.register_switchmap_obs();
   }
 
+  mergeMap1(event1:MouseEvent){console.log(event1.offsetX)}
+  switchMap1(event1:MouseEvent){console.log(event1.offsetX)}
+
   // =======================Observables============
   merge_map_data : any[] = [];
+  merge_map_1 : any[] = []; switch_map_1 : any[] = [];
   merge_map_outer_o_data : any[] = [];
   merge_map_inner_o_data : Set<string> = new Set();
 
-  register_mergemap_obs(){
+  register_mergemap_obs()
+  {
+    //2021
     this.Obs_21_input_evt = fromEvent(this.input_21.nativeElement, 'input').pipe(pluck('target','value'));
     this.Obs_22_input_evt = fromEvent(this.input_22.nativeElement, 'input').pipe(pluck('target','value'));
 
@@ -92,7 +98,6 @@ export class BasicComponent implements OnInit, AfterViewInit, OnDestroy
           map( i => v + " "+i)))
     )
     .subscribe( result => this.merge_map_data.push(result));
-
   }
 
   switch_map_data : any[] = [];

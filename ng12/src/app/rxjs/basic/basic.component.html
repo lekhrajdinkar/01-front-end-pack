@@ -7,7 +7,12 @@
     <input #inputEventObsr1 type="text" placeholder="obs 2 : input event">
     <span class="obs--data" *ngFor="let data of obs2_data"> {{data}} </span>
 
-    <hr>
+    <hr><button  type="text" class="btn" (click)="mergeMap1($event)"> mergeMap1 2025 </button>
+     mergeMap1: <span class="obs--data" *ngFor="let data of merge_map_1"> {{data}} </span>
+     <hr><button  type="text" class="btn" (click)="switchMap1($event)"> switchMap1 2025 </button>
+     switchMap1: <span class="obs--data" *ngFor="let data of switch_map_1"> {{data}} </span>
+    
+     <hr>
     <input #inputEventObsr21 type="text" placeholder="obs 2.1 (outer) : mergeMap"> {{'pipe(mergeMap( (outer_data) => { outer_data + '}}
     <input #inputEventObsr22 type="text" placeholder="obs 2.2 (inner) : mergeMap"> {{'}) )'}}
     <div>
