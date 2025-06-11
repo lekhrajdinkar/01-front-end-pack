@@ -28,7 +28,7 @@ tsc --init : generate tsconfig.json file with default compiler options.
 
 - has no runtime: TS >> JS >> JS engine
 
-## Advantages : typescript
+## 4 Advantages : typescript
 - Catch lots of error at compile time, makes JS **robust**
 - adds **additional feature to evolving ES6+**
 - Make JS from Dynamic type to **static type**

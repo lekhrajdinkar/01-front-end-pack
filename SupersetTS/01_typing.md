@@ -1,4 +1,5 @@
 ## Strong typing
+- arr :Array<number> = [1,2,3]
 - **symbol** from ES6+
 - **never** : type with no possible values. scenarios:
 ```typescript
