@@ -7,7 +7,7 @@
 # B. Framework 
 ## 1. Angular
 ### Notes:
-- maximialliam udemy : https://github.com/lekhrajdinkar/01-Frontend-Angular6-fundamentals/tree/master/notes
+- maximialliam udemy : https://github.com/lekhrajdinkar/01-Frontend-Angular6-fundamentals/tree/master/notes :point_left: :point_left:
 
 ### project/s
 - First project (NG-6) https://github.com/lekhrajdinkar/01-Frontend-Angular6-fundamentals/tree/master
@@ -20,6 +20,7 @@
 - Angular material : https://github.com/lekhrajdinkar/01-Frontend-Angular-material
 - Angular 12 project (2021) [ng12](ng12) :point_left:
 
+---
 ## 2 React js
 ### Notes
 - https://github.com/lekhrajdinkar/01-Frontend-ReactJS-16-redux/tree/master/NOTES
