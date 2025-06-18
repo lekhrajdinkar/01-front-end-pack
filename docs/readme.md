@@ -14,7 +14,7 @@
 
 ### project/s
 - Angular material : https://github.com/lekhrajdinkar/01-Frontend-Angular-material
-- Angular 12 project (2021) [ng12](../ng12) :point_left:
+- Angular 12 project (2021) [ng12](../ng12) :point_left: | [live-app](https://angular-live-app.netlify.app/)
 - **MEAN stack** 
   - mongoDB
   - Express
