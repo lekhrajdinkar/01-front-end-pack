@@ -44,7 +44,7 @@ body {
 3. 50 % of moble traffic is of Mobile users, as per google; Increase in future. hence emracing mobile friendly design.
 4. Three ingredient for responsive website:
 
-![](assets/assets-01/n1.PNG)
+![](../999_assets/assets_html-css/assets-01/n1.PNG)
 
 5. go : http://www.responsivegridsystem.com/ 
 and generate css file. everything is already compiled in sinle file - `./vendor/css/grid.css`
@@ -77,7 +77,7 @@ header {
 ```
 
 outPut:
-![](assets/assets-01/header-1.PNG)
+![](../999_assets/assets_html-css/assets-01/header-1.PNG)
 
 #### 5. Add Header - part-2
 
@@ -120,7 +120,7 @@ Style:
 }
 ```
 outPut:
-![](assets/assets-01/header-2.PNG)
+![](../999_assets/assets_html-css/assets-01/header-2.PNG)
 
 3. Add Button style on :
 ```
@@ -199,4 +199,4 @@ Style:
 }
 ```
 outPut:
-![](assets/assets-01/header-3.PNG)
+![](../999_assets/assets_html-css/assets-01/header-3.PNG)

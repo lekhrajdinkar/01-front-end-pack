@@ -40,7 +40,7 @@ template:
         </section>
 ```
 outPut:
-![](assets/assets-01/section-1.PNG)
+![](../999_assets/assets_html-css/assets-01/section-1.PNG)
 
 3. h2 and h3 style:
 
@@ -96,4 +96,4 @@ template:
 ```
 
 outPut:
-![](assets/assets-01/section-2.PNG)
+![](../999_assets/assets_html-css/assets-01/section-2.PNG)

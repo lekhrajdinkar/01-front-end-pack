@@ -8,7 +8,7 @@ background : url() left 20% top 30% / cover origin clip attachment
 
 ```
 - Actual : background-image:  url("freedom.jpg"); 
-![img](assets/img/00.JPG)
+![img](../999_assets/assets_html-css/img/00.JPG)
 
 **by PX**
 
@@ -22,15 +22,15 @@ background : url() left 20% top 30% / cover origin clip attachment
     background-repeat: no-repeat/repeat-x/repeat-y
 }
 ```
-![img](assets/img/1.JPG)
+![img](../999_assets/assets_html-css/img/1.JPG)
 
 2. `background-size: 300px 200px;` --> define both length and width --> this will distort img
-![img](assets/img/2.JPG)
+![img](../999_assets/assets_html-css/img/2.JPG)
 
 **by %**
 
 3 `background-size: 50%` --> width as 50% of container/parent.
-![img](assets/img/3.JPG)
+![img](../999_assets/assets_html-css/img/3.JPG)
 
 4. `background-size: 50% 50%` --> both. this will distort img.
 
@@ -41,7 +41,7 @@ background : url() left 20% top 30% / cover origin clip attachment
 7. `background-size: 100%` --> width as 100% of container/parent amd height will be as per ratio, but it will cropped from bottom to main aspect ratio.
 
 7.1. `background-size: 100% 100%` --> width and lenght as 100% of container/parent --> it wont get crop and fit image (distort)
-![img](assets/img/4.JPG)
+![img](../999_assets/assets_html-css/img/4.JPG)
 
 **predifined setting : contain and cover**
 
@@ -62,13 +62,13 @@ background : url() left 20% top 30% / cover origin clip attachment
 **by %**
 
 3.1 `background-position : 0% 20%` (x-axis, y-axis)  --> crop 20% from top. 
-![img](assets/img/22.JPG)
+![img](../999_assets/assets_html-css/img/22.JPG)
 
 3.2 `background-position : 0% 50%` (x-axis, y-axis)  --> crop equally from top and bottom 
-![img](assets/img/33.JPG)
+![img](../999_assets/assets_html-css/img/33.JPG)
 
 3.3 `background-position : 0% 100%` (x-axis, y-axis)  --> crop from top  and show complete bottom.
-![img](assets/img/11.JPG)
+![img](../999_assets/assets_html-css/img/11.JPG)
 
 **left right top bottom**
 

@@ -5,14 +5,14 @@
 2. css styling **Rule** = **selector** (what to style) +  **declaration** (how to style)
 3. case insensitive. 
 4. properties(color,margin,etc) with shorthand:
-![img](assets/sh1.JPG) 
+![img](../999_assets/assets_html-css/sh1.JPG) 
 5. value of properties: 
-![img](assets/010.JPG)
+![img](../999_assets/assets_html-css/010.JPG)
 
 ***
 
 ## Topic:
-![img](assets/topics.jpg)
+![img](../999_assets/assets_html-css/topics.jpg)
 
 ***
 
@@ -30,7 +30,7 @@
 - CAN I USE
 
 ## Summary:
-![img](assets/summary.JPG)
+![img](../999_assets/assets_html-css/summary.JPG)
 
 ## links:
 Complete MDN CSS Reference (don't learn this by heart!): https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
@@ -56,6 +56,6 @@ Pseudo Classes : https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 Pseudo Elements: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
 
 ## properties worth to remember:
-![img](assets/p1.JPG)
+![img](../999_assets/assets_html-css/p1.JPG)
 
 

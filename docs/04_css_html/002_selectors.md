@@ -16,9 +16,9 @@
 - `a.active` --> it will select anchor with active class.
 - `a .active` --> it will pick all desendant of achoe with class active.
 
-![img](assets/001.jpg)
-![img](assets/002.jpg)
-![img](assets/003.jpg)
+![img](../999_assets/assets_html-css/001.jpg)
+![img](../999_assets/assets_html-css/002.jpg)
+![img](../999_assets/assets_html-css/003.jpg)
 
 ***
 ## Grouping rule:
@@ -42,7 +42,7 @@ which color : ?
 ```
 2. cascading mean multiple style can be applied on element which leads to conflict and resolve it provides **specifity**
 3. preference/priority of selector
-![img](assets/004.jpg)
+![img](../999_assets/assets_html-css/004.jpg)
 
 4. Inheritance : parent has lowest priority.
 - eg : body is parent of h1
@@ -72,8 +72,8 @@ here order matter
 
 ***
 ## COMBINATOR
-![img](assets/005.jpg)
-![img](assets/006.jpg)
-![img](assets/007.jpg)
-![img](assets/008.jpg)
-![img](assets/009.jpg)
+![img](../999_assets/assets_html-css/005.jpg)
+![img](../999_assets/assets_html-css/006.jpg)
+![img](../999_assets/assets_html-css/007.jpg)
+![img](../999_assets/assets_html-css/008.jpg)
+![img](../999_assets/assets_html-css/009.jpg)
