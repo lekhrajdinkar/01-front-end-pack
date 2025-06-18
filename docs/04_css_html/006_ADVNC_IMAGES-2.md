@@ -38,16 +38,16 @@ image style:
   }
 ```
 1. Adjust image width:
-![img](../999_assets/assets_html-css/img2/01.jpg) 
+![img](../../99_archive/999_assets/assets_html-css/img2/01.jpg) 
 
 2. image (80% width ) + info (20% width) , with proper verticle alignment.
-![img](../999_assets/assets_html-css/img2/02.jpg) 
+![img](../../99_archive/999_assets/assets_html-css/img2/02.jpg) 
 
 3. Add shadow
-![img](../999_assets/assets_html-css/img2/03.jpg) 
+![img](../../99_archive/999_assets/assets_html-css/img2/03.jpg) 
 
 final:
-![img](../999_assets/assets_html-css/img2/13.jpg) 
+![img](../../99_archive/999_assets/assets_html-css/img2/13.jpg) 
 
 *** 
 
@@ -57,14 +57,14 @@ final:
 - `linear-gradient(red, blue, rgba()...)` // can use multiple colors in any of 3 format.
 
 - `linear-gradient( 45deg, red, blue ...)` //rotate by angle.
-![img](../999_assets/assets_html-css/img2/11.jpg) 
+![img](../../99_archive/999_assets/assets_html-css/img2/11.jpg) 
 
 - `linear-gradient( 180deg, red, transparent)`
-![img](../999_assets/assets_html-css/img2/04.jpg) 
+![img](../../99_archive/999_assets/assets_html-css/img2/04.jpg) 
 
 - `linear-gradient( 180deg, red, 70%, blue, 30% )`
-![img](../999_assets/assets_html-css/img2/05.jpg) 
-![img](../999_assets/assets_html-css/img2/06.jpg) 
+![img](../../99_archive/999_assets/assets_html-css/img2/05.jpg) 
+![img](../../99_archive/999_assets/assets_html-css/img2/06.jpg) 
 
 ***
 
@@ -73,22 +73,22 @@ final:
 `background-color: radial-gradient()` //css functions
 
 - radial-gradient(red, blue, rgba()...) // default shape is  eclipse.
-![img](../999_assets/assets_html-css/img2/12.jpg) 
+![img](../../99_archive/999_assets/assets_html-css/img2/12.jpg) 
 
 - radial-gradient(circle, red, blue, geen...)
 
 - radial-gradient(circle at top, red, blue, geen...)
-![img](../999_assets/assets_html-css/img2/07.jpg) 
+![img](../../99_archive/999_assets/assets_html-css/img2/07.jpg) 
 
 - radial-gradient(circle at left top, red, blue, geen...)
 
 - radial-gradient(circle at 20% 50%, red, blue, geen...)
-![img](../999_assets/assets_html-css/img2/08.jpg) 
+![img](../../99_archive/999_assets/assets_html-css/img2/08.jpg) 
 
 - radial-gradient(circle 20px at top, red, blue, geen...) // size for cirlce is 20px
-![img](../999_assets/assets_html-css/img2/09.jpg) 
+![img](../../99_archive/999_assets/assets_html-css/img2/09.jpg) 
 
 - radial-gradient(eclipse 20px 30px at top, red, blue, geen...) // size for eclipse is 20px
-![img](../999_assets/assets_html-css/img2/10.jpg) 
+![img](../../99_archive/999_assets/assets_html-css/img2/10.jpg) 
 
 ***

@@ -4,7 +4,7 @@
 - code example: https://github.com/lekhrajdinkar/01-front-end-pack/tree/master/ng12/src/app/directives
 ---
 ## 1 Intro
-![img](../999_assets/basic/8.JPG)
+![img](../../99_archive/999_assets/basic/8.JPG)
 - Directives are classes that add additional **behavior** to elements in your Angular applications
 - like ng component, but  **without view**
 - helps in manipulate the DOM, modify element appearance, or change behavior.
@@ -39,7 +39,7 @@
 ```
 - note: `<ng-template>  </ng-template>` is also directive. :point_left:
 - otherTemplate - local reference
-- ![img](../999_assets/basic/9.JPG)
+- ![img](../../99_archive/999_assets/basic/9.JPG)
 - Another tricky way : use ngIf twice with reverse conditions :)
 
 #### 2.1.2 `*ngFor` 
@@ -251,7 +251,7 @@ export class HoverDirective
 ### example-1
 - even/odd number list with different styling - ngClass and ngStyle.
 
-![img](../999_assets/basic/directive/02.jpg)
+![img](../../99_archive/999_assets/basic/directive/02.jpg)
 
 
 

@@ -57,7 +57,7 @@
   - Router builds a **tree of ActivatedRoute objects** at the end each cycle.
   - Contains the information about a route associated with a component loaded in an outlet. 
   - hence will have all info for current path.
-  - ![img](../999_assets/route/io1.JPG)
+  - ![img](../../99_archive/999_assets/route/io1.JPG)
 
 ---
 ## B. Developer guide

@@ -160,7 +160,7 @@ src/
 ```
 - **final** state will look like this (redux store)
 
-![img_1.png](../999_assets/v2/ngrx2/01/img_1.png)
+![img_1.png](../../99_archive/999_assets/v2/ngrx2/01/img_1.png)
 
 ---
 ### 1 :: create - App store
@@ -180,7 +180,7 @@ export const metaReducers: MetaReducer<AppState>[] = !environment.production ? [
 
 
 ### 2 :: create - feature store
-![img.png](../999_assets/v2/ngrx2/01/img.png)
+![img.png](../../99_archive/999_assets/v2/ngrx2/01/img.png)
 
 #### 2.1 State.ts
 - interface : **FeatureAdminState** 

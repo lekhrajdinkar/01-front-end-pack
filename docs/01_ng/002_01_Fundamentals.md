@@ -57,7 +57,7 @@ selector: '.app-signin'   |   <div class="app-signin"> </div>
 - **Template Expressions** --> The text inside {{ }} 
 - **Template Statement** --> (event) = statement
   
-![img](../999_assets/basic/comp/09.jpg)
+![img](../../99_archive/999_assets/basic/comp/09.jpg)
   
 #### 2.3 styling
 - `styleUrls` , `styles`
@@ -202,7 +202,7 @@ ngOnDestroy
 ---
 ### 4. Binding/s
 - https://chat.deepseek.com/a/chat/s/6cbd1509-8d5d-4564-93e2-5017ffe902b9
-- ![img](../999_assets/basic/5.JPG)
+- ![img](../../99_archive/999_assets/basic/5.JPG)
 #### 4.1 String Interpolation - {{ }} 
 ```html
 <p>{{ title }}</p>
@@ -223,7 +223,7 @@ Anything which get converted into string is ok.
 <input (keyup)="onKeyUp($event)">
 ```
   - **(< HTMLInputElement >e.target).value**
-    - ![img](../999_assets/basic/6.JPG)
+    - ![img](../../99_archive/999_assets/basic/6.JPG)
 
 - case-2: **custom ng-event**   :point_left:
   - @output event-1: EventEmitter < string >

@@ -57,7 +57,7 @@
 ### D. Service and Modules :yellow_circle:
 
 #### 1. root Injector : 
-![img](../999_assets/ngmod/011_1.jpg)
+![img](../../99_archive/999_assets/ngmod/011_1.jpg)
 
 #### 2. Child Injector : 
 ![img](https://github.com/lekhrajdinkar/NG6/blob/master/notes/assets/ngmod/011_2.jpg)
