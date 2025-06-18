@@ -110,7 +110,7 @@ theme:
       primary: indigo
       accent: indigo
 
-repo_url: https://github.com/lekhrajdinkar/02-backend-pack
+repo_url: https://github.com/lekhrajdinkar/01-front-end-pack
 repo_name: GitHub
 edit_uri: edit/main/Notes/
 
@@ -127,4 +127,6 @@ markdown_extensions:
   - pymdownx.tilde
 
 plugins:
-  - search
+    - search
+    - awesome-pages
+    - redirects
