@@ -438,9 +438,9 @@ this.router.navigate(
 - ng12
   - https://github.com/lekhrajdinkar/01-front-end-pack/tree/master/ng12/src/app/routing :point_left:
 - old 
-  - [100_project_2_ROUTING.md](../99_ng_udemy_project_notes/100_project_2_ROUTING.md)
-  - [100_Project_2_ROUTING_passData.md](../99_ng_udemy_project_notes/100_Project_2_ROUTING_passData.md)
-  - [100_project_2_ROUTING_RouteGuard.md](../99_ng_udemy_project_notes/100_project_2_ROUTING_RouteGuard.md)
+  - [100_project_2_ROUTING.md](../../99_archive/99_ng_udemy_project_notes/100_project_2_ROUTING.md)
+  - [100_Project_2_ROUTING_passData.md](../../99_archive/99_ng_udemy_project_notes/100_Project_2_ROUTING_passData.md)
+  - [100_project_2_ROUTING_RouteGuard.md](../../99_archive/99_ng_udemy_project_notes/100_project_2_ROUTING_RouteGuard.md)
 
 
 
