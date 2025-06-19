@@ -1,5 +1,6 @@
 - https://chat.deepseek.com/a/chat/s/75474839-971c-4605-b025-6c4fbc1996b3
 - https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/ng12/src/app/form/reactive-form/reactive-form.component.ts :point_left:
+
 ---
 # Reactive Form
 ## 1. Intro
@@ -44,6 +45,7 @@
       <button type="submit">Submit</button>
 </form>
 ```
+
 
 ```typescript
 @Component({})
@@ -94,6 +96,7 @@ export class ProfileComponent
   this.profileForm.patchValue({  firstName: 'John' });
 }
 ```
+
 ---
 ### Example-2 Dynamic Forms with FormArray
 - context

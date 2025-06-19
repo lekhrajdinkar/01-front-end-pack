@@ -6,7 +6,7 @@
 
 --- 
 # RxJS
-![](https://github.com/lekhrajdinkar/NG6/blob/master/notes/assets/obsrv1.PNG)
+![img](../999_assets/obsrv1.PNG)
 ## A. Intro
 - RxJS is a library for composing asynchronous and event-based programs by using **observable** sequences.
 - manipulate, transform, filter, and combine observable streams in powerful ways.
@@ -44,6 +44,7 @@
     Subscription-1 will remain active.
     so use onDestroy (subscription-1.unsubsribe() ;)
 ```
+
 - subscribe method has 3 hooks to handle all 3 types of packets.
 ```
   const subscription-1 = o.subscribe(
@@ -52,8 +53,8 @@
     () => {...handle completion ...}
   );
 ```
----
 
+---
 ## C. Subject
 - Act as Observer and observable at same time.
 - usage : **EventEmitter** in ng is built using Subject. 
@@ -96,7 +97,7 @@ fromEvent(document, 'click').subscribe(console.log);
 
 ```
 - Sends specific packet and then stop - `Send three strings in every 2 seconds.`
-![](https://github.com/lekhrajdinkar/NG6/blob/master/notes/assets/co3.PNG)
+![img](../999_assets/co3.PNG)
 
 ---
 ### 3. filter: filter, take, takeuntil, decbounceTime, distinctUntilChanged
@@ -121,6 +122,7 @@ of(1, 1, 2, 2, 3).pipe(distinctUntilChanged());
 // Output: 1, 2, 3
 
 ```
+
 ---
 ### 3. transform : map, scan, mergeMap, switchMap
 - **map**

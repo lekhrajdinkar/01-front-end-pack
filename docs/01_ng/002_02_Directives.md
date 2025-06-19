@@ -168,8 +168,8 @@ export class BorderDirective
 
 <div [appBorder]="{appBorder: "red", borderWidth: "2px"} > Content </div>
 ```
----
 
+---
 ## 3. Life Cycle
 ```typescript
 @Directive({...})
@@ -178,8 +178,8 @@ export class MyDirective implements OnInit, OnDestroy {
   ngOnDestroy() {    // Cleanup logic  }
 }
 ```
----
 
+---
 ## 4. @HostListener / @HostBinding :point_left:
 - `@HostListener` - Listens to host element events.
 - `@HostBinding` - Binds to host element properties.
@@ -203,6 +203,7 @@ export class HoverDirective
   constructor(private el: ElementRef, private renderer: Renderer2) { }
 }
 ```
+
 ---
 ## 5. more inbuild directive
 ### 5.1 directive : `ng-template` 

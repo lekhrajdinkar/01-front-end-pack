@@ -1,4 +1,5 @@
-- https://chat.deepseek.com/a/chat/s/37c732b1-738a-4167-9b95-046ad410f60d
+- [https://chat.deepseek.com/a/chat/s/37c732b1-738a-4167-9b95-046ad410f60d](https://chat.deepseek.com/a/chat/s/37c732b1-738a-4167-9b95-046ad410f60d)
+
 ---
 # redux
 - NgRx is a reactive state management library for Angular applications
@@ -19,7 +20,7 @@ Selectors:  Pure functions for querying the store
 Effects:    Handle side effects (like API calls)
 ```
 
-![img](https://github.com/lekhrajdinkar/NG6/blob/master/notes/assets/ngrx/001.jpg)
+![img](../999_assets/ngrx/001.jpg)
 
 ### B.1 Effect
 - https://chat.deepseek.com/a/chat/s/6f5f7c58-5281-4f57-9f01-af30d5c34007
@@ -44,6 +45,7 @@ Effects:    Handle side effects (like API calls)
     On failure: dispatches ADD_TO_CART_FAILURE
   Reducer handles success/failure to update UI state (loading spinner, error message)
 ```
+
 ```
 ** Without side effects:**
 
@@ -59,7 +61,9 @@ LoginButtonClick → LOGIN_ACTION
    → On success: dispatches LoginSuccessAction
    → On failure: dispatches LoginFailureAction
 ```
+
 #### code example
+
 ```typescript
 // ==== cart.actions.ts === 
 
@@ -215,6 +219,7 @@ export const featureAdminReducerStateMap: ActionReducerMap<FeatureAdminState> = 
     "data3": featureData3_Reducer 
 };
 ```
+
 ---
 #### 2.3  Action (class)
 - naming conventions like [Source] Event
@@ -249,6 +254,7 @@ export class FeatureAdmin_LoadData3_Action implements Action
     constructor(private d: FeatureData3) {this.payload = d;}
 }
 ```
+
 ---
 #### 2.4 Reducer (function)
 - initial state
@@ -295,6 +301,7 @@ export function featureData3_Reducer(state :FeatureData2 = initialState, action:
 }
 
 ```
+
 ---
 #### 2.5 Selector + Obseravble
 - create small, focused selectors and compose them for more complex queries
@@ -312,6 +319,7 @@ export const featureAdminState = createFeatureSelector<FeatureAdminState>('count
  const data2$ = this.store.select(selectdata2);
  const data3$ = this.store.select(selectdata3);
 ```
+
 ---
 #### 2.6 StoreModule.forFeature() :point_left:
 - **StoreModule.forFeature**('feature-module-admin', featureAdminReducerStateMap),
@@ -351,7 +359,9 @@ export const reset = createAction('[Counter] Reset');
 payload: Counter = {};
 export const setValue = createAction('[Counter] Set Value',  props<payload>() );
 ```
+
 ### Reducer
+
 ```typescript
 import { createReducer, on } from '@ngrx/store';
 import * as CounterActions from './counter.actions';

@@ -77,6 +77,7 @@ Also
 - want to laxy load module.
 - pass data while loading - async and sync
 ```
+
 ### 2. Configure Routes 
 #### 2.1 Root Module : app-routing.module.ts
 ``` typescript
@@ -117,6 +118,7 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 ```
+
 ---
 #### 2.2 feature Module : feature-module-1-routing.module.ts
 ```typescript
@@ -170,6 +172,7 @@ const routes: Routes = [
 })
 export class FeatureModule1RoutingModule { }
 ```
+
 ---
 #### 2.3 feature Module : feature-module-2-routing.module.ts
 ```typescript
@@ -211,6 +214,7 @@ const routes: Routes = [
 })
 export class FeatureModule2RoutingModule { }
 ```
+
 ---
 #### 2.4 Access Route Data
 - this.route.**data**.subscribe()
@@ -276,6 +280,7 @@ export class Component11Component implements OnInit {
   }
 }
 ```
+
 ---
 #### 2.5 view
 ```html
@@ -293,6 +298,7 @@ export class Component11Component implements OnInit {
   <router-outlet></router-outlet>
 </div>
 ```
+
 - **optional**: can create seperate component feature1-layout.component.html
 ```html
 <!-- feature1-layout.component.html -->
@@ -307,6 +313,7 @@ export class Component11Component implements OnInit {
   <router-outlet></router-outlet>
 </div>
 ```
+
 ---
 #### 2.6 Gaurd
 - create 
@@ -330,6 +337,7 @@ export class FeatureGuard implements CanLoad {
   }
 }
 ```
+
 - CanActivate, CanActivateChild
 ```typescript
 //======= 2 CanActivate ===========
@@ -350,6 +358,7 @@ export class AuthGuard implements CanActivate
 }
 
 ```
+
 
 ```typescript
 // ========== 3 CanActivateChild =========
@@ -386,6 +395,7 @@ export class CanDeactivateGuard implements CanDeactivate<CanComponentDeactivate>
   }
 }
 ```
+
 ```typescript
 //======= 5 Resolve =========== 
 
@@ -411,6 +421,7 @@ canDeactivate: [CanDeactivateGuard]
 canLoad: [FeatureGuard],
 resolve: { data1 : UserResolver  }
 ```
+
 ---
 #### 2.7 navigate
 - path, having pathParam : /app/f1/c11/**:id**
@@ -422,6 +433,7 @@ resolve: { data1 : UserResolver  }
  Link1
 </a>
 ```
+
 - Programmatically in component:
 ```typescript
 this.router.navigate(
@@ -433,6 +445,7 @@ this.router.navigate(
   }
  );
 ```
+
 ---
 ## C. projects (skip,old)
 - ng12

@@ -1,4 +1,6 @@
-- https://chat.deepseek.com/a/chat/s/a53a5b8a-85d4-4f73-8c6b-2db65129a682
+### Reference
+- [chatgpt ng17](https://chat.deepseek.com/a/chat/s/a53a5b8a-85d4-4f73-8c6b-2db65129a682)
+
 ---
 ## 1. @defer
 - powerful feature introduced in Angular 17 for lazy loading content

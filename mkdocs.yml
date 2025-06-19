@@ -34,22 +34,6 @@ nav:
           - Deployment: 01_ng/008_Deployment.md
           - Questions: 01_ng/100_Question_1.md
 
-    - React:
-          - ES6: 01_react/000_ES6.md
-          - Kickoff: 01_react/001_KICKOFF.md
-          - Components:
-                - Basics: 01_react/002_COMPONENT_1_BASIC.md
-                - Life Cycle: 01_react/002_COMPONENT_2_LIFE-CYCLE.md
-                - Communication: 01_react/002_COMPONENT_3_COMM.md
-                - Events: 01_react/002_COMPONENT_4_EVENT.md
-          - Routing: 01_react/003_ROUTING.md
-          - HTTP & Axios: 01_react/004_HTTP_AXIOS.md
-          - Forms: 01_react/005_FORMS.md
-          - Redux:
-                - Overview: 01_react/009_REDUX.md
-                - Concepts: 01_react/009_REDUX_1_CONCEPT.md
-                - With React: 01_react/009_REDUX_2_WITH_REACT.md
-                - Basic Program: 01_react/009_REDUX_3_BASIC_PRG.md
 
     - JavaScript:
           - Core Concepts:
@@ -94,6 +78,23 @@ nav:
                 - Section: 04_css_html/100_03_Code_Section.md
                 - Footer: 04_css_html/100_04_code_Footer.md
           - Deployment: 04_css_html/100_05_deploy.md
+
+    - React:
+          - ES6: 01_react/000_ES6.md
+          - Kickoff: 01_react/001_KICKOFF.md
+          - Components:
+                - Basics: 01_react/002_COMPONENT_1_BASIC.md
+                - Life Cycle: 01_react/002_COMPONENT_2_LIFE-CYCLE.md
+                - Communication: 01_react/002_COMPONENT_3_COMM.md
+                - Events: 01_react/002_COMPONENT_4_EVENT.md
+          - Routing: 01_react/003_ROUTING.md
+          - HTTP & Axios: 01_react/004_HTTP_AXIOS.md
+          - Forms: 01_react/005_FORMS.md
+          - Redux:
+                - Overview: 01_react/009_REDUX.md
+                - Concepts: 01_react/009_REDUX_1_CONCEPT.md
+                - With React: 01_react/009_REDUX_2_WITH_REACT.md
+                - Basic Program: 01_react/009_REDUX_3_BASIC_PRG.md          
 
 theme:
   name: material

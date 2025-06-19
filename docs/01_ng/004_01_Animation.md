@@ -33,6 +33,7 @@ Animate:        Define the timing and easing of the transition
 <div [@trigger1] = "state"> </div>
 onAnimate(){ this.state == 'state1' ? this.state = 'state1' : this.state = 'state2';}
 ```
+
 ---
 ## D Advance transition
 - note:
@@ -49,6 +50,7 @@ transition('state1 <=> state2', [
 
 note : it will follow order of array element.
 ```
+
 - **KeyFrames**
 ```
 transition(
@@ -65,6 +67,7 @@ transition(
     ]
 )
 ```
+
 ---
 ## E. Examples
 - check : 
