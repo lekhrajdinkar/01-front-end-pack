@@ -1,0 +1,63 @@
+/* Set global font and background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+/* Style headers */
+h1, h2, h3, h4 {
+  color: #1e88e5;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+/* Style links */
+a {
+  color: #1565c0;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Code blocks */
+code {
+  background-color: #f1f1f1;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 16px;
+  color: #555;
+  margin: 1em 0;
+  background: #f9f9f9;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+table, th, td {
+  border: 1px solid #ccc;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #e3f2fd;
+}

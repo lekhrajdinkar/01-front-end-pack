@@ -110,6 +110,9 @@ theme:
       primary: indigo
       accent: indigo
 
+extra_css:
+  - mkdocs.css
+
 repo_url: https://github.com/lekhrajdinkar/01-front-end-pack
 repo_name: GitHub
 edit_uri: edit/main/Notes/
