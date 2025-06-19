@@ -13,13 +13,13 @@
 ### Feature
 1. Document flow > normal html > one elememt after anothor.
 - default value of `position` is `static`. 
-![img](../../99_archive/999_assets/assets_html-css/position/1.JPG)
+![img](../999_assets/assets_html-css/position/1.JPG)
 
 2. change default behaviour - use other value of `position` property.
-![img](../../99_archive/999_assets/assets_html-css/position/2.JPG)
+![img](../999_assets/assets_html-css/position/2.JPG)
 
 3. Change the position, but how ? 
-![img](../../99_archive/999_assets/assets_html-css/position/3.JPG)
+![img](../999_assets/assets_html-css/position/3.JPG)
 
 - `positioning context` : eg: [top : 30] --> 30px from current pos of elememt, or from view port, or from html tag, or from body, or from it parent, etc ? 
 - if top,left,etc not been defined then value it does not mean its 0. element will take position as per flow. 
@@ -38,7 +38,7 @@ main-header { position:fixed, width:100%, box-sizing:border-boxing, margin : 10p
 
 // top:0, left:0  --> base is viewport.
 ```
-![img](../../99_archive/999_assets/assets_html-css/position/4.JPG)
+![img](../999_assets/assets_html-css/position/4.JPG)
 
 2. Adding image in background behind the content.
 ```
@@ -51,11 +51,11 @@ Image will come over document flow element because Z-index is not defined. defau
 
 **case 1:** order of elememt : navBar div  > image div 
 - image will lie on top of navbar ( _note : both are fixed position with z-index as auto_ )
-![img](../../99_archive/999_assets/assets_html-css/position/5.JPG)
+![img](../999_assets/assets_html-css/position/5.JPG)
 
 **Case 2**: opposite order : image div > navBar div  
 - navbar will lie on top of img  ( _note : both are fixed position with z-index as auto_ )
-![img](../../99_archive/999_assets/assets_html-css/position/6.JPG)
+![img](../999_assets/assets_html-css/position/6.JPG)
 
 **Case 3**:
 - Define navbar as static position in case2 eg, then img will come, _because: `fixed` will always come over `static`._ 
@@ -70,7 +70,7 @@ Setting z-index to -1 to add image in bkgrnd:
     z-index: -1;
 }
 ```
-![img](../../99_archive/999_assets/assets_html-css/position/7.JPG)
+![img](../999_assets/assets_html-css/position/7.JPG)
 
 ***
 
@@ -98,9 +98,9 @@ Css:
 ```
 position context is html
 
-![img](../../99_archive/999_assets/assets_html-css/position/9.JPG)
+![img](../999_assets/assets_html-css/position/9.JPG)
 scroll up and see:
-![img](../../99_archive/999_assets/assets_html-css/position/10.JPG)
+![img](../999_assets/assets_html-css/position/10.JPG)
 
 next change it 
 ```
@@ -114,7 +114,7 @@ next change it
 }
 
 ```
-![img](../../99_archive/999_assets/assets_html-css/position/12.JPG)
+![img](../999_assets/assets_html-css/position/12.JPG)
 ***
 
 ### C. Relative 
@@ -124,10 +124,10 @@ fixed/absolute positioned element gets out of document flow and get arranged rel
 
 - it does not take out element out of document flow.
 - using top,left,ect can shift elemet out of its parent. (it must not be done.)
-![img](../../99_archive/999_assets/assets_html-css/position/13.JPG)
+![img](../999_assets/assets_html-css/position/13.JPG)
 
 - `overflow : hidden`
-![img](../../99_archive/999_assets/assets_html-css/position/14.JPG)
+![img](../999_assets/assets_html-css/position/14.JPG)
 
 Note : if adding `overflow : hidden` in `body` then also add it in `html`
 ***

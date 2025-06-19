@@ -8,7 +8,7 @@
 2. Each element passes these **layers of box** >  content , padding, border, margin(not part of element, space between boxes).
 
 3. **margin collapse:**
-![img](../../99_archive/999_assets/assets_html-css/margin.JPG)
+![img](../999_assets/assets_html-css/margin.JPG)
 if we are worry about magin collapsing then use `margin-top` and `margin-bottom`
 [margin collapse more](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
 
@@ -39,7 +39,7 @@ if we are worry about magin collapsing then use `margin-top` and `margin-bottom`
 - html take the height of full window > delegate this value down to h1 > just keep height: 100% in all element
 
 6. **content-model**
-![img](../../99_archive/999_assets/assets_html-css/cm1.JPG)
+![img](../999_assets/assets_html-css/cm1.JPG)
 
 `box-sizing` property --> values : `content-box`, `border-box`.
 

@@ -24,9 +24,9 @@
     - if not using Subject, EventEmitter, then app is pure **zoneless**, And then can remove `zone.ts` from build. (future) :point_left: :point_left:
 
 
-![img_1.png](../../99_archive/999_assets/v2/evolution/ng16/img_1.png)
+![img_1.png](../999_assets/v2/evolution/ng16/img_1.png)
 
-![img.png](../../99_archive/999_assets/v2/evolution/ng16/img.png)
+![img.png](../999_assets/v2/evolution/ng16/img.png)
 
 ## B Key Features
 - **Reactive Values**: Signals wrap values and notify consumers when those values change

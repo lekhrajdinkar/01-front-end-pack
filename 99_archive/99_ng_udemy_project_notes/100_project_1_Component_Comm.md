@@ -17,9 +17,9 @@
 ```
 - pass it down to child server-element(**child**) 
 
-![img](../999_assets/basic/12.JPG)
+![img](../../docs/999_assets/basic/12.JPG)
 
-![img](../999_assets/basic/13.JPG)
+![img](../../docs/999_assets/basic/13.JPG)
 
 ---
 ### Case 2: Child => Parent

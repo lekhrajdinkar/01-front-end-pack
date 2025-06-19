@@ -61,9 +61,9 @@ class Validators {
   - formControl level. valid, dirty, touched, etc
 - also add css classes
 
-![](../../99_archive/999_assets/form3.PNG)
+![](../999_assets/form3.PNG)
 
-![](../../99_archive/999_assets/form4.PNG)
+![](../999_assets/form4.PNG)
 
 ---
 ## 4. Example

@@ -90,4 +90,4 @@ footer {
 ```
 
 3. outPut:
-![](../../99_archive/999_assets/assets_html-css/assets-01/footer-1.PNG)
+![](../999_assets/assets_html-css/assets-01/footer-1.PNG)

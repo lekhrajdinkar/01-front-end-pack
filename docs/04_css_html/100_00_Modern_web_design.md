@@ -13,13 +13,13 @@
 - Body text - 15px to 25px
 - line spacing - 150%
 - char lenght per line - 45 to 90 char
-![](../../99_archive/999_assets/assets_html-css/assets-01/font-1.PNG)
+![](../999_assets/assets_html-css/assets-01/font-1.PNG)
 
 ### 2. color
 1. Pick one base color for entire website.
 2. Never use Black.
 
-![](../../99_archive/999_assets/assets_html-css/assets-01/col-1.PNG)
+![](../999_assets/assets_html-css/assets-01/col-1.PNG)
 
 3. _**Red**_ is a great color to use when power, passion,strength and excitement want to be transmitted
 4. _**Orange**_ draws attention without being as overpowering as red.
@@ -29,9 +29,9 @@
 
 ### 3. Images
 1. Overlay the image with color and use text on top of it.
-![](../../99_archive/999_assets/assets_html-css/assets-01/img-1.PNG)
+![](../999_assets/assets_html-css/assets-01/img-1.PNG)
 2. put text in box while displaying it over image.
-![](../../99_archive/999_assets/assets_html-css/assets-01/img-2.PNG)
+![](../999_assets/assets_html-css/assets-01/img-2.PNG)
 3. blur the image.
 4. Floor Fade -> Image fades to dark near text(text is brighter).
 
@@ -50,7 +50,7 @@
 Type:
 1. presentation of product in site
 2. presentation of User **experience** - its not linked with design and look of product, but how used interacts. input.
-![](../../99_archive/999_assets/assets_html-css/assets-01/wd-1.PNG)
+![](../999_assets/assets_html-css/assets-01/wd-1.PNG)
 
 
 

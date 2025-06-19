@@ -1,7 +1,7 @@
 -- PDF Slide: https://github.com/mschwarzmueller/angular-complete-guide-course-resources/blob/main/other-resources/angular-course-slides.pdf :point_left:
 ---
 ## Course roadmap
-![img](../../99_archive/999_assets/kickoff/1.jpg)
+![img](../999_assets/kickoff/1.jpg)
 ---
 ## A. SPA 
 - single page application.
@@ -17,7 +17,7 @@
   - centralized store with redux to cache response
 ---
 ## B. angular vs AngularJS
-![img](../../99_archive/999_assets/kickoff/2.jpg)
+![img](../999_assets/kickoff/2.jpg)
 
 ---
 ## C. Angular 2+
@@ -46,7 +46,7 @@
   11. reactive : **rxJs or signal**
   12. PWA 
   13. makes backend api to load data
-  ![](../../99_archive/999_assets/000_1.PNG)
+  ![](../999_assets/000_1.PNG)
 
 
 ### 2. creat ng project
@@ -68,7 +68,7 @@
   7. `ng generate service` or `n g s`
   8. `ng generate directive` or `ng g d`
 
-![](../../99_archive/999_assets/001_app-file.PNG)
+![](../999_assets/001_app-file.PNG)
 
 ---
 ### 3.bootstrap appModule > app-component
@@ -101,7 +101,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 
 ![img](https://github.com/lekhrajdinkar/NG6/blob/master/notes/assets/basic/3.JPG)
 
-![img](../../99_archive/999_assets/basic/2.JPG)
+![img](../999_assets/basic/2.JPG)
 
 ---
 ## E. Interview topic
