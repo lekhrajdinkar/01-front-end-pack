@@ -9,8 +9,8 @@
   - observable in ng (continous stream)
     ...
 
-![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/async/14.jpg)
-![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/async/15.jpg)
+![img](../999_assets/asset_js/jonas/async/14.jpg)
+![img](../999_assets/asset_js/jonas/async/15.jpg)
 
 ---
 

@@ -12,7 +12,7 @@
   - return Function
 - OOPs :: ES6 - classes, interface, inheritabnce, abstraction, etc.
 - **JS engine**:
-  ![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/basic/12.jpg)
+  ![img](../999_assets/asset_js/jonas/basic/12.jpg)
 - online playground: [https://jsbin.com/](jsbin.com)
 - ES5 - Supported by all Browser.
 - ES6 - Few browser does not support it and transcompile it to ES5 format brfore run. **pollyfills**
@@ -124,24 +124,24 @@ else
 
 #### 7. Addition / subtraction
 
-1.  ![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/js4.PNG)
-2.  ![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/js5.PNG)
-3.  ![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/js6.PNG)
+1.  ![](../999_assets/asset_js/js4.PNG)
+2.  ![](../999_assets/asset_js/js5.PNG)
+3.  ![](../999_assets/asset_js/js6.PNG)
 4.  Add/sub with NULL - 0
-    ![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/js7.PNG)
+    ![](../999_assets/asset_js/js7.PNG)
 5.  Add/Sub with undefined - NaN
-    ![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/js8.PNG)
+    ![](../999_assets/asset_js/js8.PNG)
 
 6.  Sub string1/number with string2 - NaN/worked
-    ![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/js9.PNG)
-    ![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/js11.PNG)
+    ![](../999_assets/asset_js/js9.PNG)
+    ![](../999_assets/asset_js/js11.PNG)
 
 7.  Sub string1 with number - Js will convert string to number
-    ![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/js10.PNG)
+    ![](../999_assets/asset_js/js10.PNG)
 
 #### 8. Multiple:
 
-1.  ![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/js12.PNG)
+1.  ![](../999_assets/asset_js/js12.PNG)
 
 2.  withString
 

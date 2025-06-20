@@ -3,17 +3,17 @@
 - intro:
   - A closure is a fundamental concept in JavaScript that allows functions to "remember" and access their lexical scope even when they're executed outside that scope
 - Function which returns anothor function  
-  ![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/img2/11.jpg)
+  ![img](../999_assets/asset_js/img2/11.jpg)
 - get retuned function from closure
-  ![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/img2/12.jpg)
+  ![img](../999_assets/asset_js/img2/12.jpg)
 - invoke retuned function
-  ![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/img2/13.jpg)
+  ![img](../999_assets/asset_js/img2/13.jpg)
 - 3 steps: closure maintains the state of return functions.
 
 1. run the closure with arg1 and get `retuned function1` from closure.
 2. Run the closure again with agr2 and get another `retuned function2`.
 3. run the `retuned function1`.
-   ![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/img2/14.jpg)
+   ![img](../999_assets/asset_js/img2/14.jpg)
 
 ---
 
@@ -33,10 +33,10 @@ function(){     console.log("hello");  }
 ```
 
 - IIEFs have there own local scope:
-  ![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/img2/15.JPG)
+  ![img](../999_assets/asset_js/img2/15.JPG)
 
 - using global scoped obj in IIEFs scope:
-  ![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/img2/16.JPG)
+  ![img](../999_assets/asset_js/img2/16.JPG)
 
 ---
 
@@ -44,8 +44,8 @@ function(){     console.log("hello");  }
 
 ### 1. `arguments`
 
-![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/img2/17.JPG)
-![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/img2/18.JPG)
+![img](../999_assets/asset_js/img2/17.JPG)
+![img](../999_assets/asset_js/img2/18.JPG)
 
 - technically arguments are object [check above output {}], but act as array.
 
@@ -65,11 +65,11 @@ msg.name //message whuich is fn name
 msg.length // 2
 ```
 
-![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/img2/19.JPG)
+![img](../999_assets/asset_js/img2/19.JPG)
 
 - name of anonymous function
-  ![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/img2/20.JPG)
+  ![img](../999_assets/asset_js/img2/20.JPG)
 
 ---
 
-[cheatsheet](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/Functions-Cheat-Sheet.pdf)
+[cheatsheet](../999_assets/asset_js/Functions-Cheat-Sheet.pdf)

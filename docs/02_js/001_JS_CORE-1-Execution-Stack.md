@@ -8,7 +8,7 @@
 
 ### B. **Execution Stack**
 1. Understand it with for below prg:
-![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/basic/02.jpg)
+![img](../999_assets/asset_js/jonas/basic/02.jpg)
 ```
 global stack --> 
 - method declaration: first(), third()
@@ -27,24 +27,24 @@ first() method stack -->
 > `note 1` : property/method declared in parent stack will be avialble to child (and nested child). 
 See nested flow eg:
 
-![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/basic/03.jpg)
+![img](../999_assets/asset_js/jonas/basic/03.jpg)
 
 > `note 2` : `method-expression` wont be declared inside stack. eg: line 13 below.
 
-![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/basic/06.jpg)
+![img](../999_assets/asset_js/jonas/basic/06.jpg)
 
 ****
 
 2. Theory to understand it:
 - default stack is `global` stack to execute the current JS code. it act as starting execution point.
-![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/basic/04.jpg)
+![img](../999_assets/asset_js/jonas/basic/04.jpg)
 
 > ## 2.1 VO 
 
 - creation Phase: VO object holds 3 things --> `argument`, `funtion` and `property`
-![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/basic/05.jpg)
+![img](../999_assets/asset_js/jonas/basic/05.jpg)
 - Another simple eg:
-![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/basic/07.jpg)
+![img](../999_assets/asset_js/jonas/basic/07.jpg)
 
 > ## 2.2 Scope chain
 
@@ -52,19 +52,19 @@ See nested flow eg:
 - lexical scoping chain --> if function defined inside anothor function, then it will be scope inside scope. 
 - execution stack defines scope chaining.
 - It will to understand where to access particular method.proprty. simple rule --> child scope will have access to parent scope, thats all. 
-![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/basic/08.jpg)
-![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/basic/08_1.jpg)
-![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/basic/08_2.jpg)
+![img](../999_assets/asset_js/jonas/basic/08.jpg)
+![img](../999_assets/asset_js/jonas/basic/08_1.jpg)
+![img](../999_assets/asset_js/jonas/basic/08_2.jpg)
 
 - note: difference between scope chain and execution stack:
-![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/basic/09.jpg)
+![img](../999_assets/asset_js/jonas/basic/09.jpg)
 
 > ## 2.3 this
 
-![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/basic/10.jpg)
+![img](../999_assets/asset_js/jonas/basic/10.jpg)
 
 - `this` will be `window` object for prg mentioned at point 2.
 - this will be john object in below prg:
-![img](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/jonas/basic/11.jpg)
+![img](../999_assets/asset_js/jonas/basic/11.jpg)
 
 ******

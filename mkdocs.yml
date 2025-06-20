@@ -8,7 +8,7 @@ site_author: lekhraj Dinkar
 
 # Navigation based on your Notes folder
 nav:
-    - Angular:
+    - Angular 2025:
           - Kick Off: 01_ng/000_kick_off.md
           - NG Evolution:
                 - 2025 Overview: 01_ng/000_ng_evolution-2025.md
@@ -33,30 +33,28 @@ nav:
           - Deployment: 01_ng/008_Deployment.md
           - Questions: 01_ng/100_Question_1.md
 
-    - JavaScript:
+    - JavaScript 2025:
+          - ES6: 02_js/007_JS_ES6.md
           - Core Concepts:
                 - Execution Stack: 02_js/001_JS_CORE-1-Execution-Stack.md
                 - Event Loop: 02_js/001_JS_CORE-2-Event-loop.md
                 - Closure & IIFE: 02_js/001_JS_CORE-3-CLOSURE+IIFE.md
                 - Promise: 02_js/001_JS_CORE-4-PROMISE.md
                 - Data Types & Fundamentals: 02_js/001_JS_CORE-5-DataType+Fundamental.md
-          - Arrays: 02_js/002_JS_ARRAYS.md
-          - Objects (ES5):
-                - Part 1: 02_js/002_JS_ES-5-old-OBJECTS-1.md
-                - Part 2: 02_js/002_JS_ES-5-old-OBJECTS-2.md
-          - Events: 02_js/004_JS_Events.md
-          - DOM:
-                - Concepts: 02_js/005_JS_DOM-1-concepts.md
-                - Game Programming: 02_js/005_JS_DOM-2-GAME-PRG.md
-          - AJAX: 02_js/006_JS_AJAX.md
-          - ES6: 02_js/007_JS_ES6.md
-          - Functions Cheat Sheet (PDF): 02_js/Functions-Cheat-Sheet.pdf
+                - Arrays: 02_js/002_JS_ARRAYS.md
+          - OLD:
+              - AJAX: 02_js/006_JS_AJAX.md
+              - object Part 1: 02_js/002_JS_ES-5-old-OBJECTS-1.md
+              - object Part 2: 02_js/002_JS_ES-5-old-OBJECTS-2.md
+              - DOM Concepts: 02_js/005_JS_DOM-1-concepts.md
+              - Events: 02_js/004_JS_Events.md
+              #- Game Programming: 02_js/005_JS_DOM-2-GAME-PRG.md
 
-    - TypeScript:
+    - TypeScript 2025:
           - Kickoff: 03_ts/00_kickoff.md
           - Typing: 03_ts/01_typing.md
 
-    - CSS & HTML (OLD):
+    - CSS & HTML (2018 OLD):
           - Kickoff: 04_css_html/001_KickOff.md
           - Selectors: 04_css_html/002_selectors.md
           - Box Model: 04_css_html/003_Box_Model.md

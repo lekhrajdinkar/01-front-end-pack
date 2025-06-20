@@ -52,7 +52,6 @@ nav:
                 - Game Programming: 02_js/005_JS_DOM-2-GAME-PRG.md
           - AJAX: 02_js/006_JS_AJAX.md
           - ES6: 02_js/007_JS_ES6.md
-          - Functions Cheat Sheet (PDF): 02_js/Functions-Cheat-Sheet.pdf
 
     - TypeScript:
           - Kickoff: 03_ts/00_kickoff.md

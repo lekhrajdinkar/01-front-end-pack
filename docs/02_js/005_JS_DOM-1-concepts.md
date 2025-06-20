@@ -6,7 +6,7 @@
 3. google chrome > developer tools > element > is DOM > can manipulate it as run time and see the changes.
 
 pictorial desc - basic:
-![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/dom1.PNG)
+![](../999_assets/asset_js/dom1.PNG)
 
 ***
 
@@ -47,10 +47,10 @@ note: use `JS modal` for creating popup windows.
 5. document.body.children[0].style.backgrounColor.
 
 change document object and see the changes in browser _without refresh page_. eg"
-![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/dom2.PNG)
+![](../999_assets/asset_js/dom2.PNG)
 
 document object itself very complex for large html page. eg html having long list. There is another way to better traverse on DOM, will see later.
-![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/dom3.PNG)
+![](../999_assets/asset_js/dom3.PNG)
 
 
 6. Traverse more
@@ -87,10 +87,10 @@ These are more perfect sddelector to get right elemet.
 #### D. Insert element in DOM
 1. `addChild`
 2. `insertBefore`
-![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/dom4.PNG)
+![](../999_assets/asset_js/dom4.PNG)
 
 #### E. Removing element in DOM
-![](https://github.com/lekhrajdinkar/01-front-end-pack/blob/master/VanillaJS/NOTES_JS/asset/dom5.PNG)
+![](../999_assets/asset_js/dom5.PNG)
 - a.remove() --> will not work in older bowser.
 _ a.parentElemet.remove(a);
 - a.parentNode.remove(a);
