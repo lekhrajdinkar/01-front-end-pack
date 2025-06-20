@@ -33,7 +33,7 @@ nav:
           - Deployment: 01_ng/008_Deployment.md
           - Questions: 01_ng/100_Question_1.md
 
-    - JavaScript 2025:
+    - JavaScript 2021:
           - ES6: 02_js/007_JS_ES6.md
           - Core Concepts:
                 - Execution Stack: 02_js/001_JS_CORE-1-Execution-Stack.md
@@ -50,7 +50,7 @@ nav:
               - Events: 02_js/004_JS_Events.md
               #- Game Programming: 02_js/005_JS_DOM-2-GAME-PRG.md
 
-    - TypeScript 2025:
+    - TypeScript 2021:
           - Kickoff: 03_ts/00_kickoff.md
           - Typing: 03_ts/01_typing.md
 
