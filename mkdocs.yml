@@ -99,17 +99,17 @@ nav:
 theme:
   name: material
   features:
-    - navigation.side
+    - navigation.tabs
     - navigation.sections
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: deep purple
+      accent: orange
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: blue grey
+      accent: green
 
 extra_css:
   - mkdocs.css
