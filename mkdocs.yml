@@ -97,6 +97,9 @@ nav:
                 - Basic Program: 01_react/009_REDUX_3_BASIC_PRG.md          
 
 theme:
+  font:
+    text: Roboto
+    code: Roboto Mono
   name: material
   features:
     - navigation.tabs
