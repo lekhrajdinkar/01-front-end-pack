@@ -1,4 +1,5 @@
 - https://chat.deepseek.com/a/chat/s/02a193f8-5082-4aad-a41c-4e9f5e16af4b
+
 --- 
 ## 1. install : globally
 - npm install typescript **-g**
@@ -9,6 +10,7 @@ tsc --help
 tsc --init : generate tsconfig.json file with default compiler options.
 ```
 ## 2. tsc compiler option
+- tsc compiler option
 ```
 --strict                Enable all strict type checking options
 --noImplicitAny         Raise error on expressions with implied 'any' type
@@ -17,6 +19,7 @@ tsc --init : generate tsconfig.json file with default compiler options.
 --module commonjs       Specify module code generation
 --outDir ./dist         Redirect output structure to directory
 ```
+
 ---
 ## 3. Intro : typescript
 - Microsoft’s extension for JavaScript which supports 

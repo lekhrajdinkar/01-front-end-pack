@@ -8,6 +8,7 @@ site_author: lekhraj Dinkar
 
 # Navigation based on your Notes folder
 nav:
+    - Home: readme.md
     - Angular:
           - Kick Off: 01_ng/000_kick_off.md
           - NG Evolution:
@@ -33,6 +34,7 @@ nav:
           - Deployment: 01_ng/008_Deployment.md
           - Questions: 01_ng/100_Question_1.md
 
+
     - JavaScript:
           - Core Concepts:
                 - Execution Stack: 02_js/001_JS_CORE-1-Execution-Stack.md
@@ -56,20 +58,38 @@ nav:
           - Kickoff: 03_ts/00_kickoff.md
           - Typing: 03_ts/01_typing.md
 
-    - CSS & HTML (OLD):
-          - Kickoff: 04_css_html/001_KickOff.md
-          - Selectors: 04_css_html/002_selectors.md
-          - Box Model: 04_css_html/003_Box_Model.md
-          - Pseudo Selectors: 04_css_html/004_pseudo-selectors.md
-          - Positioning: 04_css_html/005_Position.md
-          - Modern Web Design: 04_css_html/100_00_Modern_web_design.md
-          - Code Structure:
-                - Header: 04_css_html/100_01_Code_Header.md
-                - Section: 04_css_html/100_03_Code_Section.md
-                - Footer: 04_css_html/100_04_code_Footer.md
-          #- Advanced Images:
-              #- Part 1: 04_css_html/006_ADVNC_IMAGES-1.md
-              #- Part 2: 04_css_html/006_ADVNC_IMAGES-2.md
+    - CSS & HTML:
+        - Kickoff: 04_css_html/001_KickOff.md
+        - Selectors: 04_css_html/002_selectors.md
+        - Box Model: 04_css_html/003_Box_Model.md
+        - Pseudo Selectors: 04_css_html/004_pseudo-selectors.md
+        - Positioning: 04_css_html/005_Position.md
+        - Modern Web Design: 04_css_html/100_00_Modern_web_design.md
+        - Code Structure:
+            - Header: 04_css_html/100_01_Code_Header.md
+            - Section: 04_css_html/100_03_Code_Section.md
+            - Footer: 04_css_html/100_04_code_Footer.md
+            #- Advanced Images:
+            #- Part 1: 04_css_html/006_ADVNC_IMAGES-1.md
+            #- Part 2: 04_css_html/006_ADVNC_IMAGES-2.md
+
+    - React:
+          - ES6: 01_react/000_ES6.md
+          - Kickoff: 01_react/001_KICKOFF.md
+          - Components:
+                - Basics: 01_react/002_COMPONENT_1_BASIC.md
+                - Life Cycle: 01_react/002_COMPONENT_2_LIFE-CYCLE.md
+                - Communication: 01_react/002_COMPONENT_3_COMM.md
+                - Events: 01_react/002_COMPONENT_4_EVENT.md
+          - Routing: 01_react/003_ROUTING.md
+          - HTTP & Axios: 01_react/004_HTTP_AXIOS.md
+          - Forms: 01_react/005_FORMS.md
+          - Redux:
+                - Overview: 01_react/009_REDUX.md
+                - Concepts: 01_react/009_REDUX_1_CONCEPT.md
+                - With React: 01_react/009_REDUX_2_WITH_REACT.md
+                - Basic Program: 01_react/009_REDUX_3_BASIC_PRG.md          
+
 theme:
   font:
     text: Roboto

@@ -8,6 +8,7 @@ function infiniteLoop(): never {  while (true) {}}
 const emptyArray: never[] = []; // You can't push anything into it:
 type Impossible = string & number;
 ```
+
 - **tuple** : heterogeneous array - fixed or vary size
 - **Type aliases**
   - type mytype = "abc" | "xyx"
@@ -23,16 +24,17 @@ interface A { a: number }
 interface B { b: string }
 type AB = A & B; // { a: number, b: string } 
 ```
+
 - **Utility Types** :point_left:
-  - type mytype = `Partial<T>` / `Required<T>`  : all properties of T to **optional /required**
-  - type mytype = `Readonly<T>` : all properties of Type set to **readonly**.
-  - type mytype = `Pick<T> / omit<T>`
-  - type mytype = `Record<K,T>`
-  - type mytype = `ReturnType<() => string>`
-  - type mytype = `NonNullable<T>`
-  - ...
-  - so basically, source type : T,K || target type : mytype
-  - mpre: https://chat.deepseek.com/a/chat/s/3c19b702-9118-49ed-9599-35975a1fbef5
+    - type mytype = `Partial<T>` / `Required<T>`  : all properties of T to **optional /required**
+    - type mytype = `Readonly<T>` : all properties of Type set to **readonly**.
+    - type mytype = `Pick<T> / omit<T>`
+    - type mytype = `Record<K,T>`
+    - type mytype = `ReturnType<() => string>`
+    - type mytype = `NonNullable<T>`
+    - ...
+    - so basically, source type : T,K || target type : mytype
+    - more: https://chat.deepseek.com/a/chat/s/3c19b702-9118-49ed-9599-35975a1fbef5
   
 - **Index signature** :point_left:
 ```typescript
