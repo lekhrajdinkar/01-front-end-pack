@@ -6,6 +6,10 @@ site_name: FrontEnd Notes (lekhraj Dinkar)
 site_description: Technical Documentation
 site_author: lekhraj Dinkar
 
+
+extra_javascript:
+  - mkdocs.js
+  
 # Navigation based on your Notes folder
 nav:
     - Angular 2025:
